@@ -157,7 +157,7 @@ footer a { color: var(--lab-footer-text); }
 <nav class="tabs-bar" aria-label="Sections"><div class="wrap" role="tablist">
   <button class="tab-btn active" data-tab="start" role="tab">Start here</button>
   <button class="tab-btn" data-tab="accommodation" role="tab">Accommodation</button>
-  <button class="tab-btn" data-tab="modules" role="tab">Modules</button>
+  <button class="tab-btn" data-tab="modules" role="tab">Modules 1–5</button>
   <button class="tab-btn" data-tab="keywords" role="tab">Vocabulary EN–FI</button>
   <button class="tab-btn" data-tab="quiz" role="tab">Quiz</button>
   <button class="tab-btn" data-tab="presentation" role="tab">Final task: instructional speech</button>
@@ -182,6 +182,7 @@ footer a { color: var(--lab-footer-text); }
     </ol>
     <p>When you have finished all modules, do the "All modules" quiz.</p>
     <div class="note">Try each quiz before you check the Answer key tab.</div>
+    <div class="note">The coursebook works best on a computer or tablet. On a phone, some tables and diagrams need sideways scrolling.</div>
   </div>
   <h2>Modules</h2>
   <div class="grid" id="class-map"></div>
@@ -2436,16 +2437,16 @@ function showTab(id) {
 
 // Module overview
 $("#class-map").innerHTML = MODULES.map(m =>
-  `<div class="card"><div class="meta">Module ${m.id}</div><h3><a href="#" data-open="${m.id}">${esc(m.title)}</a></h3><p style="margin:4px 0;color:var(--lab-grey-mid)">Dialogues: ${esc(m.reading.title)}</p></div>`).join("");
+  `<div class="card"><div class="meta">Module ${m.id} (Class ${m.id + 1})</div><h3><a href="#" data-open="${m.id}">${esc(m.title)}</a></h3><p style="margin:4px 0;color:var(--lab-grey-mid)">Dialogues: ${esc(m.reading.title)}</p></div>`).join("");
 document.querySelectorAll("[data-open]").forEach(a => a.addEventListener("click", e => { e.preventDefault(); openModule(+a.dataset.open); showTab("modules"); }));
 
 // Modules
-$("#mod-list").innerHTML = MODULES.map(m => `<button class="mod-btn" data-mod="${m.id}"><small>Module ${m.id}</small>${esc(m.title)}</button>`).join("");
+$("#mod-list").innerHTML = MODULES.map(m => `<button class="mod-btn" data-mod="${m.id}"><small>Module ${m.id} (Class ${m.id + 1})</small>${esc(m.title)}</button>`).join("");
 document.querySelectorAll(".mod-btn").forEach(b => b.addEventListener("click", () => { openModule(+b.dataset.mod); window.scrollTo({ top: $("nav.tabs-bar").offsetTop, behavior: "smooth" }); }));
 function openModule(id) {
   const m = MODULES[id - 1];
   document.querySelectorAll(".mod-btn").forEach(b => b.classList.toggle("active", +b.dataset.mod === id));
-  let h = `<div class="card"><div class="meta">Module ${m.id}</div><h2>${esc(m.title)}</h2><p>${m.intro}</p></div>`;
+  let h = `<div class="card"><div class="meta">Module ${m.id} (Class ${m.id + 1})</div><h2>${esc(m.title)}</h2><p>${m.intro}</p></div>`;
   const acc = (title, inner, cls = "") => `<details class="acc ${cls}"><summary>${esc(title)}</summary><div class="acc-body">${inner}</div></details>`;
   h += `<div class="acc-tools"><button class="acc-toggle" data-open="1">Open all</button><button class="acc-toggle" data-open="0">Close all</button></div>`;
   const t = m.topic;
@@ -2494,7 +2495,7 @@ renderKw();
 // Quiz
 const shuffle = a => { a = a.slice(); for (let i = a.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; } return a; };
 let current = { set: 1, qs: [], answered: 0, correct: 0 };
-$("#quiz-picker").innerHTML = MODULES.map(m => `<button data-set="${m.id}">Module ${m.id}</button>`).join("") + `<button data-set="all">All modules (20 questions)</button>`;
+$("#quiz-picker").innerHTML = MODULES.map(m => `<button data-set="${m.id}">Module ${m.id} (Class ${m.id + 1})</button>`).join("") + `<button data-set="all">All modules (20 questions)</button>`;
 document.querySelectorAll("#quiz-picker button").forEach(b => b.addEventListener("click", () => startQuiz(b.dataset.set === "all" ? "all" : +b.dataset.set)));
 function startQuiz(set) {
   const pool = set === "all" ? shuffle(MODULES.flatMap(m => m.quiz.map(q => ({ ...q, mod: m.id })))).slice(0, 20)
@@ -2528,7 +2529,7 @@ function updateScore() {
 startQuiz(1);
 
 // Answer key
-$("#answer-body").innerHTML = MODULES.map(m => `<div class="card"><div class="meta">Module ${m.id}</div><h3>${esc(m.title)}</h3><ol class="key-list">` +
+$("#answer-body").innerHTML = MODULES.map(m => `<div class="card"><div class="meta">Module ${m.id} (Class ${m.id + 1})</div><h3>${esc(m.title)}</h3><ol class="key-list">` +
   m.quiz.map(q => `<li>${esc(q.q)}<br><span class="key-ans">${esc(q.o[q.a])}</span><br><span style="color:var(--lab-grey-mid)">${esc(q.e)}</span></li>`).join("") +
   `</ol></div>`).join("");
 
