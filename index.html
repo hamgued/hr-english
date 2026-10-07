@@ -1,0 +1,2540 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>HR English: Self-study Coursebook</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --lab-teal: #069494; --lab-teal-light: #e6f7f7; --lab-black: #1a1a1a; --lab-white: #ffffff;
+  --lab-grey-mid: #555555; --lab-grey-light: #f5f5f5; --lab-grey-border: #e0e0e0;
+  --lab-footer-bg: #1a1a1a; --lab-footer-text: #cccccc;
+  --green: #057a55; --green-light: #def7ec; --red: #dc2626; --red-light: #fee2e2;
+  --yellow: #c27803; --yellow-light: #fdf6b2;
+}
+* { box-sizing: border-box; }
+body { margin: 0; font-family: 'DM Sans', 'Helvetica Neue', Arial, sans-serif; color: var(--lab-black); background: var(--lab-grey-light); line-height: 1.6; font-size: 1rem; }
+a { color: var(--lab-teal); }
+.wrap { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+header.top { position: sticky; top: 0; z-index: 10; background: var(--lab-white); border-bottom: 1px solid var(--lab-grey-border); }
+header.top .wrap { display: flex; justify-content: space-between; align-items: center; padding-top: 10px; padding-bottom: 10px; gap: 16px; flex-wrap: wrap; }
+.brand { font-weight: 700; }
+.credit { font-size: 0.875rem; color: var(--lab-grey-mid); }
+.hero { background: var(--lab-teal); color: var(--lab-white); text-align: center; padding: 56px 0; }
+.hero h1 { font-size: 2.5rem; margin: 0 0 8px; }
+.hero p { margin: 4px 0; }
+.hero .credit, .hero .credit a { color: var(--lab-white); }
+nav.tabs-bar { background: var(--lab-white); border-bottom: 1px solid var(--lab-grey-border); }
+nav.tabs-bar .wrap { display: flex; flex-wrap: wrap; }
+.tab-btn { font: inherit; font-size: 0.875rem; font-weight: 700; border: 0; background: transparent; color: var(--lab-grey-mid); padding: 14px 18px; cursor: pointer; }
+.tab-btn.active { background: var(--lab-teal); color: #fff; }
+.tab-btn:focus-visible, .mod-btn:focus-visible, .opt:focus-visible { outline: 3px solid var(--lab-black); outline-offset: 2px; }
+main { padding: 48px 0 64px; }
+.panel { display: none; }
+.panel.active { display: block; }
+h2 { font-size: 1.75rem; margin: 0 0 12px; }
+h3 { font-size: 1.25rem; margin: 0 0 10px; }
+.card { background: var(--lab-white); border: 1px solid var(--lab-grey-border); padding: 24px; margin-bottom: 20px; }
+.note { background: var(--lab-teal-light); border-left: 4px solid var(--lab-teal); padding: 12px 16px; margin: 12px 0; }
+.short { border-top: 1px solid var(--lab-grey-border); margin-top: 16px; padding-top: 10px; font-size: 0.95rem; }
+.short strong { color: var(--lab-teal); }
+.phrases { list-style: none; padding: 0; margin: 0; }
+.phrases li { padding: 3px 0; }
+.phrases li::before { content: "→ "; color: var(--lab-teal); font-weight: 700; }
+.example { background: var(--lab-grey-light); padding: 12px 16px; margin: 12px 0; }
+.example p { margin: 0; }
+.label { font-size: 0.875rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.04em; color: var(--lab-grey-mid); margin: 14px 0 4px; }
+.layout { display: grid; grid-template-columns: 280px 1fr; gap: 24px; align-items: start; }
+.mod-list { background: var(--lab-white); border: 1px solid var(--lab-grey-border); position: sticky; top: 72px; }
+.mod-btn { display: block; width: 100%; text-align: left; font: inherit; border: 0; border-bottom: 1px solid var(--lab-grey-border); background: var(--lab-white); padding: 12px 16px; cursor: pointer; }
+.mod-btn small { display: block; color: var(--lab-grey-mid); font-size: 0.8rem; font-weight: 700; }
+.mod-btn.active { background: var(--lab-teal); color: #fff; }
+.mod-btn.active small { color: #fff; }
+.meta { font-size: 0.875rem; color: var(--lab-grey-mid); font-weight: 700; margin-bottom: 4px; }
+table { width: 100%; border-collapse: collapse; background: var(--lab-white); }
+th, td { text-align: left; padding: 10px 12px; border-bottom: 1px solid var(--lab-grey-border); vertical-align: top; }
+th { background: var(--lab-teal); color: #fff; font-size: 0.875rem; }
+td.wrong { color: var(--red); }
+td.right { color: var(--green); font-weight: 500; }
+.table-scroll { overflow-x: auto; }
+input[type=search], select { font: inherit; padding: 10px 12px; border: 1px solid var(--lab-grey-border); width: 100%; max-width: 420px; margin-bottom: 16px; background: var(--lab-white); }
+.q { background: var(--lab-white); border: 1px solid var(--lab-grey-border); padding: 20px 24px; margin-bottom: 16px; }
+.q-text { font-weight: 700; margin-bottom: 10px; }
+.opt { display: block; width: 100%; text-align: left; font: inherit; background: var(--lab-white); border: 1px solid var(--lab-grey-border); padding: 10px 14px; margin: 6px 0; cursor: pointer; }
+.opt:hover:not(:disabled) { border-color: var(--lab-teal); }
+.opt:disabled { cursor: default; }
+.opt.correct { background: var(--green-light); border-left: 4px solid var(--green); }
+.opt.incorrect { background: var(--red-light); border-left: 4px solid var(--red); }
+.fb { margin-top: 10px; padding: 10px 14px; }
+.fb.ok { background: var(--green-light); border-left: 4px solid var(--green); }
+.fb.no { background: var(--red-light); border-left: 4px solid var(--red); }
+.score { position: sticky; top: 56px; background: var(--lab-white); border: 1px solid var(--lab-grey-border); padding: 12px 16px; margin-bottom: 16px; font-weight: 700; display: flex; justify-content: space-between; align-items: center; gap: 12px; flex-wrap: wrap; z-index: 5; }
+.btn { font: inherit; font-weight: 700; background: var(--lab-teal); color: #fff; border: 0; padding: 10px 18px; cursor: pointer; }
+.quiz-picker { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 20px; }
+.quiz-picker button { font: inherit; font-size: 0.875rem; font-weight: 700; background: var(--lab-white); border: 1px solid var(--lab-teal); color: var(--lab-teal); padding: 8px 14px; cursor: pointer; }
+.quiz-picker button.active { background: var(--lab-teal); color: #fff; }
+.key-list { margin: 0; padding-left: 22px; }
+.key-list li { margin-bottom: 10px; }
+.key-ans { color: var(--green); font-weight: 700; }
+.reading p { margin: 0 0 10px; }
+mark.lp { background: var(--lab-teal-light); color: inherit; border-bottom: 2px solid var(--lab-teal); padding: 0 2px; }
+mark.lp sup { color: var(--lab-teal); font-weight: 700; margin-left: 2px; }
+.lp-list { margin: 0; padding-left: 22px; }
+.lp-list li { padding: 3px 0; }
+details.acc { background: var(--lab-white); border: 1px solid var(--lab-grey-border); margin-bottom: 10px; }
+details.acc summary { list-style: none; cursor: pointer; padding: 16px 24px; font-weight: 700; font-size: 1.1rem; display: flex; justify-content: space-between; align-items: center; gap: 12px; }
+details.acc summary::-webkit-details-marker { display: none; }
+details.acc summary::after { content: "+"; color: var(--lab-teal); font-size: 1.4rem; line-height: 1; }
+details.acc[open] summary::after { content: "−"; }
+details.acc[open] summary { border-bottom: 1px solid var(--lab-grey-border); }
+details.acc summary:focus-visible { outline: 3px solid var(--lab-black); outline-offset: 2px; }
+.acc-body { padding: 16px 24px 20px; }
+.acc-tools { display: flex; gap: 8px; justify-content: flex-end; margin: 4px 0 10px; }
+.acc-toggle { font: inherit; font-size: 0.875rem; font-weight: 700; background: var(--lab-white); border: 1px solid var(--lab-teal); color: var(--lab-teal); padding: 6px 12px; cursor: pointer; }
+.fig { margin: 18px 0; }
+.fig figcaption { font-size: 0.85rem; color: var(--lab-grey-mid); margin-top: 8px; }
+.flow { display: flex; flex-wrap: wrap; gap: 8px; }
+.flow .step { flex: 1 1 120px; background: var(--lab-teal-light); border-top: 4px solid var(--lab-teal); padding: 10px 12px; font-size: 0.9rem; }
+.flow .step .n { display: inline-block; background: var(--lab-teal); color: #fff; font-weight: 700; width: 22px; height: 22px; text-align: center; line-height: 22px; font-size: 0.8rem; margin-bottom: 6px; }
+.flow .step b { display: block; }
+.flow .step span:not(.n) { color: var(--lab-grey-mid); font-size: 0.85rem; }
+.cols { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; }
+.cols .col { background: var(--lab-teal-light); padding: 14px; }
+.cols .big { display: block; font-size: 2rem; font-weight: 700; color: var(--lab-teal); line-height: 1; }
+.cols b { display: block; margin: 6px 0 4px; }
+.cols span:not(.big) { font-size: 0.9rem; }
+.scale .srow { display: grid; grid-template-columns: 130px 1fr 200px; gap: 12px; align-items: center; padding: 4px 0; font-size: 0.9rem; }
+.scale .sl { font-weight: 700; }
+.scale .sbar { background: var(--lab-grey-light); height: 14px; display: block; }
+.scale .sbar span { display: block; height: 100%; background: var(--lab-teal); }
+.scale .sd { color: var(--lab-grey-mid); }
+.levels .lvl { border: 2px solid var(--lab-teal); padding: 10px 14px 14px; margin-top: 8px; background: var(--lab-white); }
+.levels > .lvl { margin-top: 0; }
+.levels .lvl1, .levels .lvl3 { background: var(--lab-teal-light); }
+.levels .lvl b { display: block; }
+.levels .lvl > span { display: block; font-size: 0.85rem; color: var(--lab-grey-mid); }
+.cont .cbar { height: 14px; background: linear-gradient(90deg, var(--lab-teal), var(--lab-teal-light), var(--lab-teal)); }
+.cont .clabels { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 10px; margin-top: 8px; font-size: 0.85rem; }
+.cont .clabels b { display: block; font-size: 0.95rem; }
+.cont .cmid { text-align: center; color: var(--lab-grey-mid); }
+.funnel { display: flex; flex-direction: column; align-items: center; gap: 6px; }
+.funnel .frow { background: var(--lab-teal-light); border-left: 4px solid var(--lab-teal); padding: 8px 12px; text-align: center; font-size: 0.9rem; min-width: 220px; }
+.funnel .frow b { display: block; }
+.grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+.grid .card { margin: 0; }
+footer { background: var(--lab-footer-bg); color: var(--lab-footer-text); padding: 32px 0; font-size: 0.875rem; }
+footer a { color: var(--lab-footer-text); }
+@media (max-width: 768px) {
+  .layout { grid-template-columns: 1fr; }
+  .mod-list { position: static; }
+  .grid { grid-template-columns: repeat(2, 1fr); }
+  main { padding: 40px 0; }
+}
+@media (max-width: 600px) {
+  .cols { grid-template-columns: 1fr; }
+  .scale .srow { grid-template-columns: 110px 1fr; }
+  .scale .sd { grid-column: 1 / -1; }
+  .cont .clabels { grid-template-columns: 1fr 1fr; }
+  .cont .cmid { grid-column: 1 / -1; grid-row: 2; }
+}
+@media (max-width: 480px) {
+  .grid { grid-template-columns: 1fr; }
+  .hero h1 { font-size: 1.9rem; }
+}
+</style>
+</head>
+<body>
+<header class="top"><div class="wrap">
+  <span class="brand">HR English</span>
+  <span class="credit">Designed by <a href="https://www.linkedin.com/in/hagu1/" target="_blank" rel="noopener">Hamid Guedra</a> (Language Centre, <a href="https://lab.fi/en" target="_blank" rel="noopener">LAB University of Applied Sciences</a>)</span>
+</div></header>
+
+<section class="hero"><div class="wrap">
+  <h1>HR English: Self-study Coursebook</h1>
+</div></section>
+
+<nav class="tabs-bar" aria-label="Sections"><div class="wrap" role="tablist">
+  <button class="tab-btn active" data-tab="start" role="tab">Start here</button>
+  <button class="tab-btn" data-tab="accommodation" role="tab">Accommodation</button>
+  <button class="tab-btn" data-tab="modules" role="tab">Modules</button>
+  <button class="tab-btn" data-tab="keywords" role="tab">Vocabulary EN–FI</button>
+  <button class="tab-btn" data-tab="quiz" role="tab">Quiz</button>
+  <button class="tab-btn" data-tab="presentation" role="tab">Final presentation</button>
+  <button class="tab-btn" data-tab="answers" role="tab">Answer key</button>
+  <button class="tab-btn" data-tab="sources" role="tab">Sources</button>
+</div></nav>
+
+<main><div class="wrap">
+
+<section class="panel active" id="start">
+  <h2>How to use this coursebook</h2>
+  <div class="card">
+    <p>This coursebook supports the HR English course for HR professionals. The five modules follow the working life of one international employee, Daniel, from his job interview to his exit interview. Each module has a short text on the topic with key words, a reading with dialogues and language points, topic cards, useful phrases and expressions, common errors for Finnish speakers, a learning journal task and a quiz. The Vocabulary tab covers the main areas of HR work in English and Finnish.</p>
+    <p>Study each module before the class it belongs to: Module 1 before class 2, Module 2 before class 3, and so on. Write your learning journal entry after the class. The Accommodation tab explains how to adjust your English to your listener. Read it before Module 1; it supports all modules. The Final presentation tab explains the task for the last class.</p>
+    <ol>
+      <li>Read the short text. Study the key words and phrases.</li>
+      <li>Read the dialogues. Study the numbered language points.</li>
+      <li>Read the topic cards. Say the useful phrases aloud.</li>
+      <li>Check the common errors.</li>
+      <li>Add a short entry to your learning journal.</li>
+      <li>Do the module quiz on the Quiz tab.</li>
+    </ol>
+    <p>When you have finished all modules, do the "All modules" quiz.</p>
+    <div class="note">Your learning journal entries are short: about 200 words per module.</div>
+    <div class="note">You can check all answers on the Answer key tab. Try the quiz first.</div>
+  </div>
+  <h2>Modules</h2>
+  <div class="grid" id="class-map"></div>
+</section>
+
+<section class="panel" id="modules">
+  <div class="layout">
+    <div class="mod-list" id="mod-list"></div>
+    <div id="mod-content"></div>
+  </div>
+</section>
+
+<section class="panel" id="accommodation">
+<div class="card"><div class="meta">Communication skills</div><h2>Communication accommodation</h2><p>How do we adjust our English to the person we are talking to, and how much is too much? This section explains communication accommodation and shows how to use it in HR conversations. It supports all five modules.</p></div>
+<div class="acc-tools"><button class="acc-toggle" data-scope="accommodation" data-open="1">Open all</button><button class="acc-toggle" data-scope="accommodation" data-open="0">Close all</button></div>
+<details class="acc"><summary>Text: Adjusting to your listener</summary><div class="acc-body"><p>When we talk, we adjust how we speak to the person in front of us. We speak more slowly to a learner, choose simpler words for a newcomer, or start using a colleague's expressions. The social psychologist Howard Giles and his colleagues called this <mark class="lp">communication accommodation<sup>1</sup></mark>. Their Communication Accommodation Theory (CAT) has been developed since the 1970s.</p>
+<p>The theory describes three main strategies. In <mark class="lp">convergence<sup>2</sup></mark>, speakers adjust towards each other, for example in speed, vocabulary or formality. Convergence usually signals that we want to be understood and to get closer. In <mark class="lp">divergence<sup>3</sup></mark>, a speaker stresses the difference, for example with more jargon or a stronger accent, often to show a separate identity. In <mark class="lp">maintenance<sup>4</sup></mark>, a speaker simply continues in their own style.</p>
+<figure class="fig"><svg viewBox="0 0 600 180" role="img" aria-label="Convergence: two speakers adjust towards each other. Divergence: a speaker moves away." style="width:100%;height:auto;display:block;max-width:640px">
+<defs><marker id="ah" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 z" fill="#069494"/></marker><marker id="ah2" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 z" fill="#1a1a1a"/></marker></defs>
+<text x="150" y="24" font-size="14" font-weight="700" text-anchor="middle" fill="#1a1a1a">Convergence</text>
+<circle cx="40" cy="70" r="16" fill="#069494"/><text x="40" y="75" font-size="12" text-anchor="middle" fill="#fff" font-weight="700">A</text>
+<circle cx="260" cy="70" r="16" fill="#1a1a1a"/><text x="260" y="75" font-size="12" text-anchor="middle" fill="#fff" font-weight="700">B</text>
+<line x1="60" y1="110" x2="130" y2="110" stroke="#069494" stroke-width="3" marker-end="url(#ah)"/>
+<line x1="240" y1="130" x2="170" y2="130" stroke="#1a1a1a" stroke-width="3" marker-end="url(#ah2)"/>
+<text x="150" y="165" font-size="12" text-anchor="middle" fill="#555">Speakers adjust towards each other</text><text x="450" y="24" font-size="14" font-weight="700" text-anchor="middle" fill="#1a1a1a">Divergence</text>
+<circle cx="420" cy="70" r="16" fill="#069494"/><text x="420" y="75" font-size="12" text-anchor="middle" fill="#fff" font-weight="700">A</text>
+<circle cx="480" cy="70" r="16" fill="#1a1a1a"/><text x="480" y="75" font-size="12" text-anchor="middle" fill="#fff" font-weight="700">B</text>
+<line x1="400" y1="110" x2="340" y2="110" stroke="#069494" stroke-width="3" marker-end="url(#ah)"/>
+<line x1="500" y1="130" x2="560" y2="130" stroke="#1a1a1a" stroke-width="3" marker-end="url(#ah2)"/>
+<text x="450" y="165" font-size="12" text-anchor="middle" fill="#555">A speaker stresses the difference</text></svg><figcaption>Convergence and divergence in communication accommodation.</figcaption></figure>
+<p>Accommodation can also go wrong. <mark class="lp">Over-accommodation<sup>5</sup></mark> means adjusting too much: speaking very slowly, loudly or simply to someone who does not need it. It can sound <mark class="lp">patronising<sup>6</sup></mark>. <mark class="lp">Under-accommodation<sup>7</sup></mark> means not adjusting enough: fast speech, idioms and local references that the listener cannot follow.</p>
+<p>For HR professionals, accommodation is a practical skill. Many conversations at work happen in <mark class="lp">English as a lingua franca<sup>8</sup></mark>: both speakers use English as a second or third language. What matters most is not native-like English but <mark class="lp">mutual intelligibility<sup>9</sup></mark>: clear speech, checking understanding and adjusting to the listener. Native speakers are not automatically easy to understand. Fast speech and idioms can make them hard to follow, so they need to accommodate too.</p><div class="label">Key words and phrases</div><ol class="lp-list"><li><strong>communication accommodation</strong>: adjusting how you speak to your listener</li><li><strong>convergence</strong>: adjusting towards the other speaker</li><li><strong>divergence</strong>: stressing the difference from the other speaker</li><li><strong>maintenance</strong>: keeping your own style without adjusting</li><li><strong>over-accommodation</strong>: adjusting too much; it can sound patronising</li><li><strong>patronising</strong>: treating someone as less able than they are (AmE: patronizing)</li><li><strong>under-accommodation</strong>: not adjusting enough for the listener</li><li><strong>English as a lingua franca</strong>: English used between people who have different first languages</li><li><strong>mutual intelligibility</strong>: both speakers can understand each other</li></ol></div></details>
+<details class="acc"><summary>Dialogues: Three ways to explain change negotiations</summary><div class="acc-body"><p>Laura, the HR manager, explains the upcoming change negotiations to Daniel. Read three versions.</p>
+<p><strong>Version A</strong></p>
+<p><strong>Laura:</strong> Right, so heads-up: we're kicking off the YT process next week, well, muutosneuvottelut now, and the TES stuff means we'll have to touch base with the luottamusmies before we circle back to the teams. Ballpark, six weeks. Makes sense?</p>
+<p><strong>Daniel:</strong> Er… yes.</p>
+<p><strong>Version B</strong></p>
+<p><strong>Laura:</strong> Daniel. We. Have. Change. Negotiations. Do you know what negotiations are? It is when people talk. About changes. OK?</p>
+<p><strong>Daniel:</strong> Yes, I know what negotiations are.</p>
+<p><strong>Version C</strong></p>
+<p><strong>Laura:</strong> Daniel, I'd like to tell you about something important. Next week, we're starting change negotiations. <mark class="lp">In Finnish, they're called<sup>1</sup></mark> muutosneuvottelut. <mark class="lp">It's a process that the law requires<sup>2</sup></mark> before an organisation reduces staff or makes big changes.</p>
+<p><strong>Daniel:</strong> Does that mean people will lose their jobs?</p>
+<p><strong>Laura:</strong> <mark class="lp">That's a fair question.<sup>3</sup></mark> It's possible, but nothing has been decided. The negotiations will take about six weeks. During that time, we'll talk to the shop steward, <mark class="lp">that is, the union's representative here<sup>4</sup></mark>, and then to the teams. <mark class="lp">Please stop me if anything is unclear.<sup>5</sup></mark></p>
+<p><strong>Daniel:</strong> I think it's clear. But what does it mean for my team?</p>
+<p><strong>Laura:</strong> <mark class="lp">Let me put it another way.<sup>6</sup></mark> Your team isn't the focus of these negotiations, but everyone will get the same information at the same time. <mark class="lp">Just to check<sup>7</sup></mark>: <mark class="lp">what will you tell your team if they ask you?<sup>8</sup></mark></p>
+<p><strong>Daniel:</strong> That nothing is decided yet, and that we'll get information in the next six weeks.</p>
+<p><strong>Laura:</strong> Exactly.</p><p><strong>Version A</strong> under-accommodates: fast speech, idioms (<em>heads-up</em>, <em>touch base</em>, <em>circle back</em>, <em>ballpark</em>) and Finnish abbreviations. Daniel says "yes", but he has probably not understood. <strong>Version B</strong> over-accommodates: it is slow, broken and patronising. Daniel is a professional who understands English well. <strong>Version C</strong> converges: clear structure, Finnish terms explained, no idioms, and a real check of understanding.</p><div class="label">Language points</div><ol class="lp-list"><li><strong>In Finnish, they're called</strong>: introduces a Finnish term and connects it to English</li><li><strong>It's a process that the law requires</strong>: explains the term in plain words</li><li><strong>That's a fair question.</strong>: acknowledges a worry before answering</li><li><strong>that is, the union's representative here</strong>: explains a term without stopping the sentence</li><li><strong>Please stop me if anything is unclear.</strong>: invites the listener to ask</li><li><strong>Let me put it another way.</strong>: reformulates when the first explanation may not have worked</li><li><strong>Just to check</strong>: introduces a check of understanding</li><li><strong>what will you tell your team if they ask you?</strong>: checks understanding with an open question, not "Do you understand?"</li></ol></div></details>
+<details class="acc"><summary>Accommodation in practice</summary><div class="acc-body"><p>Adjust to your listener, not to a rule. Watch the reactions, and adjust again.</p>
+<div class="table-scroll"><table><thead><tr><th>Instead of…</th><th>Try…</th></tr></thead><tbody>
+<tr><td>fast speech without pauses</td><td>a slightly slower pace and a pause between ideas</td></tr>
+<tr><td>long sentences with several ideas</td><td>one idea per sentence</td></tr>
+<tr><td>idioms: touch base, ballpark, circle back</td><td>plain words: contact, about, return to</td></tr>
+<tr><td>abbreviations: TES, YT, TTH</td><td>the full English term, plus the Finnish name once</td></tr>
+<tr><td>"Do you understand?"</td><td>an open check: "What will you do first?"</td></tr>
+<tr><td>numbers and dates only in speech</td><td>numbers and dates also in writing</td></tr>
+<tr><td>very slow, loud or simplified speech</td><td>normal speech, clearly structured</td></tr>
+</tbody></table></div>
+<div class="label">Useful phrases: when you speak</div><ul class="phrases">
+<li>Let me put it another way.</li><li>In other words, …</li><li>What I mean is…</li><li>Sorry, I'm speaking too fast.</li><li>Please stop me if anything is unclear.</li><li>In Finnish, this is called… In English, we say…</li><li>I'll send you a short summary in writing.</li></ul>
+<div class="label">Useful phrases: when you listen</div><ul class="phrases">
+<li>Sorry, could you say that again?</li><li>Could you speak a bit more slowly, please?</li><li>Sorry, what does "ballpark" mean?</li><li>Just to check: do you mean…?</li><li>Could you write that down for me?</li></ul>
+<div class="short"><strong>In short:</strong> Converge towards your listener. Avoid idioms and abbreviations, explain Finnish terms and check understanding with open questions.</div></div></details>
+<details class="acc"><summary>Too much or too little?</summary><div class="acc-body"><figure class="fig"><div class="cont"><div class="cbar"></div><div class="clabels"><span><b>Under-accommodation</b>fast, idiomatic, full of abbreviations</span><span class="cmid">Balanced: clear, structured, checked</span><span style="text-align:right"><b>Over-accommodation</b>slow, loud, simplified, patronising</span></div></div><figcaption>Aim for the middle, and adjust to the person.</figcaption></figure></div></details>
+</section>
+
+<section class="panel" id="keywords">
+  <h2>Vocabulary: English–Finnish</h2>
+  <p>HR vocabulary in eight areas. Choose an area or search. BrE = British English, AmE = American English.</p>
+  <div class="quiz-picker" id="kw-areas"></div>
+  <input type="search" id="kw-search" placeholder="Search in English or Finnish" aria-label="Search vocabulary">
+  <div class="table-scroll"><table>
+    <thead><tr><th>English</th><th>Finnish</th><th>Meaning and example</th><th>Area</th></tr></thead>
+    <tbody id="kw-body"></tbody>
+  </table></div>
+</section>
+
+<section class="panel" id="quiz">
+  <h2>Quiz</h2>
+  <p>Choose a module or "All modules". You see the answer and a short explanation after each question.</p>
+  <div class="quiz-picker" id="quiz-picker"></div>
+  <div class="score" id="score"></div>
+  <div id="quiz-body"></div>
+</section>
+
+<section class="panel" id="presentation">
+  <h2>Final presentation</h2>
+  <div class="card">
+    <h3>The task</h3>
+    <p>Give a short talk (4–5 minutes) for new international employees at your organisation. Choose one topic that new employees need to understand, for example:</p>
+    <ul>
+      <li>annual leave and how it builds up</li>
+      <li>occupational health care</li>
+      <li>sick leave: what to do when you are ill</li>
+      <li>the development discussion</li>
+      <li>the collective agreement</li>
+      <li>feedback and communication culture in Finnish workplaces</li>
+      <li>how your organisation and HR team are organised</li>
+    </ul>
+    <p>After your talk, answer one or two questions from the audience.</p>
+  </div>
+  <div class="card">
+    <h3>Structure</h3>
+    <ol>
+      <li><strong>Opening:</strong> welcome the audience and say what you will cover.</li>
+      <li><strong>Main part:</strong> two or three main points. Use the four steps: rule, reason, what to do, where to find more.</li>
+      <li><strong>Summary:</strong> repeat the key message in one or two sentences.</li>
+      <li><strong>Questions:</strong> invite questions and check understanding.</li>
+    </ol>
+    <div class="label">Useful phrases</div>
+    <ul class="phrases">
+      <li>Welcome, everyone. Today I'd like to explain how annual leave works in Finland.</li>
+      <li>I'll cover three things: …</li>
+      <li>First, … / Let's move on to … / Finally, …</li>
+      <li>The main difference from many other countries is that…</li>
+      <li>In practice, this means that…</li>
+      <li>So, to sum up, …</li>
+      <li>Do you have any questions? / Does that make sense?</li>
+      <li>That's a good question. I'm not sure, but I'll find out and let you know.</li>
+    </ul>
+  </div>
+  <div class="card">
+    <h3>Checklist</h3>
+    <ul>
+      <li>My talk is 4–5 minutes long.</li>
+      <li>I use plain English and explain every Finnish term.</li>
+      <li>I use signposts to show the structure.</li>
+      <li>I have checked the facts in our own policies or official sources.</li>
+      <li>I have practised the talk aloud at least once.</li>
+    </ul>
+    <div class="note">Use Modules 2 and 3 to prepare. Add a short learning journal entry after the talk: what went well, and what you would change.</div>
+  </div>
+</section>
+
+<section class="panel" id="answers">
+  <h2>Answer key</h2>
+  <div id="answer-body"></div>
+</section>
+
+<section class="panel" id="sources">
+  <h2>Sources</h2>
+  <div class="card"><ul id="source-list"></ul>
+  <div class="note">Laws and HR policies change. Check current rules with your HR team or official sources.</div></div>
+</section>
+
+</div></main>
+
+<footer><div class="wrap">
+  <p>HR English: Self-study Coursebook. Designed by <a href="https://www.linkedin.com/in/hagu1/" target="_blank" rel="noopener">Hamid Guedra</a> (Language Centre, <a href="https://lab.fi/en" target="_blank" rel="noopener">LAB University of Applied Sciences</a>). Created with Claude Opus 5.5.</p>
+</div></footer>
+
+<script>
+const MODULES = [
+ {
+  "id": 1,
+  "title": "Recruiting and interviewing",
+  "intro": "Recruitment is often the first contact between an international professional and your organisation. This module covers job adverts, inclusive wording, interview structure, interview questions and next steps. The reading follows Daniel, a software developer from Spain, as he applies for a job at Nordbyte, a fictional company in Lahti.",
+  "cards": [
+   {
+    "title": "The structure of a discussion",
+    "body": "<p>Most structured discussions have four stages: opening, main questions, the other person's questions, and closing. Signposts mark each change.</p><figure class=\"fig\"><div class=\"flow\"><div class=\"step\"><span class=\"n\">1</span><b>Opening</b><span>welcome, purpose, structure</span></div><div class=\"step\"><span class=\"n\">2</span><b>Main questions</b><span>signpost each new topic</span></div><div class=\"step\"><span class=\"n\">3</span><b>Their questions</b><span>invite and answer</span></div><div class=\"step\"><span class=\"n\">4</span><b>Closing</b><span>summary and next steps</span></div></div><figcaption>Four stages of a structured discussion.</figcaption></figure>",
+    "phrases": [
+     "Opening: Thanks for coming. First, I'll tell you a bit about the role.",
+     "Moving on: Let's move on to your work experience.",
+     "Adding: I'd also like to ask about…",
+     "Their questions: Do you have any questions for us?",
+     "Closing: Before we finish, … / To sum up, …",
+     "Next steps: We'll contact you by the end of next week."
+    ],
+    "example": "",
+    "short": "Open, ask, invite questions, close. Signpost each step."
+   },
+   {
+    "title": "Interview questions",
+    "body": "<p><strong>Open questions</strong> let the candidate talk: <em>Tell me about yourself.</em></p>\n<p><strong>Behavioural questions</strong> ask about real past situations: <em>Tell me about a time when you solved a conflict at work.</em> The idea is that past behaviour shows how a person works.</p>\n<p><strong>Follow-up questions</strong> go deeper: <em>What did you do next? What was the result?</em></p>\n<p><strong>Questions to avoid:</strong> in Finland and the EU, equality and non-discrimination laws limit what you can ask. Do not ask about age, family plans, religion, health or origin unless the question is directly necessary for the job. Check your organisation's recruitment guidelines.</p>",
+    "phrases": [
+     "Tell me about yourself.",
+     "Why are you interested in this role?",
+     "Tell me about a time when…",
+     "What did you learn from that?",
+     "What would you do if…?"
+    ],
+    "example": "",
+    "short": "Ask open and behavioural questions. Avoid personal questions."
+   },
+   {
+    "title": "Probing questions, next steps and reference checks",
+    "body": "<p>Experienced interviewers probe: they ask for details until they get real evidence. They also tell candidates clearly what happens next.</p>\n<p>Reference checks are short structured calls with a referee: a person who knows the candidate's work. In Finland, you normally need the candidate's consent before you contact referees. Check your organisation's practice.</p>",
+    "phrases": [
+     "Could you walk me through your last project?",
+     "What was your role in that, specifically?",
+     "How did you measure success?",
+     "What would you do differently now?",
+     "What are your salary expectations?",
+     "We're at an early stage in the process.",
+     "The next step is a second interview with the team.",
+     "You'll hear from us by the end of next week.",
+     "Reference check: In what capacity did you work with her?",
+     "Reference check: How would you describe his main strengths?"
+    ],
+    "example": "",
+    "short": "Probe for evidence; state the next steps; get consent before references."
+   },
+   {
+    "title": "Job adverts, inclusive wording and rejections",
+    "body": "<p>A job advert is often the first contact with an international candidate. Keep it clear, specific and inclusive.</p>\n<ul><li>Use gender-neutral job titles: <em>chair</em>, not <em>chairman</em>; <em>salesperson</em>, not <em>salesman</em>.</li>\n<li>Describe the work and the skills, not the person: <em>experience of…</em>, not <em>young and energetic</em>.</li>\n<li>Say which languages are required, and at what level. <em>Fluent Finnish</em> excludes many international candidates; ask for it only if the job really needs it.</li>\n<li>Singular <em>they</em> is standard for an unknown person: <em>The successful candidate will… They will…</em></li></ul>\n<p>Rejection messages should be short, polite and final. Do not give reasons you cannot defend.</p>",
+    "phrases": [
+     "We are looking for a software developer to join our team in Lahti.",
+     "You will be responsible for…",
+     "The successful candidate will have experience of…",
+     "Finnish is an advantage but not a requirement.",
+     "We welcome applicants from all backgrounds.",
+     "Thank you for your interest in the position. After careful consideration, we have decided to proceed with other candidates.",
+     "We will keep your application on file for similar roles, with your permission."
+    ],
+    "example": "",
+    "short": "Describe the work, not the person. Reject clearly and politely."
+   }
+  ],
+  "errors": [
+   [
+    "Tell about yourself.",
+    "Tell me about yourself."
+   ],
+   [
+    "Let's discuss about your goals.",
+    "Let's discuss your goals. / Let's talk about your goals."
+   ],
+   [
+    "Next question is…",
+    "My next question is… / Let's move on to…"
+   ],
+   [
+    "Do you have children? (in an interview)",
+    "Avoid. Ask only about things the job requires."
+   ],
+   [
+    "What is your salary wish?",
+    "What are your salary expectations?"
+   ],
+   [
+    "Can you open this more?",
+    "Could you tell me more about that? / Could you walk me through it?"
+   ],
+   [
+    "You were not chosen because you were bad in the interview.",
+    "After careful consideration, we have decided to proceed with other candidates."
+   ],
+   [
+    "We regret to inform that…",
+    "We regret to inform you that…"
+   ]
+  ],
+  "quiz": [
+   {
+    "q": "Which signpost moves to a new topic?",
+    "o": [
+     "Let's move on to your work experience.",
+     "Nice to meet you.",
+     "I see.",
+     "Thanks for coming."
+    ],
+    "a": 0,
+    "e": "\"Let's move on to…\" tells the listener the topic is changing."
+   },
+   {
+    "q": "Which is a behavioural question?",
+    "o": [
+     "Tell me about a time when you solved a conflict at work.",
+     "Do you like conflicts?",
+     "Are you good at your job?",
+     "Where do you live?"
+    ],
+    "a": 0,
+    "e": "Behavioural questions ask about real past situations."
+   },
+   {
+    "q": "Which is correct?",
+    "o": [
+     "Tell me about yourself.",
+     "Tell about yourself.",
+     "Tell to me about yourself.",
+     "Say me about yourself."
+    ],
+    "a": 0,
+    "e": "\"Tell\" needs a person: tell me."
+   },
+   {
+    "q": "Which question should you avoid in a job interview in Finland?",
+    "o": [
+     "Are you planning to have children?",
+     "Why are you interested in this role?",
+     "Tell me about a project you led.",
+     "What would you do if a deadline changed?"
+    ],
+    "a": 0,
+    "e": "Questions about family plans can be discriminatory."
+   },
+   {
+    "q": "Which is correct?",
+    "o": [
+     "We'll discuss your goals.",
+     "We'll discuss about your goals.",
+     "We'll discuss of your goals.",
+     "We'll discuss for your goals."
+    ],
+    "a": 0,
+    "e": "\"Discuss\" takes a direct object. No preposition."
+   },
+   {
+    "q": "Which signpost is for closing?",
+    "o": [
+     "Before we finish, do you have any questions for us?",
+     "First, I'll tell you about the role.",
+     "Let's start with your background.",
+     "I'd also like to ask about…"
+    ],
+    "a": 0,
+    "e": "\"Before we finish\" signals the end."
+   },
+   {
+    "q": "Why use signposts?",
+    "o": [
+     "They help the listener follow the structure.",
+     "They make the meeting longer.",
+     "They replace questions.",
+     "They are only for written texts."
+    ],
+    "a": 0,
+    "e": "Signposts show where the conversation is going."
+   },
+   {
+    "q": "Which is a good reference check question?",
+    "o": [
+     "In what capacity did you work with her?",
+     "Is she married?",
+     "Do you like her?",
+     "How old is she?"
+    ],
+    "a": 0,
+    "e": "Ask about the working relationship and work, not private life."
+   },
+   {
+    "q": "\"Could you walk me through your last project?\" asks the candidate to…",
+    "o": [
+     "explain it step by step.",
+     "show you the office.",
+     "go for a walk.",
+     "shorten the answer."
+    ],
+    "a": 0,
+    "e": "To walk someone through something is to explain it step by step."
+   },
+   {
+    "q": "Which is the most professional way to reject a candidate?",
+    "o": [
+     "After careful consideration, we have decided to proceed with other candidates.",
+     "You failed the interview.",
+     "We didn't like you.",
+     "Sorry, no."
+    ],
+    "a": 0,
+    "e": "It is clear, polite and does not judge the person."
+   },
+   {
+    "q": "Which job advert wording is the most inclusive?",
+    "o": [
+     "The successful candidate will have experience of software testing.",
+     "We are looking for a young and energetic salesman.",
+     "He will report to the team lead.",
+     "Native Finnish speakers only."
+    ],
+    "a": 0,
+    "e": "It describes experience, not age, gender or origin."
+   },
+   {
+    "q": "Which job title is gender-neutral?",
+    "o": [
+     "chair",
+     "chairman",
+     "salesman",
+     "foreman"
+    ],
+    "a": 0,
+    "e": "Chair (or chairperson) is gender-neutral."
+   }
+  ],
+  "reading": {
+   "title": "Nordbyte is hiring",
+   "type": "Job advert, interview and phone call",
+   "text": "<p><strong>Part 1: The job advert</strong></p>\n<p><strong>Software Developer, Cloud Services (permanent, full-time)</strong></p>\n<p>Nordbyte is a software company in Lahti with about 300 employees. We build cloud services for Nordic retailers. We are now looking for a software developer to <mark class=\"lp\">join our cloud services team<sup>1</sup></mark>.</p>\n<p><strong>What you will do:</strong> You <mark class=\"lp\">will be responsible for<sup>2</sup></mark> designing and maintaining back-end services. You will work in a team of eight developers and report to the team lead.</p>\n<p><strong>What we are looking for:</strong> The <mark class=\"lp\">successful candidate<sup>3</sup></mark> will have at least three years of experience in back-end development and good teamwork skills. Finnish is <mark class=\"lp\">an advantage but not a requirement<sup>4</sup></mark>: our working language is English.</p>\n<p><strong>What we offer:</strong> a permanent contract, flexitime, a hybrid working model, occupational health care, a lunch benefit and a structured onboarding programme. We <mark class=\"lp\">welcome applicants from all backgrounds<sup>5</sup></mark>.</p>\n<p>The <mark class=\"lp\">closing date<sup>6</sup></mark> is 15 March. Interviews will be held in the week beginning 22 March.</p>\n<p><strong>Part 2: The interview</strong></p>\n<p><strong>Mikko (HR):</strong> Hi, Daniel. Thanks for joining us. Can you hear us all right?</p>\n<p><strong>Daniel:</strong> Yes, perfectly, thanks.</p>\n<p><strong>Mikko:</strong> Great. I'm Mikko, the HR business partner for our IT units, and this is Heidi, the team lead. <mark class=\"lp\">First, I'll tell you a bit about the role<sup>7</sup></mark>, and then we'd like to hear about your experience. We'll have about forty-five minutes.</p>\n<p><strong>Daniel:</strong> Sounds good.</p>\n<p><strong>Mikko:</strong> … So that's the role. <mark class=\"lp\">Let's move on to<sup>8</sup></mark> your background. <mark class=\"lp\">Tell me about a time when<sup>9</sup></mark> you had to deal with a disagreement in your team.</p>\n<p><strong>Daniel:</strong> In my last job in Valencia, two developers disagreed about priorities, and it started to delay the project.</p>\n<p><strong>Heidi:</strong> <mark class=\"lp\">What was your role in that, specifically?<sup>10</sup></mark></p>\n<p><strong>Daniel:</strong> I was the most senior developer. I talked to each of them first, and then the three of us agreed on a plan.</p>\n<p><strong>Heidi:</strong> <mark class=\"lp\">Could you walk me through<sup>11</sup></mark> that conversation?</p>\n<p><strong>Daniel:</strong> Sure. I asked each of them what mattered most and why. It turned out they wanted the same thing but in a different order…</p>\n<p><strong>Mikko:</strong> Thank you, that's very clear. One practical question: <mark class=\"lp\">what are your salary expectations<sup>12</sup></mark>?</p>\n<p><strong>Daniel:</strong> Based on what I've read about the Finnish market, I'd expect something between 4,500 and 5,000 euros a month.</p>\n<p><strong>Mikko:</strong> Noted. <mark class=\"lp\">Before we finish<sup>13</sup></mark>, do you have any questions for us?</p>\n<p><strong>Daniel:</strong> Yes. What does the onboarding look like for someone moving from abroad?</p>\n<p><strong>Mikko:</strong> You'd have a buddy and a four-week onboarding plan, and HR helps with practical matters like the tax card. As for the next steps, we're interviewing four candidates this week. <mark class=\"lp\">You'll hear from us by<sup>14</sup></mark> Friday next week.</p>\n<p><strong>Part 3: The phone call</strong></p>\n<p><strong>Mikko:</strong> Hi, Daniel, it's Mikko from Nordbyte. Is now a good time?</p>\n<p><strong>Daniel:</strong> Yes, of course.</p>\n<p><strong>Mikko:</strong> I'm <mark class=\"lp\">pleased to offer you the position<sup>15</sup></mark> of software developer. The offer is <mark class=\"lp\">subject to<sup>16</sup></mark> satisfactory references. I'll send you the written offer and the contract today.</p>\n<p><strong>Daniel:</strong> That's great news. Thank you!</p>\n<p><strong>Mikko:</strong> Take a couple of days to read the contract, and <mark class=\"lp\">let me know if you have any questions<sup>17</sup></mark>. We'd like you to start on 1 June, if that works for you.</p>",
+   "points": [
+    [
+     "join our cloud services team",
+     "A standard, welcoming advert phrase. Also: join us as…"
+    ],
+    [
+     "will be responsible for",
+     "Future form describes the duties in an advert."
+    ],
+    [
+     "successful candidate",
+     "The person who gets the job. Gender-neutral."
+    ],
+    [
+     "an advantage but not a requirement",
+     "States the language need honestly without excluding applicants."
+    ],
+    [
+     "welcome applicants from all backgrounds",
+     "An inclusive statement common in adverts."
+    ],
+    [
+     "closing date",
+     "The last day to apply (BrE). Also: application deadline."
+    ],
+    [
+     "First, I'll tell you a bit about the role",
+     "Opening signpost: shows the structure."
+    ],
+    [
+     "Let's move on to",
+     "Signpost for a new topic."
+    ],
+    [
+     "Tell me about a time when",
+     "Opens a behavioural question: asks for a real past example."
+    ],
+    [
+     "What was your role in that, specifically?",
+     "Probing: separates the candidate's own work from the team's."
+    ],
+    [
+     "Could you walk me through",
+     "= explain step by step."
+    ],
+    [
+     "what are your salary expectations",
+     "The standard way to ask about pay. Not \"salary wish\"."
+    ],
+    [
+     "Before we finish",
+     "Closing signpost."
+    ],
+    [
+     "You'll hear from us by",
+     "States the next step and the deadline clearly."
+    ],
+    [
+     "pleased to offer you the position",
+     "The standard phrase for a job offer."
+    ],
+    [
+     "subject to",
+     "= only if; depending on. Common in offers and contracts."
+    ],
+    [
+     "let me know if you have any questions",
+     "A friendly, open invitation to ask."
+    ]
+   ]
+  },
+  "journal": [
+   "Write three questions for an interview with an international candidate: one behavioural question, one probing question and one signpost.",
+   "Look at a job advert from your organisation (or one you have seen). Is it clear and inclusive? Rewrite one sentence to make it better.",
+   "After the class: which question worked best in your group? Why?"
+  ],
+  "topic": {
+   "title": "Recruiting internationally",
+   "text": "<p>Many Finnish organisations now recruit <mark class=\"lp\">international talent<sup>1</sup></mark>. For a candidate abroad, the <mark class=\"lp\">job advert<sup>2</sup></mark> is often the first contact with your organisation, so it needs to be clear and <mark class=\"lp\">inclusive<sup>3</sup></mark>. Good adverts describe the <mark class=\"lp\">duties<sup>4</sup></mark> and the <mark class=\"lp\">requirements<sup>5</sup></mark>, not the ideal person. They use <mark class=\"lp\">gender-neutral job titles<sup>6</sup></mark> and say honestly which languages are needed.</p>\n<p>The next step is <mark class=\"lp\">screening<sup>7</sup></mark>: checking applications against the <mark class=\"lp\">selection criteria<sup>8</sup></mark> and <mark class=\"lp\">shortlisting<sup>9</sup></mark> the strongest candidates. Many organisations use a <mark class=\"lp\">structured interview<sup>10</sup></mark>, in which every candidate answers the same questions. This makes the process fairer and the candidates easier to compare.</p><figure class=\"fig\"><div class=\"flow\"><div class=\"step\"><span class=\"n\">1</span><b>Job advert</b><span>duties, requirements, languages</span></div><div class=\"step\"><span class=\"n\">2</span><b>Screening</b><span>check against criteria</span></div><div class=\"step\"><span class=\"n\">3</span><b>Shortlist</b><span>the strongest candidates</span></div><div class=\"step\"><span class=\"n\">4</span><b>Interviews</b><span>structured questions</span></div><div class=\"step\"><span class=\"n\">5</span><b>References</b><span>with consent</span></div><div class=\"step\"><span class=\"n\">6</span><b>Offer</b><span>often subject to conditions</span></div><div class=\"step\"><span class=\"n\">7</span><b>Onboarding</b><span>first weeks</span></div></div><figcaption>The recruitment process, from advert to onboarding.</figcaption></figure>\n<p><mark class=\"lp\">Behavioural questions<sup>11</sup></mark> ask about real past situations: <em>Tell me about a time when…</em> <mark class=\"lp\">Probing questions<sup>12</sup></mark> ask for details: <em>What was your role, specifically?</em> Interviewers also use <mark class=\"lp\">signposts<sup>13</sup></mark> to show the structure of the interview. This helps candidates who are not using their first language.</p>\n<p>Before making an offer, you may do a <mark class=\"lp\">reference check<sup>14</sup></mark> with the candidate's <mark class=\"lp\">referees<sup>15</sup></mark>. In Finland, you normally need the candidate's consent first. A <mark class=\"lp\">job offer<sup>16</sup></mark> is often <mark class=\"lp\">subject to<sup>17</sup></mark> conditions, for example satisfactory references. Candidates who are not selected deserve a short, polite and clear message. A good <mark class=\"lp\">candidate experience<sup>18</sup></mark> protects your <mark class=\"lp\">employer brand<sup>19</sup></mark>, even when the answer is no.</p>",
+   "keys": [
+    [
+     "international talent",
+     "skilled professionals from other countries"
+    ],
+    [
+     "job advert",
+     "a public notice about a vacancy (also: job ad, job posting)"
+    ],
+    [
+     "inclusive",
+     "not excluding people because of gender, age, origin or other personal characteristics"
+    ],
+    [
+     "duties",
+     "the tasks of a job"
+    ],
+    [
+     "requirements",
+     "the skills and experience a candidate must have"
+    ],
+    [
+     "gender-neutral job titles",
+     "e.g. chair, salesperson"
+    ],
+    [
+     "screening",
+     "checking applications to remove unsuitable ones"
+    ],
+    [
+     "selection criteria",
+     "the standards used to choose a candidate"
+    ],
+    [
+     "shortlisting",
+     "choosing the best applicants for the next stage"
+    ],
+    [
+     "structured interview",
+     "an interview where every candidate gets the same questions"
+    ],
+    [
+     "behavioural questions",
+     "questions about real past situations"
+    ],
+    [
+     "probing questions",
+     "follow-up questions that ask for details"
+    ],
+    [
+     "signposts",
+     "phrases that show where a conversation is going"
+    ],
+    [
+     "reference check",
+     "a call or questionnaire to a referee"
+    ],
+    [
+     "referees",
+     "people who give information about a candidate's work (AmE: references)"
+    ],
+    [
+     "job offer",
+     "a formal offer of a job"
+    ],
+    [
+     "subject to",
+     "only if; depending on"
+    ],
+    [
+     "candidate experience",
+     "how candidates feel about the recruitment process"
+    ],
+    [
+     "employer brand",
+     "how people see an organisation as a place to work"
+    ]
+   ]
+  }
+ },
+ {
+  "id": 2,
+  "title": "Welcome and onboarding",
+  "intro": "The first weeks shape how a new employee feels about the organisation. This module covers welcoming a new employee, introducing yourself and your organisation, small talk, building trust and different communication styles. In the reading, Daniel starts work at Nordbyte.",
+  "cards": [
+   {
+    "title": "Welcoming a new employee",
+    "body": "<p>The first day shapes how a new employee feels about the organisation. For international employees, practical information matters most: who to ask, where things are, and what happens this week.</p><figure class=\"fig\"><div class=\"flow\"><div class=\"step\"><span class=\"n\">1</span><b>Before day 1</b><span>contract, equipment, welcome email</span></div><div class=\"step\"><span class=\"n\">2</span><b>Week 1</b><span>access rights, team, occupational health care</span></div><div class=\"step\"><span class=\"n\">3</span><b>Weeks 2–4</b><span>real tasks with the buddy</span></div><div class=\"step\"><span class=\"n\">4</span><b>Months 1–6</b><span>check-ins, end of probation</span></div></div><figcaption>A typical onboarding timeline.</figcaption></figure>",
+    "phrases": [
+     "Welcome to Nordbyte! We're really glad to have you on board.",
+     "I'll be your contact person in HR for the first few months.",
+     "This is your onboarding plan for the first four weeks.",
+     "Your buddy is Ville. He'll show you around and answer everyday questions.",
+     "Don't hesitate to ask if anything is unclear.",
+     "Let's meet again at the end of the week to see how things are going.",
+     "Is there anything you'd like to know before we start?"
+    ],
+    "example": "",
+    "short": "Welcome, contact person, plan, buddy, follow-up."
+   },
+   {
+    "title": "Introducing yourself and your role",
+    "body": "<p>A good work introduction is short. It has three parts: your name, your role and one detail about your work.</p>\n<p>Use the <strong>present simple</strong> for your job: <em>I work in HR.</em> Use the <strong>present perfect</strong> for how long: <em>I've worked here for six years.</em></p><p>When you work with international colleagues, \"I work in HR\" is often not enough. People want to know what you handle and when to contact you. Say what you are responsible for and who you work with.</p>\n<p>An <strong>HR business partner</strong> is an HR specialist who supports one unit and its managers. The term is common in larger organisations.</p><p><strong>Remit</strong> (the areas you are responsible for) is formal and mainly British. You will read it in job descriptions and policies. In speech, it is most natural in the negative: <em>I'm afraid that's outside my remit.</em></p>",
+    "phrases": [
+     "Hi, I'm Anna. I work in HR.",
+     "I'm responsible for recruitment and onboarding.",
+     "I mainly work with payroll.",
+     "I've worked here for six years / since 2019.",
+     "I'm based on the Lahti campus.",
+     "I'm in charge of the recruitment process, from the job advertisement to onboarding.",
+     "I'm responsible for pay, benefits and working-time questions.",
+     "I handle employee queries about leave and absences.",
+     "I look after the onboarding programme.",
+     "I work closely with line managers on performance and development.",
+     "I'm the first point of contact for new employees.",
+     "I'm the HR business partner for the engineering unit.",
+     "We outsource payroll to an external provider.",
+     "Our HR function is split into three areas: recruitment, employee relations and development.",
+     "I'm afraid that's outside my remit. My colleague in payroll can help you."
+    ],
+    "example": "<p><strong>New manager:</strong> Who should I talk to about a fixed-term contract?<br><strong>HR:</strong> That's me. I handle contracts and working hours. For anything to do with training, my colleague Laura is the right person.</p>",
+    "short": "Name, role, one detail. Say what you are responsible for."
+   },
+   {
+    "title": "Describing your organisation and its roles",
+    "body": "<p>People often ask what your organisation does, how big it is and how it is organised. Answer in two or three sentences.</p>\n<p>For size, say <em>We have about 500 employees</em> or <em>There are about 500 of us</em>. Do not say <em>We are 500 persons</em>.</p><p>Many HR words are the same in most organisations. Learn the English names for the people and teams you work with.</p>\n<p>Say <em>in HR</em>, <em>in finance</em>, <em>in marketing</em>: no article. <em>Personnel</em> (henkilöstö) is not the same word as <em>personal</em> (henkilökohtainen).</p>",
+    "phrases": [
+     "We're a university of applied sciences / a software company / a hospital.",
+     "We have about 500 employees.",
+     "Our main office is in Lahti.",
+     "The HR team supports all staff and managers.",
+     "I report to the HR director.",
+     "line manager: the person you report to directly (lähiesihenkilö)",
+     "colleague: a person you work with",
+     "staff / personnel: all the people who work in an organisation",
+     "payroll: the team or system that pays salaries",
+     "recruitment: finding and hiring new employees"
+    ],
+    "example": "<p><strong>Visitor:</strong> So what does your organisation do?<br><strong>Mika:</strong> We're a university of applied sciences. We have about 500 employees and two campuses. The HR team is small: there are five of us.</p>",
+    "short": "Say what you do, how big you are and where you are. Two or three sentences are enough."
+   },
+   {
+    "title": "Small talk and building trust",
+    "body": "<p>Small talk is a short, friendly conversation about everyday topics. It happens before meetings, in the coffee room and at the start of phone calls. In many cultures, it is an important first step in a working relationship.</p>\n<p>Safe topics: the weekend, holidays, travel, the weather, work projects. Topics to avoid with new people: salary, religion, politics, health.</p>\n<p>Keep the conversation going: answer, add one detail, then ask back.</p><p>People trust colleagues who are reliable and open. Small actions matter: you reply when you said you would, you follow up, and you admit mistakes quickly.</p>",
+    "phrases": [
+     "How was your weekend?",
+     "Good, thanks. We went to the cottage. How about you?",
+     "Have you been busy lately?",
+     "Are you going anywhere for the holidays?",
+     "I'll get back to you by Friday.",
+     "Just following up on our conversation last week.",
+     "Thanks for letting me know.",
+     "My mistake. I'll correct it today.",
+     "I'm not sure, but I'll find out."
+    ],
+    "example": "",
+    "short": "Answer, add a detail, ask back. Make clear promises and keep them."
+   },
+   {
+    "title": "Direct and indirect styles",
+    "body": "<p>Some people say exactly what they mean. Others expect the listener to understand from the context. The anthropologist Edward T. Hall called these <strong>low-context</strong> and <strong>high-context</strong> communication (Hall 1976). Erin Meyer (2014) describes similar differences in how people give negative feedback and disagree.</p>\n<p>Finnish communication is often described as direct and comfortable with silence. In some other cultures, a long silence can mean disagreement or lack of interest. A short response such as <em>I see</em> or <em>Let me think about that</em> helps.</p>\n<p><strong>Be careful:</strong> these ideas describe general tendencies in groups, not individuals. Many people do not fit the typical pattern of their country. Use the ideas as questions, not as rules.</p><figure class=\"fig\"><div class=\"cont\"><div class=\"cbar\"></div><div class=\"clabels\"><span><b>Low-context</b>meaning is in the words; direct; explicit</span><span class=\"cmid\">Most people and groups are somewhere in between</span><span style=\"text-align:right\"><b>High-context</b>meaning is in the situation; indirect; implicit</span></div></div><figcaption>Communication styles as a continuum (after Hall 1976). Individuals move along the line depending on the situation.</figcaption></figure>",
+    "phrases": [
+     "Let me think about that for a moment.",
+     "Just to be clear, do you mean…?",
+     "In Finland, we tend to be quite direct. Please tell me if I sound too direct."
+    ],
+    "example": "",
+    "short": "Styles differ, but individuals differ more. Check meaning; do not assume it."
+   },
+   {
+    "title": "Rapport and common workplace expressions",
+    "body": "<p><strong>Rapport</strong> is a good, easy connection with someone. HR professionals build rapport with managers, employees and candidates across the organisation.</p>\n<p>Native speakers use many fixed expressions at work. You do not need to use all of them, but you should understand them. Some people see them as jargon, so use them with care in international groups.</p>",
+    "phrases": [
+     "It's good to finally put a face to the name. (you meet someone after emailing)",
+     "Let's keep in touch.",
+     "Feel free to reach out if you have any questions. (reach out = contact)",
+     "Keep me in the loop. (keep me informed)",
+     "Let's touch base next week. (make brief contact)",
+     "Are we on the same page? (do we agree / understand the same thing?)",
+     "Could we have a quick catch-up on Friday? (a short update meeting)",
+     "My door is always open. (you can come and talk to me at any time)"
+    ],
+    "example": "",
+    "short": "Understand common expressions; use them carefully with international groups."
+   }
+  ],
+  "errors": [
+   [
+    "I am working here since 2019.",
+    "I have worked here since 2019."
+   ],
+   [
+    "We are 200 persons.",
+    "We have 200 employees. / There are 200 of us."
+   ],
+   [
+    "I work in the HR.",
+    "I work in HR."
+   ],
+   [
+    "I'm responsible of payroll.",
+    "I'm responsible for payroll. / I'm in charge of payroll."
+   ],
+   [
+    "I take care about recruiting.",
+    "I take care of recruitment. / I handle recruitment."
+   ],
+   [
+    "Nice to see you. (first meeting)",
+    "Nice to meet you. (first meeting) / Nice to see you again."
+   ],
+   [
+    "Let's keep contact.",
+    "Let's keep in touch. / Let's stay in touch."
+   ],
+   [
+    "I'll inform you about it later. (can sound very formal)",
+    "I'll keep you posted. / I'll let you know."
+   ]
+  ],
+  "quiz": [
+   {
+    "q": "I ___ at this organisation since 2018.",
+    "o": [
+     "work",
+     "am working",
+     "have worked",
+     "worked"
+    ],
+    "a": 2,
+    "e": "With \"since\" + a point in time, use the present perfect: I have worked."
+   },
+   {
+    "q": "Which sentence describes the size of your organisation correctly?",
+    "o": [
+     "We are 300 persons.",
+     "We have about 300 employees.",
+     "We are 300 peoples.",
+     "Our persons are 300."
+    ],
+    "a": 1,
+    "e": "Say \"We have about 300 employees\" or \"There are about 300 of us\"."
+   },
+   {
+    "q": "I'm responsible ___ recruitment.",
+    "o": [
+     "for",
+     "of",
+     "about",
+     "to"
+    ],
+    "a": 0,
+    "e": "The phrase is \"responsible for\"."
+   },
+   {
+    "q": "Which is the best first sentence when you meet new international colleagues?",
+    "o": [
+     "My name is Anna and I am HR.",
+     "Hi, I'm Anna. I work in HR, mainly with recruitment.",
+     "Anna. HR.",
+     "I am Anna, I am working in the HR since long time."
+    ],
+    "a": 1,
+    "e": "It gives your name, your role and one detail, with correct grammar."
+   },
+   {
+    "q": "An HR business partner is…",
+    "o": [
+     "an HR specialist who supports one unit and its managers.",
+     "an external recruitment company.",
+     "a union representative.",
+     "a payroll system."
+    ],
+    "a": 0,
+    "e": "HR business partners work closely with the management of one unit."
+   },
+   {
+    "q": "A colleague asks \"How was your weekend?\" What is the best answer?",
+    "o": [
+     "Good, thanks. We went to the cottage. How about you?",
+     "Good.",
+     "A ten-minute story about every day",
+     "Why?"
+    ],
+    "a": 0,
+    "e": "Answer, add one detail, ask back."
+   },
+   {
+    "q": "High-context communication means that…",
+    "o": [
+     "much of the meaning comes from context and what is not said.",
+     "people use many words and very direct statements.",
+     "people speak loudly.",
+     "people use technical terms."
+    ],
+    "a": 0,
+    "e": "In high-context communication, the listener reads meaning from the situation."
+   },
+   {
+    "q": "In some cultures, a long silence in a meeting may be understood as…",
+    "o": [
+     "disagreement or lack of interest.",
+     "strong agreement in all cases.",
+     "a joke.",
+     "the end of the meeting."
+    ],
+    "a": 0,
+    "e": "Silence can mean different things. A short response helps."
+   },
+   {
+    "q": "\"Keep me in the loop\" means…",
+    "o": [
+     "keep me informed.",
+     "include me in the training.",
+     "call me every day.",
+     "don't tell me anything."
+    ],
+    "a": 0,
+    "e": "To keep someone in the loop is to keep them informed."
+   },
+   {
+    "q": "You say \"It's good to finally put a face to the name\" when…",
+    "o": [
+     "you meet someone in person after emailing or calling.",
+     "you forget someone's name.",
+     "you introduce a new employee.",
+     "you end a meeting."
+    ],
+    "a": 0,
+    "e": "You knew the name; now you see the person."
+   },
+   {
+    "q": "A colleague asks you about a tax question that payroll handles. What is the most natural answer?",
+    "o": [
+     "I'm afraid that's outside my remit. My colleague in payroll can help you.",
+     "My remit is not that.",
+     "That is not remitted to me.",
+     "I have no remit."
+    ],
+    "a": 0,
+    "e": "\"Outside my remit\" is the most natural spoken use of remit: a polite way to say it is not your area."
+   },
+   {
+    "q": "Ideas about national communication styles are best used as…",
+    "o": [
+     "general tendencies; individuals differ.",
+     "exact rules for every person.",
+     "proof that everyone is the same.",
+     "something that is always wrong."
+    ],
+    "a": 0,
+    "e": "They describe groups, not individuals."
+   }
+  ],
+  "reading": {
+   "title": "Daniel's first weeks",
+   "type": "Dialogues and short story",
+   "text": "<p><strong>Part 1: First morning</strong></p>\n<p><strong>Sara (HR):</strong> Good morning, Daniel! <mark class=\"lp\">Welcome to Nordbyte. We're really glad to have you on board.<sup>1</sup></mark></p>\n<p><strong>Daniel:</strong> Thank you. I'm happy to be here, although it's a bit colder than Valencia!</p>\n<p><strong>Sara:</strong> I'm sure it is. How was the move?</p>\n<p><strong>Daniel:</strong> Busy, but fine. The flat is nice, and it's close to the office.</p>\n<p><strong>Sara:</strong> Good to hear. So, I'm Sara. <mark class=\"lp\">I'm responsible for<sup>2</sup></mark> contracts and onboarding, so <mark class=\"lp\">I'll be your contact person in HR<sup>3</sup></mark> for the first few months. <mark class=\"lp\">I've worked here for<sup>4</sup></mark> six years, so I know most people. Nordbyte <mark class=\"lp\">has about 300 employees<sup>5</sup></mark>, and your team has eight people. This is your onboarding plan for the next four weeks.</p>\n<p><strong>Daniel:</strong> Thanks. It looks very detailed.</p>\n<p><strong>Sara:</strong> It is. In the first week, you'll get your laptop and access rights, meet the team and visit occupational health care. In weeks two to four, you'll start on real tasks with Ville, your buddy. He'll show you around and answer everyday questions, like where the coffee machine is.</p>\n<p><strong>Daniel:</strong> The most important question!</p>\n<p><strong>Sara:</strong> Exactly. And <mark class=\"lp\">don't hesitate to ask<sup>6</sup></mark> me anything. <mark class=\"lp\">Let's meet again on Friday to see how things are going.<sup>7</sup></mark></p>\n<p><strong>Part 2: Coffee with Ville</strong></p>\n<p><strong>Ville:</strong> Hi, you must be Daniel. I'm Ville. <mark class=\"lp\">Nice to meet you.<sup>8</sup></mark></p>\n<p><strong>Daniel:</strong> Nice to meet you too. Sara said you're my buddy.</p>\n<p><strong>Ville:</strong> That's right. So, <mark class=\"lp\">how are you finding Lahti so far?<sup>9</sup></mark></p>\n<p><strong>Daniel:</strong> It's quiet, but I like it. I went for a walk by the lake yesterday.</p>\n<p><strong>Ville:</strong> Nice. In summer, it's even better. <mark class=\"lp\">Are you into<sup>10</sup></mark> sports? Some of us play floorball on Thursdays.</p>\n<p><strong>Daniel:</strong> I've never played, but I'd like to try.</p>\n<p><strong>Part 3: Week two, the quiet meeting</strong></p>\n<p>In his first team meeting, Daniel presented an idea for the new service and asked for comments. Nobody spoke. After ten seconds, he asked, a little nervously, \"Is something wrong with the idea?\" Nothing was wrong. His Finnish colleagues were simply thinking.</p>\n<p>Many Finns <mark class=\"lp\">tend to<sup>11</sup></mark> treat silence as normal. In many other places, a long pause is <mark class=\"lp\">read as<sup>12</sup></mark> doubt or disagreement. These are general patterns, not rules: many Finns talk a lot, and many Spaniards are comfortable with silence. But the patterns explain small misunderstandings.</p>\n<p>After the meeting, Heidi, the team lead, started to <mark class=\"lp\">think aloud<sup>13</sup></mark>: \"That's a good point. Let me think about it for a moment.\" At the end of the next meeting, she asked, \"<mark class=\"lp\">Are we all on the same page?<sup>14</sup></mark>\"</p>\n<p><strong>Part 4: Friday check-in</strong></p>\n<p><strong>Sara:</strong> So, how has your first week been?</p>\n<p><strong>Daniel:</strong> Good, mostly. I still don't have access to the test server, though.</p>\n<p><strong>Sara:</strong> Thanks for letting me know. That shouldn't happen. <mark class=\"lp\">I'll get back to you by Monday<sup>15</sup></mark>, and I'll <mark class=\"lp\">keep Heidi in the loop<sup>16</sup></mark>.</p>",
+   "points": [
+    [
+     "Welcome to Nordbyte. We're really glad to have you on board.",
+     "A warm, standard welcome. On board = part of the team."
+    ],
+    [
+     "I'm responsible for",
+     "The most natural way to describe your role in speech."
+    ],
+    [
+     "I'll be your contact person",
+     "Tells the newcomer exactly who to ask."
+    ],
+    [
+     "I've worked here for",
+     "Present perfect + for: a situation that started in the past and continues."
+    ],
+    [
+     "has about 300 employees",
+     "Describe size with have + employees, not \"we are 300 persons\"."
+    ],
+    [
+     "don't hesitate to ask",
+     "An encouraging invitation. Also: feel free to ask."
+    ],
+    [
+     "Let's meet again on Friday to see how things are going.",
+     "Sets a follow-up. Builds trust."
+    ],
+    [
+     "Nice to meet you.",
+     "For a first meeting. Later: Nice to see you again."
+    ],
+    [
+     "how are you finding Lahti so far?",
+     "= how do you like it? A friendly small talk question."
+    ],
+    [
+     "Are you into",
+     "Informal: are you interested in…?"
+    ],
+    [
+     "tend to",
+     "Describes a general pattern, not a rule. Useful for talking about cultures carefully."
+    ],
+    [
+     "read as",
+     "= understood as."
+    ],
+    [
+     "think aloud",
+     "Say what you are thinking so others understand your silence."
+    ],
+    [
+     "Are we all on the same page?",
+     "= Do we all understand and agree? An informal check."
+    ],
+    [
+     "I'll get back to you by Monday",
+     "A clear promise with a deadline."
+    ],
+    [
+     "keep Heidi in the loop",
+     "= keep Heidi informed."
+    ]
+   ]
+  },
+  "journal": [
+   "Write the welcome you would give a new international employee on the first morning (four or five sentences). Say who you are, what you are responsible for and one practical thing.",
+   "What do international employees at your organisation usually find hardest in their first weeks? How could HR help?",
+   "Note one thing you noticed in class about different communication styles."
+  ],
+  "topic": {
+   "title": "Onboarding international employees",
+   "text": "<p><mark class=\"lp\">Onboarding<sup>1</sup></mark> (also called <mark class=\"lp\">induction<sup>2</sup></mark>) is the process of helping a new employee settle into the job and the workplace. It usually starts before the first day and continues for several weeks or months. For international employees, good onboarding matters even more: they are learning a new job, a new workplace and often a new country at the same time.</p>\n<p>A typical <mark class=\"lp\">onboarding plan<sup>3</sup></mark> covers practical matters, such as equipment and <mark class=\"lp\">access rights<sup>4</sup></mark>; people, such as the team and a <mark class=\"lp\">buddy<sup>5</sup></mark>; and information, such as policies and benefits. A named <mark class=\"lp\">contact person<sup>6</sup></mark> in HR gives the newcomer someone to ask.</p>\n<p>Relationships matter as much as information. <mark class=\"lp\">Small talk<sup>7</sup></mark> helps new employees feel welcome, and <mark class=\"lp\">building trust<sup>8</sup></mark> depends on small actions: replying when you said you would, <mark class=\"lp\">following up<sup>9</sup></mark>, and <mark class=\"lp\">keeping people in the loop<sup>10</sup></mark>.</p>\n<p>New employees also meet a new <mark class=\"lp\">communication style<sup>11</sup></mark>. Finnish workplace communication is often described as <mark class=\"lp\">direct<sup>12</sup></mark> and comfortable with silence. Colleagues from <mark class=\"lp\">high-context<sup>13</sup></mark> cultures may expect more indirect signals, and they may <mark class=\"lp\">read silence as<sup>14</sup></mark> disagreement. These are <mark class=\"lp\">general tendencies<sup>15</sup></mark>, not rules: individuals differ. The practical lesson for HR is simple: explain what is normal here, and check understanding rather than assume it.</p>",
+   "keys": [
+    [
+     "onboarding",
+     "helping a new employee settle into the job and workplace (perehdytys)"
+    ],
+    [
+     "induction",
+     "another word for onboarding, common in BrE"
+    ],
+    [
+     "onboarding plan",
+     "a written schedule for the first weeks"
+    ],
+    [
+     "access rights",
+     "permissions to use systems and buildings"
+    ],
+    [
+     "buddy",
+     "an experienced colleague who helps a newcomer with everyday questions"
+    ],
+    [
+     "contact person",
+     "the person to ask about a certain matter"
+    ],
+    [
+     "small talk",
+     "short, friendly conversation about everyday topics"
+    ],
+    [
+     "building trust",
+     "creating confidence that you are reliable"
+    ],
+    [
+     "following up",
+     "checking on something later"
+    ],
+    [
+     "keeping people in the loop",
+     "keeping people informed"
+    ],
+    [
+     "communication style",
+     "a typical way of communicating"
+    ],
+    [
+     "direct",
+     "saying exactly what you mean"
+    ],
+    [
+     "high-context",
+     "communication where much meaning comes from the situation"
+    ],
+    [
+     "read silence as",
+     "understand silence as"
+    ],
+    [
+     "general tendencies",
+     "patterns in groups, not rules for individuals"
+    ]
+   ]
+  }
+ },
+ {
+  "id": 3,
+  "title": "Explaining Finnish working life",
+  "intro": "International employees have many questions about how working life works in Finland. This module helps you explain systems and policies clearly: the language of rules, formal policy language, plain rewriting and common questions. In the reading, Daniel asks HR about tax, holidays and remote work.",
+  "cards": [
+   {
+    "title": "Explaining a system to a newcomer",
+    "body": "<p>International employees often ask how things work in Finland. You know the system well, so the challenge is to explain it simply to someone with no background. Use four steps: the rule, the reason, what to do, and where to find more information.</p>\n<p>Compare with what the person knows. Check understanding at the end. Do not give legal advice you are not sure about: say where the official information is.</p><figure class=\"fig\"><div class=\"flow\"><div class=\"step\"><span class=\"n\">1</span><b>Rule</b><span>In Finland, it works like this: …</span></div><div class=\"step\"><span class=\"n\">2</span><b>Reason</b><span>The reason for this is…</span></div><div class=\"step\"><span class=\"n\">3</span><b>Action</b><span>What you need to do is…</span></div><div class=\"step\"><span class=\"n\">4</span><b>Source</b><span>You can find the details on…</span></div></div><figcaption>Four steps for explaining a rule or system.</figcaption></figure>",
+    "phrases": [
+     "In Finland, it works like this: …",
+     "The main difference from many other countries is that…",
+     "The reason for this is…",
+     "What you need to do is…",
+     "You can find the details on the Tax Administration's website / on the intranet.",
+     "I'm not an expert on that, but I can find out.",
+     "Does that make sense? / Is that clear so far?"
+    ],
+    "example": "",
+    "short": "Rule, reason, action, source. Compare and check."
+   },
+   {
+    "title": "Common questions from international employees",
+    "body": "<p>These are typical first questions. The answers depend partly on the law and partly on your organisation and collective agreement, so always check your own policies.</p>\n<ul><li><strong>Tax card (verokortti):</strong> the employer needs the employee's tax rate to pay salary. Without a tax card, the employer must withhold 60 per cent tax. Employees order a tax card in MyTax (OmaVero).</li>\n<li><strong>Annual leave:</strong> leave builds up month by month in the holiday credit year, which runs from 1 April to 31 March. New employees usually earn 2 days per month in their first year, and 2.5 days after that. Saturdays count as leave days, so a week of holiday uses six days.</li>\n<li><strong>Sick leave:</strong> practice depends on the organisation: how to report, how many days without a certificate, and when to visit occupational health care.</li>\n<li><strong>Occupational health care:</strong> employer-arranged health services. Explain what is included at your organisation.</li>\n<li><strong>Collective agreement:</strong> explain that it sets minimum pay and conditions for the sector, and that the employee's contract refers to it.</li>\n<li><strong>Probationary period:</strong> explain its length and what it means in practice.</li></ul><figure class=\"fig\"><svg viewBox=\"0 0 640 290\" role=\"img\" aria-labelledby=\"hct\" style=\"width:100%;height:auto;display:block\"><title id=\"hct\">Leave days built up during one holiday credit year: 2 days per month in the first year, 2.5 days per month later</title><line x1=\"44\" x2=\"630\" y1=\"240\" y2=\"240\" stroke=\"#e0e0e0\"/><text x=\"36\" y=\"244\" font-size=\"11\" text-anchor=\"end\" fill=\"#555\">0</text><line x1=\"44\" x2=\"630\" y1=\"196.8\" y2=\"196.8\" stroke=\"#e0e0e0\"/><text x=\"36\" y=\"200.8\" font-size=\"11\" text-anchor=\"end\" fill=\"#555\">6</text><line x1=\"44\" x2=\"630\" y1=\"153.6\" y2=\"153.6\" stroke=\"#e0e0e0\"/><text x=\"36\" y=\"157.6\" font-size=\"11\" text-anchor=\"end\" fill=\"#555\">12</text><line x1=\"44\" x2=\"630\" y1=\"110.4\" y2=\"110.4\" stroke=\"#e0e0e0\"/><text x=\"36\" y=\"114.4\" font-size=\"11\" text-anchor=\"end\" fill=\"#555\">18</text><line x1=\"44\" x2=\"630\" y1=\"67.19999999999999\" y2=\"67.19999999999999\" stroke=\"#e0e0e0\"/><text x=\"36\" y=\"71.19999999999999\" font-size=\"11\" text-anchor=\"end\" fill=\"#555\">24</text><line x1=\"44\" x2=\"630\" y1=\"24\" y2=\"24\" stroke=\"#e0e0e0\"/><text x=\"36\" y=\"28\" font-size=\"11\" text-anchor=\"end\" fill=\"#555\">30</text><rect x=\"50\" y=\"225.6\" width=\"17.416666666666668\" height=\"14.400000000000006\" fill=\"#9fd9d9\"/><rect x=\"69.41666666666667\" y=\"222\" width=\"17.416666666666668\" height=\"18\" fill=\"#069494\"/><text x=\"67.41666666666667\" y=\"256\" font-size=\"11\" text-anchor=\"middle\" fill=\"#1a1a1a\">Apr</text><rect x=\"98.83333333333334\" y=\"211.2\" width=\"17.416666666666668\" height=\"28.80000000000001\" fill=\"#9fd9d9\"/><rect x=\"118.25000000000001\" y=\"204\" width=\"17.416666666666668\" height=\"36\" fill=\"#069494\"/><text x=\"116.25000000000001\" y=\"256\" font-size=\"11\" text-anchor=\"middle\" fill=\"#1a1a1a\">May</text><rect x=\"147.66666666666669\" y=\"196.8\" width=\"17.416666666666668\" height=\"43.19999999999999\" fill=\"#9fd9d9\"/><rect x=\"167.08333333333334\" y=\"186\" width=\"17.416666666666668\" height=\"54\" fill=\"#069494\"/><text x=\"165.08333333333334\" y=\"256\" font-size=\"11\" text-anchor=\"middle\" fill=\"#1a1a1a\">Jun</text><rect x=\"196.5\" y=\"182.4\" width=\"17.416666666666668\" height=\"57.599999999999994\" fill=\"#9fd9d9\"/><rect x=\"215.91666666666666\" y=\"168\" width=\"17.416666666666668\" height=\"72\" fill=\"#069494\"/><text x=\"213.91666666666666\" y=\"256\" font-size=\"11\" text-anchor=\"middle\" fill=\"#1a1a1a\">Jul</text><rect x=\"245.33333333333334\" y=\"168\" width=\"17.416666666666668\" height=\"72\" fill=\"#9fd9d9\"/><rect x=\"264.75\" y=\"150\" width=\"17.416666666666668\" height=\"90\" fill=\"#069494\"/><text x=\"262.75\" y=\"256\" font-size=\"11\" text-anchor=\"middle\" fill=\"#1a1a1a\">Aug</text><rect x=\"294.1666666666667\" y=\"153.6\" width=\"17.416666666666668\" height=\"86.4\" fill=\"#9fd9d9\"/><rect x=\"313.58333333333337\" y=\"132\" width=\"17.416666666666668\" height=\"108\" fill=\"#069494\"/><text x=\"311.58333333333337\" y=\"256\" font-size=\"11\" text-anchor=\"middle\" fill=\"#1a1a1a\">Sep</text><rect x=\"343\" y=\"139.2\" width=\"17.416666666666668\" height=\"100.80000000000001\" fill=\"#9fd9d9\"/><rect x=\"362.4166666666667\" y=\"113.99999999999999\" width=\"17.416666666666668\" height=\"126.00000000000001\" fill=\"#069494\"/><text x=\"360.4166666666667\" y=\"256\" font-size=\"11\" text-anchor=\"middle\" fill=\"#1a1a1a\">Oct</text><rect x=\"391.83333333333337\" y=\"124.8\" width=\"17.416666666666668\" height=\"115.2\" fill=\"#9fd9d9\"/><rect x=\"411.25000000000006\" y=\"96\" width=\"17.416666666666668\" height=\"144\" fill=\"#069494\"/><text x=\"409.25000000000006\" y=\"256\" font-size=\"11\" text-anchor=\"middle\" fill=\"#1a1a1a\">Nov</text><rect x=\"440.6666666666667\" y=\"110.4\" width=\"17.416666666666668\" height=\"129.6\" fill=\"#9fd9d9\"/><rect x=\"460.08333333333337\" y=\"78\" width=\"17.416666666666668\" height=\"162\" fill=\"#069494\"/><text x=\"458.08333333333337\" y=\"256\" font-size=\"11\" text-anchor=\"middle\" fill=\"#1a1a1a\">Dec</text><rect x=\"489.5\" y=\"96\" width=\"17.416666666666668\" height=\"144\" fill=\"#9fd9d9\"/><rect x=\"508.9166666666667\" y=\"60\" width=\"17.416666666666668\" height=\"180\" fill=\"#069494\"/><text x=\"506.9166666666667\" y=\"256\" font-size=\"11\" text-anchor=\"middle\" fill=\"#1a1a1a\">Jan</text><rect x=\"538.3333333333334\" y=\"81.60000000000002\" width=\"17.416666666666668\" height=\"158.39999999999998\" fill=\"#9fd9d9\"/><rect x=\"557.75\" y=\"42\" width=\"17.416666666666668\" height=\"198\" fill=\"#069494\"/><text x=\"555.75\" y=\"256\" font-size=\"11\" text-anchor=\"middle\" fill=\"#1a1a1a\">Feb</text><rect x=\"587.1666666666667\" y=\"67.19999999999999\" width=\"17.416666666666668\" height=\"172.8\" fill=\"#9fd9d9\"/><rect x=\"606.5833333333334\" y=\"24\" width=\"17.416666666666668\" height=\"216\" fill=\"#069494\"/><text x=\"604.5833333333334\" y=\"256\" font-size=\"11\" text-anchor=\"middle\" fill=\"#1a1a1a\">Mar</text><text x=\"595.8750000000001\" y=\"62.19999999999999\" font-size=\"11\" text-anchor=\"middle\" font-weight=\"700\" fill=\"#1a1a1a\">24</text><text x=\"615.2916666666667\" y=\"19\" font-size=\"11\" text-anchor=\"middle\" font-weight=\"700\" fill=\"#1a1a1a\">30</text><rect x=\"44\" y=\"268\" width=\"12\" height=\"12\" fill=\"#9fd9d9\"/><text x=\"62\" y=\"278\" font-size=\"12\" fill=\"#1a1a1a\">First year: 2 days per month</text><rect x=\"274\" y=\"268\" width=\"12\" height=\"12\" fill=\"#069494\"/><text x=\"292\" y=\"278\" font-size=\"12\" fill=\"#1a1a1a\">Later years: 2.5 days per month</text></svg><figcaption>Leave days built up over one holiday credit year (1 April – 31 March), assuming every month is a full holiday credit month. Saturdays count as leave days, so 30 days = five weeks.</figcaption></figure>",
+    "phrases": [
+     "Have you ordered your tax card yet?",
+     "Holiday builds up month by month.",
+     "In your first year, you earn two days of leave per month.",
+     "For short absences, you can report it to your manager yourself.",
+     "Occupational health care covers…",
+     "Your contract follows the collective agreement for our sector."
+    ],
+    "example": "",
+    "short": "Know the common questions. Check your own policies for the details."
+   },
+   {
+    "title": "Modal verbs for rules: a clear explanation",
+    "body": "<p><strong>Modal verbs</strong> (must, can, may, should, might, could) are small verbs that add meaning to a main verb: obligation, permission, advice or possibility. They are the grammar of policies and rules.</p>\n<p><strong>Form:</strong> modal + base verb, with no <em>to</em> and no <em>-s</em>: <em>She must send</em> (not <em>she musts send</em> or <em>she must to send</em>). <em>Have to</em>, <em>need to</em> and <em>be required to</em> are not true modals, so they change form: <em>She has to send. She had to send.</em></p><figure class=\"fig\"><div class=\"scale\"><div class=\"srow\"><span class=\"sl\">must / have to</span><span class=\"sbar\"><span style=\"width:100%\"></span></span><span class=\"sd\">obligation</span></div><div class=\"srow\"><span class=\"sl\">should</span><span class=\"sbar\"><span style=\"width:70%\"></span></span><span class=\"sd\">advice, a strong recommendation</span></div><div class=\"srow\"><span class=\"sl\">can / may</span><span class=\"sbar\"><span style=\"width:45%\"></span></span><span class=\"sd\">permission</span></div><div class=\"srow\"><span class=\"sl\">might / could</span><span class=\"sbar\"><span style=\"width:25%\"></span></span><span class=\"sd\">possibility</span></div><div class=\"srow\"><span class=\"sl\">don't have to</span><span class=\"sbar\"><span style=\"width:10%\"></span></span><span class=\"sd\">no obligation</span></div><div class=\"srow\"><span class=\"sl\">mustn't</span><span class=\"sbar\"><span style=\"width:100%\"></span></span><span class=\"sd\">prohibition: the opposite of permission</span></div></div><figcaption>How strong is it? The bar shows how strongly each form limits the listener's choice.</figcaption></figure><div class=\"table-scroll\"><table class=\"\"><thead><tr><th>Meaning</th><th>Form</th><th>Example</th><th>Formal equivalent</th></tr></thead><tbody><tr><td>Obligation</td><td><strong>must</strong>, <strong>have to</strong>, <strong>need to</strong></td><td>You must tell your manager if you are ill.</td><td>are required to, are obliged to</td></tr><tr><td>Prohibition</td><td><strong>mustn't</strong>, <strong>can't</strong></td><td>You mustn't share passwords.</td><td>are not permitted to, are prohibited from</td></tr><tr><td>No obligation</td><td><strong>don't have to</strong>, <strong>don't need to</strong></td><td>You don't have to work on Saturdays.</td><td>are not required to</td></tr><tr><td>Permission</td><td><strong>can</strong>, <strong>may</strong></td><td>You can / may work remotely two days a week.</td><td>are permitted to, are allowed to</td></tr><tr><td>Right</td><td>—</td><td>You are entitled to occupational health care.</td><td>are entitled to, are eligible for</td></tr><tr><td>Advice</td><td><strong>should</strong>, <strong>ought to</strong></td><td>You should book your holiday early.</td><td>are advised to, are recommended to</td></tr><tr><td>Possibility</td><td><strong>might</strong>, <strong>could</strong>, <strong>may</strong></td><td>The policy might change next year.</td><td>is likely to, is subject to change</td></tr><tr><td>Past obligation</td><td><strong>had to</strong></td><td>I had to get a certificate last year.</td><td>was required to</td></tr></tbody></table></div><p><strong>Three points to remember:</strong></p><ul>\n<li><strong>Must vs have to:</strong> both express obligation. <em>Must</em> often comes from the speaker or a written rule; <em>have to</em> often reports an outside rule: <em>I have to be at work by nine.</em> In speech, <em>have to</em> is more common.</li>\n<li><strong>Mustn't vs don't have to:</strong> they are completely different. <em>Mustn't</em> = it is not allowed. <em>Don't have to</em> = it is not necessary; you can choose.</li>\n<li><strong>May</strong> has two meanings: formal permission (<em>Employees may work remotely</em>) and possibility (<em>The meeting may be cancelled</em>). The context shows which one.</li></ul>",
+    "phrases": [],
+    "example": "",
+    "short": "Must = necessary. Mustn't = forbidden. Don't have to = not necessary. Should = advisable. May/can = allowed."
+   },
+   {
+    "title": "Policy vocabulary",
+    "body": "<p>These words appear in most HR policies. More terms are on the Vocabulary tab.</p><div class=\"table-scroll\"><table class=\"\"><thead><tr><th>English</th><th>Finnish</th><th>Notes</th></tr></thead><tbody><tr><td>employment contract</td><td>työsopimus</td><td>permanent or fixed-term</td></tr><tr><td>probationary period</td><td>koeaika</td><td>in speech often: trial period</td></tr><tr><td>working hours</td><td>työaika</td><td>also: working time</td></tr><tr><td>flexitime</td><td>liukuva työaika</td><td>AmE: flextime</td></tr><tr><td>working time bank</td><td>työaikapankki</td><td>saving hours to take as time off later</td></tr><tr><td>overtime compensation</td><td>ylityökorvaus</td><td>extra pay or time off for overtime</td></tr><tr><td>time off in lieu</td><td>ylityön korvaaminen vapaana</td><td>BrE; time off instead of overtime pay</td></tr><tr><td>remote work / hybrid work</td><td>etätyö / hybridityö</td><td></td></tr><tr><td>annual leave</td><td>vuosiloma</td><td>BrE also: holiday; AmE: vacation</td></tr><tr><td>sick leave</td><td>sairausloma</td><td></td></tr><tr><td>parental leave / family leave</td><td>perhevapaat</td><td>leave to care for a child</td></tr><tr><td>unpaid leave</td><td>palkaton vapaa</td><td>also: leave of absence</td></tr><tr><td>study leave</td><td>opintovapaa</td><td></td></tr><tr><td>occupational health care</td><td>työterveyshuolto</td><td></td></tr><tr><td>early support model</td><td>varhaisen tuen malli</td><td></td></tr><tr><td>equality plan</td><td>tasa-arvosuunnitelma</td><td>gender equality</td></tr><tr><td>non-discrimination plan</td><td>yhdenvertaisuussuunnitelma</td><td></td></tr><tr><td>code of conduct</td><td>toimintaohje, eettinen ohjeistus</td><td></td></tr><tr><td>harassment policy</td><td>häirinnän vastainen ohje</td><td>also: policy on inappropriate treatment</td></tr><tr><td>substance abuse programme</td><td>päihdeohjelma</td><td></td></tr><tr><td>data protection policy</td><td>tietosuojaohje</td><td></td></tr><tr><td>acceptable use policy</td><td>tietoturvaohje</td><td>rules for IT systems and devices</td></tr><tr><td>whistleblowing channel</td><td>ilmoituskanava</td><td>for reporting misconduct confidentially</td></tr><tr><td>travel and expenses policy</td><td>matkustus- ja kulukorvausohje</td><td>expense claim = kulukorvaushakemus</td></tr><tr><td>confidentiality agreement / NDA</td><td>salassapitosopimus</td><td>NDA = non-disclosure agreement</td></tr><tr><td>non-competition agreement</td><td>kilpailukieltosopimus</td><td></td></tr><tr><td>grievance procedure</td><td>epäkohtien käsittelymenettely</td><td></td></tr><tr><td>disciplinary procedure</td><td>varoitusmenettely</td><td></td></tr></tbody></table></div>",
+    "phrases": [],
+    "example": "",
+    "short": "Learn the English names of the policies you work with, and their Finnish equivalents."
+   },
+   {
+    "title": "Formal policy language and plain English",
+    "body": "<p><strong>What is plain English?</strong> Plain language is writing that the intended readers can easily find, understand and use. It is not \"simple\" or childish writing. It is careful writing that puts the reader first. The international standard ISO 24495-1 (2023) sets out principles and guidelines for plain language.</p>\n<p><strong>Why is it preferred?</strong></p><ul>\n<li>Readers understand faster and make fewer mistakes.</li>\n<li>Employees ask fewer questions, so HR saves time.</li>\n<li>Many readers use English as a second or third language.</li>\n<li>Clear rules are fairer: everyone can understand their rights and duties.</li></ul>\n<p><strong>How?</strong> Write for your reader. Use short sentences, everyday words and the active voice. Address the reader as <em>you</em>. Put the most important information first. Use headings and lists. Keep the formal version where the law requires exact wording, and add a plain summary.</p>\n<p><strong>Common formal expressions:</strong></p><div class=\"table-scroll\"><table class=\"\"><thead><tr><th>Formal</th><th>Plain</th></tr></thead><tbody><tr><td>in accordance with</td><td>following, under</td></tr><tr><td>eligible for</td><td>can get</td></tr><tr><td>subject to</td><td>only if, depending on</td></tr><tr><td>with effect from</td><td>from, starting on</td></tr><tr><td>at the discretion of</td><td>… decides</td></tr><tr><td>prior to</td><td>before</td></tr><tr><td>no later than</td><td>by</td></tr><tr><td>where applicable</td><td>if it applies</td></tr><tr><td>commence</td><td>start</td></tr><tr><td>in the event of</td><td>if</td></tr><tr><td>notify</td><td>tell</td></tr><tr><td>remuneration</td><td>pay</td></tr><tr><td>terminate</td><td>end</td></tr><tr><td>failure to … may result in</td><td>if you don't …, you may …</td></tr></tbody></table></div><p><strong>Formal and plain versions:</strong></p><div class=\"table-scroll\"><table class=\"\"><thead><tr><th>Formal policy text</th><th>Plain English</th></tr></thead><tbody><tr><td>Employees are required to notify their line manager prior to the commencement of the absence.</td><td>Tell your manager before your absence starts.</td></tr><tr><td>Annual leave shall be requested no later than 31 March.</td><td>Ask for your summer leave by 31 March.</td></tr><tr><td>Remote work is subject to approval by the line manager.</td><td>Your manager must approve remote work.</td></tr><tr><td>In the event of illness, employees shall inform their supervisor at the earliest possible opportunity.</td><td>If you are ill, tell your manager as soon as you can.</td></tr><tr><td>Expense claims must be submitted within 30 days of the date on which the expense was incurred.</td><td>Send your expense claim within 30 days.</td></tr><tr><td>Employees who have completed six months of continuous employment are eligible for the bonus scheme.</td><td>You can join the bonus scheme after six months.</td></tr><tr><td>Overtime work shall be compensated in accordance with the applicable collective agreement.</td><td>You get paid for overtime as the collective agreement says.</td></tr><tr><td>Failure to comply with data protection requirements may result in disciplinary action.</td><td>If you break data protection rules, you may get a warning.</td></tr><tr><td>The use of personal devices for work purposes is permitted at the discretion of the IT department.</td><td>IT decides if you can use your own devices for work.</td></tr><tr><td>This policy shall apply with effect from 1 January.</td><td>This policy starts on 1 January.</td></tr></tbody></table></div>",
+    "phrases": [],
+    "example": "",
+    "short": "Plain English helps readers find, understand and use information. Keep formal wording only where it is needed."
+   },
+   {
+    "title": "British and American HR terms",
+    "body": "<p>International HR material mixes British and American English. Most differences are small, but some cause real confusion. Choose one variety in a document and use it consistently.</p><div class=\"table-scroll\"><table class=\"\"><thead><tr><th>British English (BrE)</th><th>American English (AmE)</th><th>Notes</th></tr></thead><tbody><tr><td>CV</td><td>résumé</td><td>AmE uses CV mainly in academia</td></tr><tr><td>covering letter</td><td>cover letter</td><td></td></tr><tr><td>referee</td><td>reference</td><td>the person who recommends a candidate</td></tr><tr><td>annual leave, holiday</td><td>vacation, PTO (paid time off)</td><td>BrE holiday also = a trip</td></tr><tr><td>public holiday, bank holiday</td><td>public holiday, federal holiday</td><td></td></tr><tr><td>sick leave</td><td>sick leave, sick days</td><td></td></tr><tr><td>flexitime</td><td>flextime</td><td></td></tr><tr><td>induction</td><td>onboarding</td><td>both used in BrE now</td></tr><tr><td>line manager</td><td>supervisor, direct manager</td><td></td></tr><tr><td>appraisal</td><td>performance review</td><td></td></tr><tr><td>remuneration</td><td>compensation</td><td>the whole pay package</td></tr><tr><td>pay rise</td><td>raise</td><td></td></tr><tr><td>pay slip</td><td>pay stub</td><td></td></tr><tr><td>redundancy</td><td>layoff</td><td>dismissal because the job is no longer needed</td></tr><tr><td>dismissal</td><td>termination, firing</td><td>informal BrE: sacked</td></tr><tr><td>notice period</td><td>notice</td><td>AmE often: two weeks' notice</td></tr><tr><td>fixed-term contract</td><td>contract position, temporary job</td><td></td></tr><tr><td>trade union</td><td>labor union</td><td></td></tr><tr><td>pension</td><td>retirement plan, 401(k)</td><td>401(k) is a US-specific plan</td></tr><tr><td>organisation, programme, behaviour, labour</td><td>organization, program, behavior, labor</td><td>spelling</td></tr><tr><td>fortnight</td><td>two weeks</td><td>fortnight is rare in AmE</td></tr></tbody></table></div><p><strong>Important for Finnish HR:</strong> <em>lomautus</em> is a <strong>temporary lay-off</strong>: the employment continues. In American English, a <em>layoff</em> usually ends the employment. Always say <em>temporary</em>.</p>",
+    "phrases": [],
+    "example": "",
+    "short": "Know both forms. Choose one variety per document. Say \"temporary lay-off\" for lomautus."
+   }
+  ],
+  "errors": [
+   [
+    "You don't must come.",
+    "You don't have to come."
+   ],
+   [
+    "You mustn't come. (meaning: it is not necessary)",
+    "You don't have to come."
+   ],
+   [
+    "I'm on sick holiday.",
+    "I'm on sick leave."
+   ],
+   [
+    "The company has a good benefit package with many benefit.",
+    "The company has a good benefits package with many benefits."
+   ],
+   [
+    "You are allowed to occupational health care.",
+    "You are entitled to occupational health care."
+   ],
+   [
+    "We laid off ten people. (meaning lomautus)",
+    "Ten people were temporarily laid off."
+   ],
+   [
+    "He is eligible to the bonus.",
+    "He is eligible for the bonus."
+   ]
+  ],
+  "quiz": [
+   {
+    "q": "You ___ tell your manager if you are sick. (obligation)",
+    "o": [
+     "must",
+     "might",
+     "may",
+     "could"
+    ],
+    "a": 0,
+    "e": "\"Must\" expresses obligation."
+   },
+   {
+    "q": "\"You don't have to work on Saturdays\" means…",
+    "o": [
+     "it is not necessary.",
+     "it is forbidden.",
+     "it is recommended.",
+     "it is possible but risky."
+    ],
+    "a": 0,
+    "e": "\"Don't have to\" means no obligation."
+   },
+   {
+    "q": "\"Employees mustn't share personal data outside the organisation\" means…",
+    "o": [
+     "it is forbidden.",
+     "it is not necessary.",
+     "it is recommended.",
+     "it is possible."
+    ],
+    "a": 0,
+    "e": "\"Mustn't\" means prohibition."
+   },
+   {
+    "q": "Employees are ___ to occupational health care.",
+    "o": [
+     "entitled",
+     "required",
+     "permitted",
+     "allowed"
+    ],
+    "a": 0,
+    "e": "\"Entitled to + noun\" means you have a right to it. \"Allowed to\" needs a verb."
+   },
+   {
+    "q": "What is työterveyshuolto in English?",
+    "o": [
+     "occupational health care",
+     "work doctor care",
+     "job health",
+     "employee hospital"
+    ],
+    "a": 0,
+    "e": "The standard term is occupational health care."
+   },
+   {
+    "q": "You ___ talk to your line manager first. It's a good idea. (advice)",
+    "o": [
+     "should",
+     "must",
+     "mustn't",
+     "have to"
+    ],
+    "a": 0,
+    "e": "\"Should\" gives advice."
+   },
+   {
+    "q": "Which is correct?",
+    "o": [
+     "I'm on sick leave.",
+     "I'm on sick holiday.",
+     "I have sickness vacation.",
+     "I'm in sick leave."
+    ],
+    "a": 0,
+    "e": "The fixed phrase is \"on sick leave\"."
+   },
+   {
+    "q": "\"Remote work is subject to approval by your line manager\" means…",
+    "o": [
+     "your manager must approve it first.",
+     "your manager must work remotely.",
+     "remote work is not allowed.",
+     "you must approve your manager's work."
+    ],
+    "a": 0,
+    "e": "Subject to = only if; depending on."
+   },
+   {
+    "q": "Which is the plain version of \"Employees are required to notify their line manager prior to the commencement of the absence\"?",
+    "o": [
+     "Tell your manager before your absence starts.",
+     "Your manager tells you when to be absent.",
+     "You can be absent if you want.",
+     "Tell HR after your absence."
+    ],
+    "a": 0,
+    "e": "Required to notify = must tell; prior to the commencement = before it starts."
+   },
+   {
+    "q": "A new employee has no tax card. What happens?",
+    "o": [
+     "The employer must withhold 60 per cent tax.",
+     "No tax is withheld.",
+     "The salary is not paid.",
+     "The employer chooses the tax rate."
+    ],
+    "a": 0,
+    "e": "Without a tax card, the employer must withhold 60 per cent. The employee can order a tax card in MyTax."
+   },
+   {
+    "q": "In Finland, the holiday credit year runs from…",
+    "o": [
+     "1 April to 31 March.",
+     "1 January to 31 December.",
+     "1 June to 31 May.",
+     "1 September to 31 August."
+    ],
+    "a": 0,
+    "e": "Leave builds up during the holiday credit year, 1 April to 31 March."
+   },
+   {
+    "q": "Which phrase introduces an explanation of a system?",
+    "o": [
+     "In Finland, it works like this: …",
+     "Nice to meet you.",
+     "Let's move on.",
+     "I'm afraid not."
+    ],
+    "a": 0,
+    "e": "It tells the listener an explanation is coming."
+   }
+  ],
+  "reading": {
+   "title": "\"How does it work here?\"",
+   "type": "Dialogue, policy extract and email",
+   "text": "<p><strong>Part 1: Daniel's questions</strong></p>\n<p><strong>Daniel:</strong> Sara, do you have a minute? I have a few practical questions.</p>\n<p><strong>Sara:</strong> Of course. Go ahead.</p>\n<p><strong>Daniel:</strong> My first payslip had very high tax. Is that normal?</p>\n<p><strong>Sara:</strong> Ah, that's probably the tax card. <mark class=\"lp\">In Finland, it works like this:<sup>1</sup></mark> the employer needs your tax rate from the Tax Administration. Without a tax card, <mark class=\"lp\">we're required to<sup>2</sup></mark> withhold 60 per cent. <mark class=\"lp\">What you need to do is<sup>3</sup></mark> order a tax card in MyTax. The extra tax is not lost: it's returned to you after your tax is assessed.</p>\n<p><strong>Daniel:</strong> Good to know. I'll do it today. And holidays? My contract says I earn leave every month.</p>\n<p><strong>Sara:</strong> Yes. <mark class=\"lp\">The main difference from many other countries is that<sup>4</sup></mark> leave builds up during the holiday credit year, from April to March. In your first year, you earn two days per month. And Saturdays count as leave days, so a week off uses six days.</p>\n<p><strong>Daniel:</strong> That's confusing!</p>\n<p><strong>Sara:</strong> It is at first. <mark class=\"lp\">In practice, this means that<sup>5</sup></mark> you'll have enough days for a short summer holiday this year and a full five weeks from next year. I'll send you our leave guide. <mark class=\"lp\">Does that make sense so far?<sup>6</sup></mark></p>\n<p><strong>Daniel:</strong> Yes, I think so. What if I'm ill?</p>\n<p><strong>Sara:</strong> At Nordbyte, for short absences, <mark class=\"lp\">you don't have to<sup>7</sup></mark> get a doctor's certificate. You just tell Heidi before your working day starts. For longer absences, you <mark class=\"lp\">need to<sup>8</sup></mark> see occupational health care. <mark class=\"lp\">The reason for this is<sup>9</sup></mark> that they can also help if the illness is connected to work.</p>\n<p><strong>Daniel:</strong> OK. One more thing: can I work from home?</p>\n<p><strong>Sara:</strong> After your probationary period, yes. Here's the policy.</p>\n<p><strong>Part 2: Remote work policy (extract)</strong></p>\n<p>3.1 Employees <mark class=\"lp\">are eligible for<sup>10</sup></mark> remote work after the completion of their probationary period.</p>\n<p>3.2 Remote work is <mark class=\"lp\">subject to<sup>11</sup></mark> approval by the employee's line manager.</p>\n<p>3.3 Employees are required to be available during core hours (9:00–15:00) <mark class=\"lp\">in accordance with<sup>12</sup></mark> the flexitime agreement.</p>\n<p>3.4 <mark class=\"lp\">Failure to</mark> follow data protection rules when working remotely <mark class=\"lp\">may result in<sup>13</sup></mark> withdrawal of remote work rights.</p>\n<p><strong>Part 3: Sara's follow-up email</strong></p>\n<p>Hi Daniel,</p>\n<p><mark class=\"lp\">As promised<sup>14</sup></mark>, here is a short summary of what we discussed:</p>\n<p>Tax card: please order it in MyTax. Payroll gets it automatically.<br>Leave: see the attached leave guide.<br>Sick leave: tell Heidi before your working day starts.<br>Remote work: possible after your probationary period, with Heidi's approval. Please be available from 9 to 3. You <mark class=\"lp\">mustn't<sup>15</sup></mark> use public Wi-Fi without the VPN.</p>\n<p>The full policies are on the intranet. <mark class=\"lp\">Feel free to get in touch<sup>16</sup></mark> if anything is unclear.</p>\n<p>Best regards,<br>Sara</p>",
+   "points": [
+    [
+     "In Finland, it works like this:",
+     "Introduces an explanation of a system."
+    ],
+    [
+     "we're required to",
+     "States an obligation. More neutral than \"we must\"."
+    ],
+    [
+     "What you need to do is",
+     "Moves from the rule to the action."
+    ],
+    [
+     "The main difference from many other countries is that",
+     "Compares with what the listener knows."
+    ],
+    [
+     "In practice, this means that",
+     "Turns a rule into a concrete example."
+    ],
+    [
+     "Does that make sense so far?",
+     "Checks understanding before continuing."
+    ],
+    [
+     "you don't have to",
+     "No obligation: it is not necessary."
+    ],
+    [
+     "need to",
+     "Obligation in everyday speech. Less formal than \"must\"."
+    ],
+    [
+     "The reason for this is",
+     "Gives the reason behind a rule."
+    ],
+    [
+     "are eligible for",
+     "Formal: can get, because you meet the conditions."
+    ],
+    [
+     "subject to",
+     "Formal: only if; depending on."
+    ],
+    [
+     "in accordance with",
+     "Formal: following."
+    ],
+    [
+     "Failure to … may result in",
+     "Formal warning structure. Plain: \"If you don't…, you may lose…\""
+    ],
+    [
+     "As promised",
+     "Links an email to an earlier conversation."
+    ],
+    [
+     "mustn't",
+     "Prohibition: it is not allowed. Different from \"don't have to\"."
+    ],
+    [
+     "Feel free to get in touch",
+     "A friendly invitation to contact you."
+    ]
+   ]
+  },
+  "journal": [
+   "Choose one feature of Finnish working life or one policy from your organisation. Explain it in plain English in three or four sentences: rule, reason, what to do, where to find more.",
+   "Find one sentence in a formal policy and rewrite it in plain English.",
+   "After the class: which question from your group was hardest to answer in English? Why?"
+  ],
+  "topic": {
+   "title": "How Finnish working life works",
+   "text": "<p>International employees often ask how working life works in Finland. Many answers depend on three levels: <mark class=\"lp\">legislation<sup>1</sup></mark>, the <mark class=\"lp\">collective agreement<sup>2</sup></mark> for the sector, and the organisation's own <mark class=\"lp\">policies<sup>3</sup></mark>. HR professionals know these levels well. The challenge is to explain them simply, in English, to someone with no background.</p><figure class=\"fig\"><div class=\"levels\"><div class=\"lvl lvl0\"><b>Legislation</b><span>e.g. the Annual Holidays Act, the Employment Contracts Act</span><div class=\"lvl lvl1\"><b>Collective agreement</b><span>minimum pay and conditions for the sector</span><div class=\"lvl lvl2\"><b>Organisation's policies</b><span>your own rules and practices</span><div class=\"lvl lvl3\"><b>Employment contract</b><span>the individual agreement</span></div></div></div></div></div><figcaption>Three levels of rules, plus the individual contract. In general, each level must meet the minimum set by the levels above it.</figcaption></figure>\n<p>Common first questions concern the <mark class=\"lp\">tax card<sup>4</sup></mark>, <mark class=\"lp\">annual leave<sup>5</sup></mark>, <mark class=\"lp\">sick leave<sup>6</sup></mark>, <mark class=\"lp\">occupational health care<sup>7</sup></mark> and the <mark class=\"lp\">probationary period<sup>8</sup></mark>. For example, without a tax card, the employer must <mark class=\"lp\">withhold<sup>9</sup></mark> 60 per cent tax, and annual leave <mark class=\"lp\">builds up<sup>10</sup></mark> month by month during the <mark class=\"lp\">holiday credit year<sup>11</sup></mark>.</p>\n<p>A useful method has four steps: the rule, the reason, what to do, and where to find more. Comparing with what the person already knows also helps: <em>The main difference from many other countries is that…</em></p>\n<p>The language of rules is modal verbs. <em>Must</em> and <mark class=\"lp\">be required to<sup>12</sup></mark> express obligation; <mark class=\"lp\">mustn't<sup>13</sup></mark> expresses prohibition; <mark class=\"lp\">don't have to<sup>14</sup></mark> means that something is not necessary; <em>may</em> and <mark class=\"lp\">be entitled to<sup>15</sup></mark> express permission and rights.</p>\n<p>Written policies use a <mark class=\"lp\">formal register<sup>16</sup></mark>: <mark class=\"lp\">eligible for<sup>17</sup></mark>, <mark class=\"lp\">in accordance with<sup>18</sup></mark>, <mark class=\"lp\">with effect from<sup>19</sup></mark>. Many international employees understand a <mark class=\"lp\">plain-English<sup>20</sup></mark> version faster. When you are not sure about a rule, say so, and point to the official source.</p>",
+   "keys": [
+    [
+     "legislation",
+     "laws"
+    ],
+    [
+     "collective agreement",
+     "an agreement on pay and working conditions for a whole sector (TES)"
+    ],
+    [
+     "policies",
+     "an organisation's own rules"
+    ],
+    [
+     "tax card",
+     "a document that tells the employer how much tax to withhold (verokortti)"
+    ],
+    [
+     "annual leave",
+     "paid time off work each year (vuosiloma)"
+    ],
+    [
+     "sick leave",
+     "time off work because of illness"
+    ],
+    [
+     "occupational health care",
+     "health services arranged by the employer (työterveyshuolto)"
+    ],
+    [
+     "probationary period",
+     "a trial period at the start of employment (koeaika)"
+    ],
+    [
+     "withhold",
+     "to keep back part of the pay for tax"
+    ],
+    [
+     "builds up",
+     "increases little by little"
+    ],
+    [
+     "holiday credit year",
+     "the period in which leave builds up: 1 April to 31 March"
+    ],
+    [
+     "be required to",
+     "must (formal)"
+    ],
+    [
+     "mustn't",
+     "it is not allowed"
+    ],
+    [
+     "don't have to",
+     "it is not necessary"
+    ],
+    [
+     "be entitled to",
+     "have a right to"
+    ],
+    [
+     "formal register",
+     "the style of official texts"
+    ],
+    [
+     "eligible for",
+     "able to get, because you meet the conditions"
+    ],
+    [
+     "in accordance with",
+     "following"
+    ],
+    [
+     "with effect from",
+     "starting from"
+    ],
+    [
+     "plain-English",
+     "simple and clear"
+    ]
+   ]
+  }
+ },
+ {
+  "id": 4,
+  "title": "When problems come up",
+  "intro": "Sometimes you must refuse a request or listen to a problem. This module covers soft language, polite refusals, giving opinions and making suggestions, active listening and responding to emotions. In the reading, Daniel makes a request that HR cannot approve, and later raises a workload problem.",
+  "cards": [
+   {
+    "title": "Soft language: why and how",
+    "body": "<p>Compare: <em>Send me the form.</em> and <em>Could you send me the form, please?</em> Both are clear. The second one sounds polite in English. The first one can sound like an order.</p>\n<p>In HR, you often give information people do not want to hear: a holiday request is refused, a form is missing, a rule has changed. Soft language makes these messages easier to receive.</p><p>You can soften a message in several ways:</p>\n<ul><li><strong>Questions instead of orders:</strong> <em>Could you…? Would you mind…?</em></li>\n<li><strong>Would like instead of want:</strong> <em>I'd like to change the date.</em></li>\n<li><strong>Less certain verbs:</strong> <em>It seems (that)…, It looks like…</em></li>\n<li><strong>Small words:</strong> <em>a bit, slightly, quite</em></li>\n<li><strong>Not very + positive word:</strong> <em>not very clear</em> instead of <em>unclear</em></li>\n<li><strong>Past forms:</strong> <em>I was wondering if you could…</em></li></ul><p><strong>Direct and softer versions:</strong></p><div class=\"table-scroll\"><table class=\"\"><thead><tr><th>Direct</th><th>Softer</th></tr></thead><tbody><tr><td>Send me the contract.</td><td>Could you send me the contract, please?</td></tr><tr><td>You're wrong.</td><td>I'm not sure I agree. / I see it a bit differently.</td></tr><tr><td>That's impossible.</td><td>That might be difficult.</td></tr><tr><td>Your report is bad.</td><td>Your report isn't quite ready yet.</td></tr><tr><td>We need it today.</td><td>Would it be possible to have it today?</td></tr><tr><td>You forgot the signature.</td><td>It looks like the signature is missing.</td></tr><tr><td>I want an answer by Friday.</td><td>It would be great if you could reply by Friday.</td></tr><tr><td>No.</td><td>I'm afraid that won't be possible.</td></tr><tr><td>This is a problem.</td><td>This could be a bit of a problem.</td></tr><tr><td>You must attend the training.</td><td>Please make sure you attend the training.</td></tr><tr><td>Why didn't you tell me?</td><td>It would have been helpful to know earlier.</td></tr><tr><td>Call me.</td><td>Would you mind giving me a call?</td></tr></tbody></table></div>",
+    "phrases": [
+     "Could you send me the signed contract, please?",
+     "Would you mind checking the dates again?",
+     "It seems that the form is missing a signature.",
+     "The schedule is a bit tight.",
+     "I was wondering if you could join the meeting."
+    ],
+    "example": "",
+    "short": "Soft language keeps the message clear and the relationship good."
+   },
+   {
+    "title": "Saying no and delivering difficult messages",
+    "body": "<p>A polite refusal in English often has three parts: a soft opening, the reason and an alternative.</p><p>HR professionals often deliver news people do not want: a candidate was not selected, a request is refused, information cannot be shared. The message must be clear, and the tone must show respect.</p>\n<p>Useful structure: acknowledge, state the decision clearly, give the reason if you can, and say what happens next. Do not hide the decision under too many softeners.</p>\n<p>In writing, formal softening is common: <em>Please note that…, We would ask that…, It would be appreciated if…</em></p><figure class=\"fig\"><div class=\"flow\"><div class=\"step\"><span class=\"n\">1</span><b>Soft opening</b><span>I'm afraid… / Unfortunately…</span></div><div class=\"step\"><span class=\"n\">2</span><b>Clear decision</b><span>…that won't be possible.</span></div><div class=\"step\"><span class=\"n\">3</span><b>Reason</b><span>The reason is…</span></div><div class=\"step\"><span class=\"n\">4</span><b>Alternative</b><span>Would … work for you?</span></div></div><figcaption>The structure of a polite refusal.</figcaption></figure>",
+    "phrases": [
+     "I'm afraid I can't approve leave for that week.",
+     "Unfortunately, the deadline has already passed.",
+     "The reason is that three people are already away.",
+     "Would the following week work for you?",
+     "I'm sorry to have to tell you that your request has not been approved.",
+     "I understand this isn't the news you were hoping for.",
+     "Unfortunately, we're not in a position to offer remote work in this role.",
+     "I'm not able to share that information, as it's confidential.",
+     "Let me explain the background to this decision.",
+     "I appreciate that this is a difficult situation.",
+     "Please note that the deadline for applications is final."
+    ],
+    "example": "<p><strong>Employee:</strong> Can I take my holiday in the first week of June?<br><strong>HR:</strong> I'm afraid that week is difficult. Three people from your team are already away. Would the second week of June work for you?</p>",
+    "short": "Soft opening, clear decision, reason, alternative."
+   },
+   {
+    "title": "Giving opinions and making suggestions",
+    "body": "<p>In meetings and HR conversations, you often give your view or suggest a solution. A direct opinion (<em>This plan won't work.</em>) can sound like a final judgement. Soft language turns it into a contribution that others can discuss.</p><p>Useful tools: start with an opinion phrase (<em>In my view…</em>), make suggestions as questions (<em>Have you considered…?</em>), use <em>could</em> and <em>might</em>, and recognise the other person's point before you disagree (<em>I see your point, but…</em>).</p><div class=\"table-scroll\"><table><thead><tr><th>Purpose</th><th>Phrases</th></tr></thead><tbody><tr><td>Giving an opinion</td><td>In my view, … / I think… / It seems to me that… / From an HR point of view, … / I'm not sure, but I think…</td></tr><tr><td>Making a suggestion</td><td>I'd suggest… / Maybe we could… / What if we…? / Have you considered…? / It might be worth… / How about…?</td></tr><tr><td>Asking for opinions</td><td>What do you think? / How do you see it? / Do you have any suggestions?</td></tr><tr><td>Agreeing</td><td>I agree. / That's a good point. / I think you're right.</td></tr><tr><td>Partly disagreeing</td><td>I see your point, but… / That's true, but have we thought about…? / I'm not sure I agree. / I see it a bit differently.</td></tr></tbody></table></div><p><strong>Direct and softer versions:</strong></p><div class=\"table-scroll\"><table><thead><tr><th>Direct</th><th>Softer</th></tr></thead><tbody><tr><td>This plan won't work.</td><td>I'm not sure this plan will work as it is.</td></tr><tr><td>We should hire an agency.</td><td>Maybe we could consider an agency.</td></tr><tr><td>Your idea is bad.</td><td>I see your point, but I'm worried about the cost.</td></tr><tr><td>Do it this way.</td><td>Have you considered doing it this way?</td></tr><tr><td>That's wrong.</td><td>I'm not sure that's quite right.</td></tr><tr><td>Talk to your manager.</td><td>It might be worth talking to your manager.</td></tr></tbody></table></div><p><strong>Grammar note:</strong> <em>suggest</em> is followed by <em>-ing</em> or a <em>that</em> clause: <em>I suggest contacting HR.</em> / <em>I suggest (that) you contact HR.</em> Not: <em>I suggest you to contact HR.</em></p>",
+    "phrases": [],
+    "example": "",
+    "short": "Give your view as a contribution, not a final judgement. Suggest with questions, could and might."
+   },
+   {
+    "title": "Active listening and short responses",
+    "body": "<p>Carl Rogers and Richard Farson (1957) described active listening as listening for the full meaning of what a person says, including their feelings, and showing that you understand.</p>\n<p>Active listening has three parts: you give full attention, you try to understand the meaning, and you show that you understand.</p>\n<p>It does not mean planning your answer while the other person is still talking.</p><p>English speakers often give short responses while the other person talks. These show that you are following. In Finnish, <em>joo</em> or a nod does a similar job. If you listen in silence in English, the speaker may think you are not interested or do not understand.</p>\n<p>Vary your responses. Repeating <em>yes, yes, yes</em> can sound impatient.</p><figure class=\"fig\"><div class=\"flow\"><div class=\"step\"><span class=\"n\">1</span><b>Listen</b><span>full attention</span></div><div class=\"step\"><span class=\"n\">2</span><b>Respond</b><span>short responses</span></div><div class=\"step\"><span class=\"n\">3</span><b>Ask</b><span>open questions</span></div><div class=\"step\"><span class=\"n\">4</span><b>Paraphrase</b><span>check understanding</span></div><div class=\"step\"><span class=\"n\">5</span><b>Summarise</b><span>confirm what was agreed</span></div></div><figcaption>Active listening in five steps.</figcaption></figure><div class=\"label\">Phrases by purpose</div><div class=\"table-scroll\"><table class=\"\"><thead><tr><th>Purpose</th><th>Phrases</th></tr></thead><tbody><tr><td>Showing you follow</td><td>I see. / Right. / Mm-hm. / OK. / Sure. / Go on.</td></tr><tr><td>Encouraging</td><td>Tell me more. / And then what happened? / Take your time. / I'm listening.</td></tr><tr><td>Showing interest</td><td>Really? / That's interesting. / I didn't know that.</td></tr><tr><td>Clarifying</td><td>What do you mean by…? / Could you give me an example? / When you say…, do you mean…?</td></tr><tr><td>Paraphrasing</td><td>So what you're saying is… / In other words, … / If I understand correctly, …</td></tr><tr><td>Reflecting feelings</td><td>It sounds like you're worried about… / That must be frustrating. / I can hear that this matters to you.</td></tr><tr><td>Summarising</td><td>So, to sum up, … / Let me check I've got this right: … / So the main points are…</td></tr></tbody></table></div>",
+    "phrases": [],
+    "example": "",
+    "short": "Full attention, short varied responses."
+   },
+   {
+    "title": "Open and closed questions",
+    "body": "<p><strong>Closed questions</strong> can be answered with <em>yes</em>, <em>no</em> or a short fact. They often start with an auxiliary verb: <em>Is…? Do…? Did…? Can…? Have…?</em> Use them to confirm facts and to finish a topic.</p>\n<p><strong>Open questions</strong> need a longer answer. They start with <em>what, how, why</em>, or with <em>tell me, describe, explain</em>. Use them to start a topic, to understand a situation and to let the other person talk.</p><div class=\"table-scroll\"><table class=\"\"><thead><tr><th>Closed question</th><th>Open version</th></tr></thead><tbody><tr><td>Is the workload too high?</td><td>How is your workload at the moment?</td></tr><tr><td>Did you like the training?</td><td>What did you find most useful in the training?</td></tr><tr><td>Do you have problems with the new system?</td><td>How is the new system working for you?</td></tr><tr><td>Was it difficult?</td><td>What was the most difficult part?</td></tr><tr><td>Are you happy in the team?</td><td>How would you describe the atmosphere in the team?</td></tr><tr><td>Did you talk to your manager?</td><td>What happened when you talked to your manager?</td></tr></tbody></table></div><figure class=\"fig\"><div class=\"funnel\"><div class=\"frow\" style=\"width:100%\"><b>Open</b><span>How is your work going?</span></div><div class=\"frow\" style=\"width:82%\"><b>Probing</b><span>What exactly makes the deadlines difficult?</span></div><div class=\"frow\" style=\"width:64%\"><b>Closed</b><span>So the problem is the Friday deadline?</span></div></div><figcaption>The question funnel: start open, then probe, then use a closed question to confirm.</figcaption></figure><p><strong>Be careful with <em>why</em>:</strong> <em>Why did you do that?</em> can sound like criticism. <em>What made you decide to…?</em> is softer.</p>",
+    "phrases": [
+     "How do you feel about…?",
+     "What happened next?",
+     "Could you describe…?",
+     "What would help?",
+     "So, just to confirm: is it the Friday deadline?"
+    ],
+    "example": "",
+    "short": "Open questions to explore, closed questions to confirm. Start open, finish closed."
+   },
+   {
+    "title": "Follow-up questions and checking",
+    "body": "<p>Follow-up questions show that you are listening and help you understand more. <strong>Paraphrasing</strong> means saying the main point again in your own words. It shows you understood, and it lets the speaker correct you. <strong>Summarising</strong> at the end lists what you agreed.</p>",
+    "phrases": [
+     "Could you tell me a bit more about that?",
+     "What happened next?",
+     "How did that affect your work?",
+     "So what you're saying is that…",
+     "If I understand correctly, you'd like to…",
+     "So, to sum up, we've agreed that…"
+    ],
+    "example": "<p><strong>Employee:</strong> The new schedule is really hard for me. I have to pick up my kids at four.<br><strong>HR:</strong> I see. So the problem is mainly the late shifts?<br><strong>Employee:</strong> Yes, exactly.<br><strong>HR:</strong> Could you tell me a bit more about which days are hardest?</p>",
+    "short": "Ask open questions, paraphrase, summarise."
+   },
+   {
+    "title": "Responding to emotions and sensitive topics",
+    "body": "<p>In HR, people bring worries, conflicts and personal problems. Show that you understand the feeling before you move to facts and solutions.</p>\n<p><strong>Be careful with confidentiality.</strong> Do not promise to tell no one. If an employee reports harassment or a safety risk, you may have to act. Explain this at the start.</p>",
+    "phrases": [
+     "That sounds really frustrating.",
+     "I can see why you'd feel that way.",
+     "Take your time.",
+     "Thank you for telling me. That can't have been easy.",
+     "What would help you most right now?",
+     "I'll handle this as confidentially as I can, but I may need to act on it. Let me explain what that means.",
+     "Let's look at the options together.",
+     "Would it help to involve occupational health care?"
+    ],
+    "example": "",
+    "short": "Recognise the feeling first. Be honest about confidentiality."
+   }
+  ],
+  "errors": [
+   [
+    "You must send the form today.",
+    "Could you send the form today, please?"
+   ],
+   [
+    "I want to change the meeting.",
+    "I'd like to change the meeting."
+   ],
+   [
+    "I'm scared I can't come.",
+    "I'm afraid I can't come."
+   ],
+   [
+    "Please send me the file. (in speech, can sound like an order)",
+    "Could you send me the file, please?"
+   ],
+   [
+    "Too many softeners: I was just maybe wondering if perhaps…",
+    "One or two softeners are enough. Keep the main message clear."
+   ],
+   [
+    "Yes. Yes. Yes. (only)",
+    "Right. / I see. / That makes sense."
+   ],
+   [
+    "What do you mean? (can sound sharp)",
+    "Could you say a bit more about that?"
+   ],
+   [
+    "Only closed questions: Is it bad? Is it Monday?",
+    "Open questions: How is it going? What is the problem?"
+   ],
+   [
+    "Interrupting to give a solution",
+    "Listen first, then paraphrase, then suggest."
+   ],
+   [
+    "I understand you. (can sound empty)",
+    "I can see why you'd feel that way."
+   ],
+   [
+    "Don't worry, I won't tell anyone. (a promise you may not be able to keep)",
+    "I'll handle this as confidentially as I can."
+   ],
+   [
+    "I suggest you to contact HR.",
+    "I suggest contacting HR. / I suggest (that) you contact HR."
+   ],
+   [
+    "In my opinion, I think we should wait.",
+    "In my opinion, we should wait. / I think we should wait."
+   ]
+  ],
+  "quiz": [
+   {
+    "q": "Which request is the most polite?",
+    "o": [
+     "Send me the form.",
+     "You must send me the form.",
+     "Could you send me the form, please?",
+     "I want the form."
+    ],
+    "a": 2,
+    "e": "A question with \"could\" and \"please\" is the most polite."
+   },
+   {
+    "q": "___, I can't approve your holiday for that week.",
+    "o": [
+     "I'm afraid",
+     "I'm scared",
+     "Sorry for that",
+     "Unluckily"
+    ],
+    "a": 0,
+    "e": "\"I'm afraid\" is a fixed phrase for bad news. It does not mean fear here."
+   },
+   {
+    "q": "Which sentence softens \"Your report is unclear\"?",
+    "o": [
+     "Your report is not very clear in places.",
+     "Your report is bad.",
+     "Your report is very unclear.",
+     "Unclear report."
+    ],
+    "a": 0,
+    "e": "\"Not very + positive word\" and \"in places\" make the criticism softer."
+   },
+   {
+    "q": "I was wondering ___ you could join the meeting.",
+    "o": [
+     "if",
+     "that",
+     "what",
+     "to"
+    ],
+    "a": 0,
+    "e": "The phrase is \"I was wondering if…\"."
+   },
+   {
+    "q": "What does \"It seems that…\" do?",
+    "o": [
+     "It makes a statement less direct and less certain.",
+     "It turns a statement into an order.",
+     "It shows that you are angry.",
+     "It is only used in writing."
+    ],
+    "a": 0,
+    "e": "\"It seems\" makes a message softer and less certain."
+   },
+   {
+    "q": "Which is the most polite?",
+    "o": [
+     "I'd like to change the date.",
+     "I want change the date.",
+     "Change the date.",
+     "I must change the date."
+    ],
+    "a": 0,
+    "e": "\"I'd like\" is softer than \"I want\"."
+   },
+   {
+    "q": "Which short response shows that you are listening?",
+    "o": [
+     "I see.",
+     "Stop.",
+     "Whatever.",
+     "Next."
+    ],
+    "a": 0,
+    "e": "\"I see\" shows you are following."
+   },
+   {
+    "q": "Which is an open question?",
+    "o": [
+     "What happened next?",
+     "Did it happen?",
+     "Is it Monday?",
+     "Are you tired?"
+    ],
+    "a": 0,
+    "e": "Open questions start with what, how, why or tell me."
+   },
+   {
+    "q": "Which is softer than \"What do you mean?\"",
+    "o": [
+     "Could you say a bit more about that?",
+     "Explain.",
+     "What?",
+     "That's wrong."
+    ],
+    "a": 0,
+    "e": "A \"could\" question sounds interested, not sharp."
+   },
+   {
+    "q": "Which is NOT part of active listening?",
+    "o": [
+     "Planning your answer while the other person is still talking",
+     "Giving full attention",
+     "Checking that you understood",
+     "Asking follow-up questions"
+    ],
+    "a": 0,
+    "e": "Active listening means focusing on the speaker, not on your reply."
+   },
+   {
+    "q": "An employee reports harassment and asks you to promise to tell no one. What is the best answer?",
+    "o": [
+     "I'll handle this as confidentially as I can, but I may need to act on it. Let me explain what that means.",
+     "I promise I won't tell anyone.",
+     "Then I can't help you.",
+     "Tell your manager instead."
+    ],
+    "a": 0,
+    "e": "Be honest: HR may have a duty to act."
+   },
+   {
+    "q": "Which response recognises the other person's feelings?",
+    "o": [
+     "I can see why you'd feel that way.",
+     "That's not my problem.",
+     "Everyone feels like that.",
+     "Let's focus on the facts only."
+    ],
+    "a": 0,
+    "e": "It shows you understand before you move on."
+   },
+   {
+    "q": "Which is the softest way to make a suggestion?",
+    "o": [
+     "Maybe we could ask the team first?",
+     "Ask the team first.",
+     "You must ask the team first.",
+     "Asking the team first is obligatory."
+    ],
+    "a": 0,
+    "e": "\"Maybe we could\" turns the suggestion into an option for discussion."
+   },
+   {
+    "q": "Which is correct?",
+    "o": [
+     "I suggest contacting HR.",
+     "I suggest you to contact HR.",
+     "I suggest to contact HR.",
+     "I suggest you contacting HR."
+    ],
+    "a": 0,
+    "e": "Suggest + -ing, or suggest (that) + clause: I suggest (that) you contact HR."
+   }
+  ],
+  "reading": {
+   "title": "Two difficult conversations",
+   "type": "Dialogues and email",
+   "text": "<p><strong>Part 1: November, a request</strong></p>\n<p><strong>Daniel:</strong> Hi, Sara. <mark class=\"lp\">I was wondering if<sup>1</sup></mark> I could work from Spain for the whole of December. My family is there, and it would mean a lot to me.</p>\n<p><strong>Sara:</strong> <mark class=\"lp\">I understand why you'd want that.<sup>2</sup></mark> <mark class=\"lp\">I'm afraid<sup>3</sup></mark> a whole month abroad isn't possible under our current policy. Working from another country raises tax and social security questions for both you and us.</p>\n<p><strong>Daniel:</strong> Oh. Even if I work normal hours?</p>\n<p><strong>Sara:</strong> Yes, <mark class=\"lp\">unfortunately<sup>4</sup></mark>. The hours aren't the problem; the country is. <mark class=\"lp\">We're not in a position to<sup>5</sup></mark> make exceptions, because the same rule applies to everyone.</p>\n<p><strong>Daniel:</strong> I see. That's <mark class=\"lp\">a bit<sup>6</sup></mark> disappointing.</p>\n<p><strong>Sara:</strong> I know. <mark class=\"lp\">Would it work for you to<sup>7</sup></mark> take your annual leave over Christmas and combine it with a few remote days here before you go? I can check the options with Heidi.</p>\n<p><strong>Daniel:</strong> That could work. Thanks.</p>\n<p><strong>Part 2: Sara's email</strong></p>\n<p>Hi Daniel,</p>\n<p>Thank you for our conversation today. I checked with Heidi, and <mark class=\"lp\">it seems that<sup>8</sup></mark> the team can manage if you take leave from 20 December to 6 January. <mark class=\"lp\">Could you confirm<sup>9</sup></mark> these dates by Friday?</p>\n<p>Best regards,<br>Sara</p>\n<p><strong>Part 3: February, a problem</strong></p>\n<p><strong>Daniel:</strong> Thanks for seeing me. Since Anna left the team, I've taken over her projects. I just can't keep up.</p>\n<p><strong>Sara:</strong> <mark class=\"lp\">I see.<sup>10</sup></mark> <mark class=\"lp\">Could you tell me a bit more about<sup>11</sup></mark> what has changed?</p>\n<p><strong>Daniel:</strong> Nobody has taken anything off my desk. I'm working evenings most weeks.</p>\n<p><strong>Sara:</strong> <mark class=\"lp\">Right.<sup>12</sup></mark> And how long has this been going on?</p>\n<p><strong>Daniel:</strong> About six weeks. I don't want to look like I'm complaining, so I haven't said anything to Heidi.</p>\n<p><strong>Sara:</strong> <mark class=\"lp\">That sounds really frustrating.<sup>13</sup></mark> <mark class=\"lp\">So what you're saying is that<sup>14</sup></mark> the extra work came without any changes to your other tasks, and you're not sure how to raise it with Heidi.</p>\n<p><strong>Daniel:</strong> Exactly.</p>\n<p><strong>Sara:</strong> Thank you for telling me. <mark class=\"lp\">That can't have been easy.<sup>15</sup></mark> I'll <mark class=\"lp\">handle this as confidentially as I can<sup>16</sup></mark>. With your permission, I'd like to help you prepare a conversation with Heidi. We could also involve occupational health care if the stress continues. <mark class=\"lp\">So, to sum up,<sup>17</sup></mark> you'll list your current tasks and hours this week, and we'll meet again on Monday. <mark class=\"lp\">Does that sound all right?<sup>18</sup></mark></p>",
+   "points": [
+    [
+     "I was wondering if",
+     "Past continuous makes a request softer."
+    ],
+    [
+     "I understand why you'd want that.",
+     "Recognises the request before refusing it."
+    ],
+    [
+     "I'm afraid",
+     "A fixed softener before bad news."
+    ],
+    [
+     "unfortunately",
+     "Signals bad news politely."
+    ],
+    [
+     "We're not in a position to",
+     "A formal, polite refusal. Softer than \"We can't\"."
+    ],
+    [
+     "a bit",
+     "A small word that softens: a bit disappointing, a bit tight."
+    ],
+    [
+     "Would it work for you to",
+     "Offers an alternative as a question."
+    ],
+    [
+     "it seems that",
+     "Makes a statement less direct."
+    ],
+    [
+     "Could you confirm",
+     "A polite request, often with a deadline."
+    ],
+    [
+     "I see.",
+     "A short response that shows you are listening."
+    ],
+    [
+     "Could you tell me a bit more about",
+     "An open follow-up question."
+    ],
+    [
+     "Right.",
+     "Another short response. Vary them."
+    ],
+    [
+     "That sounds really frustrating.",
+     "Recognises the feeling before moving to facts."
+    ],
+    [
+     "So what you're saying is that",
+     "Paraphrasing: checks understanding."
+    ],
+    [
+     "That can't have been easy.",
+     "Shows empathy. Can't have been = was probably not."
+    ],
+    [
+     "handle this as confidentially as I can",
+     "Honest: it does not promise complete secrecy."
+    ],
+    [
+     "So, to sum up,",
+     "Signposts a summary of what was agreed."
+    ],
+    [
+     "Does that sound all right?",
+     "Checks agreement at the end."
+    ]
+   ]
+  },
+  "journal": [
+   "Think of a request you had to refuse at work. Write the refusal again in softer English, with a reason and an alternative (two or three sentences).",
+   "Write one paraphrasing sentence you could use in a difficult conversation: \"So what you're saying is…\".",
+   "After the class: what did your partner in the role play do or say that made you feel listened to?"
+  ],
+  "topic": {
+   "title": "Listening and saying no",
+   "text": "<p>HR professionals often hear problems: a heavy workload, a conflict, a request that cannot be approved. Two skills help most: <mark class=\"lp\">soft language<sup>1</sup></mark> and <mark class=\"lp\">active listening<sup>2</sup></mark>.</p>\n<p>Soft language makes difficult messages easier to receive without hiding them. Common tools are questions instead of orders (<em>Could you…?</em>), <mark class=\"lp\">softeners<sup>3</sup></mark> such as <em>I'm afraid</em> and <em>unfortunately</em>, less certain verbs such as <em>it seems</em>, and small words such as <em>a bit</em>. A good <mark class=\"lp\">refusal<sup>4</sup></mark> has three parts: a soft opening, the reason and an <mark class=\"lp\">alternative<sup>5</sup></mark>. Too much softening is also a problem: the <mark class=\"lp\">main message<sup>6</sup></mark> must stay clear. Soft language also helps you <mark class=\"lp\">give opinions<sup>7</sup></mark> and <mark class=\"lp\">make suggestions<sup>8</sup></mark> without sounding too strong: <em>In my view, …</em>, <em>Maybe we could…</em></p>\n<p>Active listening means giving full attention, trying to understand the full meaning, and showing that you understand. <mark class=\"lp\">Short responses<sup>9</sup></mark> such as <em>I see</em> and <em>right</em> show that you are following. <mark class=\"lp\">Open questions<sup>10</sup></mark> give the speaker space. <mark class=\"lp\">Paraphrasing<sup>11</sup></mark> checks understanding: <em>So what you're saying is…</em> A <mark class=\"lp\">summary<sup>12</sup></mark> at the end confirms what was agreed.</p>\n<p>When people are upset, <mark class=\"lp\">acknowledge the feeling<sup>13</sup></mark> before you move to facts and solutions: <em>That sounds really frustrating.</em> Be honest about <mark class=\"lp\">confidentiality<sup>14</sup></mark>: if someone reports harassment or a safety risk, HR may have a duty to act, so do not promise complete secrecy. Where appropriate, refer the employee to support, such as the <mark class=\"lp\">early support model<sup>15</sup></mark> or occupational health care.</p>",
+   "keys": [
+    [
+     "soft language",
+     "words and structures that make a message more polite"
+    ],
+    [
+     "active listening",
+     "listening with full attention and showing you understand"
+    ],
+    [
+     "softeners",
+     "words that make a message less direct"
+    ],
+    [
+     "refusal",
+     "saying no"
+    ],
+    [
+     "alternative",
+     "another option"
+    ],
+    [
+     "main message",
+     "the most important point"
+    ],
+    [
+     "give opinions",
+     "say what you think about something"
+    ],
+    [
+     "make suggestions",
+     "propose ideas or solutions"
+    ],
+    [
+     "short responses",
+     "brief words that show you are listening (I see, right)"
+    ],
+    [
+     "open questions",
+     "questions that start with what, how, why or tell me"
+    ],
+    [
+     "paraphrasing",
+     "saying the main point again in your own words"
+    ],
+    [
+     "summary",
+     "a short statement of the main points"
+    ],
+    [
+     "acknowledge the feeling",
+     "show that you understand how someone feels"
+    ],
+    [
+     "confidentiality",
+     "keeping information private"
+    ],
+    [
+     "early support model",
+     "a practice for acting early when work ability may be at risk (varhaisen tuen malli)"
+    ]
+   ]
+  }
+ },
+ {
+  "id": 5,
+  "title": "Development, feedback and moving on",
+  "intro": "Development discussions, feedback and, one day, leaving are part of every employment relationship. This module covers development discussions, giving and receiving feedback, performance conversations, change negotiations and exit interviews. In the reading, Daniel has his first development discussion and, two years later, his exit interview.",
+  "cards": [
+   {
+    "title": "Development discussions",
+    "body": "<p>A <strong>development discussion</strong> (kehityskeskustelu) is a regular meeting between an employee and their manager about work, goals, wellbeing and development. An <strong>onboarding meeting</strong> introduces a new employee to the job and the workplace.</p>\n<p>The same signposts work in all of them. They help the other person follow, especially if English is not their first language.</p><figure class=\"fig\"><div class=\"flow\"><div class=\"step\"><span class=\"n\">1</span><b>Opening</b><span>purpose and agenda</span></div><div class=\"step\"><span class=\"n\">2</span><b>Looking back</b><span>achievements, challenges</span></div><div class=\"step\"><span class=\"n\">3</span><b>Wellbeing</b><span>workload, work ability</span></div><div class=\"step\"><span class=\"n\">4</span><b>Feedback</b><span>both directions</span></div><div class=\"step\"><span class=\"n\">5</span><b>Goals</b><span>next period</span></div><div class=\"step\"><span class=\"n\">6</span><b>Development</b><span>skills, training</span></div><div class=\"step\"><span class=\"n\">7</span><b>Closing</b><span>next steps, review date</span></div></div><figcaption>A typical development discussion.</figcaption></figure><div class=\"label\">Phrases by stage</div><div class=\"table-scroll\"><table class=\"\"><thead><tr><th>Stage</th><th>Phrases</th></tr></thead><tbody><tr><td>Opening</td><td>Today I'd like to cover… / This is your time as much as mine. / Is there anything you'd like to add to the agenda?</td></tr><tr><td>Looking back</td><td>How do you feel the past year has gone? / What are you most proud of? / What was the biggest challenge?</td></tr><tr><td>Wellbeing</td><td>How is your workload at the moment? / How are you coping with…? / Is there anything that makes your work harder than it needs to be?</td></tr><tr><td>Feedback to the manager</td><td>What could I do to support you better? / What would you like more or less of from me?</td></tr><tr><td>Goals</td><td>What would you like to achieve next year? / How will we know you've reached it? / Let's make this goal a bit more specific.</td></tr><tr><td>Development</td><td>Which skills would you like to develop? / Is there a course or a project that would help? / Where do you see yourself in two or three years?</td></tr><tr><td>Closing</td><td>Let's agree on the next steps. / I'll summarise this and send it to you. / Let's review your goals in six months.</td></tr></tbody></table></div>",
+    "phrases": [],
+    "example": "",
+    "short": "Say what you will cover, then follow that order."
+   },
+   {
+    "title": "Constructive feedback: what it is",
+    "body": "<p><strong>Constructive feedback</strong> is information about someone's work or behaviour that aims to help them improve or continue doing well. The key word is <em>help</em>: the purpose is the person's development and the work, not blame.</p>\n<p>It differs from <strong>criticism</strong> in three ways: it describes behaviour, not personality; it is specific, not general; and it points forward to what the person can do next.</p>\n<p>Constructive feedback can be positive (what to continue) or developmental (what to change). Both kinds are specific.</p><div class=\"table-scroll\"><table class=\"\"><thead><tr><th>Not constructive</th><th>Constructive</th></tr></thead><tbody><tr><td>You're always late.</td><td>You arrived after 9:15 three times this week. The team had to start without you.</td></tr><tr><td>Good job!</td><td>Your summary was clear and short. People understood the new rules quickly.</td></tr><tr><td>Your emails are rude.</td><td>In your email to the client yesterday, there was no greeting. It may seem abrupt to them.</td></tr><tr><td>You need to be more proactive.</td><td>In the last project, you waited for instructions. Next time, could you suggest a plan first?</td></tr><tr><td>Everyone says you're difficult.</td><td>In Monday's meeting, you interrupted Maria twice. She didn't finish her point.</td></tr></tbody></table></div>",
+    "phrases": [
+     "Can I give you some feedback on…?",
+     "Do you have a few minutes to talk about…?",
+     "I'd like to give you some feedback on…",
+     "What went really well was…",
+     "One thing I'd like you to keep doing is…",
+     "One thing that could be even better is…",
+     "What I'd like to see next time is…",
+     "How do you see it?",
+     "What would help you do that?"
+    ],
+    "example": "",
+    "short": "Constructive feedback is specific, about behaviour, and aims to help. It can be positive or developmental."
+   },
+   {
+    "title": "The SBI model",
+    "body": "<p>The Center for Creative Leadership developed a simple feedback model called <strong>SBI</strong>: Situation, Behaviour, Impact.</p>\n\n<p>Then add a question or a request for next time.</p><figure class=\"fig\"><div class=\"cols\"><div class=\"col\"><span class=\"big\">S</span><b>Situation</b><span>When and where: In yesterday's meeting…</span></div><div class=\"col\"><span class=\"big\">B</span><b>Behaviour</b><span>What the person did, as you saw or heard it: …you interrupted Maria twice.</span></div><div class=\"col\"><span class=\"big\">I</span><b>Impact</b><span>The effect: …so she didn't finish her point.</span></div></div><figcaption>The SBI model (Center for Creative Leadership). Add a request or a question at the end.</figcaption></figure><div class=\"label\">Phrase bank</div><div class=\"table-scroll\"><table class=\"\"><thead><tr><th>Part</th><th>Phrases</th></tr></thead><tbody><tr><td>Situation</td><td>In yesterday's meeting, … / During the info session on Monday, … / In your email to the team last week, … / When we met the candidate, …</td></tr><tr><td>Behaviour</td><td>I noticed that you… / I saw that you… / You mentioned that… / You didn't…</td></tr><tr><td>Impact</td><td>The effect was that… / As a result, … / This meant that… / I felt… / The team…</td></tr><tr><td>Next step</td><td>Next time, could you…? / How do you see it? / What could we do differently? / Please keep doing that.</td></tr></tbody></table></div><div class=\"label\">Examples</div><ul>\n<li><strong>Developmental:</strong> In yesterday's team meeting, you presented the new schedule very quickly. As a result, some people didn't have time to ask questions. Next time, could you stop for questions after each part?</li>\n<li><strong>Positive:</strong> During the onboarding session on Monday, you gave practical examples for every rule. The new employees told me it was the clearest session they had attended. Please keep doing that.</li>\n<li><strong>Developmental:</strong> In your email to the candidates last week, the interview time was missing. This meant that four people called to ask. Could you use the checklist before you send the next invitations?</li>\n<li><strong>Positive:</strong> When the employee was upset in our meeting, you let her finish and then summarised her concerns. She told me afterwards that she felt listened to.</li>\n<li><strong>Developmental:</strong> In the last two development discussions, you did most of the talking. The employees didn't have much time to share their views. How do you see it?</li></ul>",
+    "phrases": [],
+    "example": "<p><strong>Manager:</strong> Can I give you some feedback on Monday's meeting? When you presented the new leave policy, you went through it very quickly. Some people didn't have time to ask questions, and I got three emails afterwards. Next time, could you stop after each section for questions?</p>",
+    "short": "Situation, behaviour, impact, then next time."
+   },
+   {
+    "title": "Receiving feedback",
+    "body": "<p>Receiving feedback is also a skill. Douglas Stone and Sheila Heen (2014) point out that people often reject feedback before they understand it. A good first step is to thank the person and ask a question.</p>\n<p><strong>The feedback sandwich</strong> (positive, negative, positive) is a common method. Some trainers recommend it. Others say the main message can get lost between the positive parts. Opinions differ.</p><figure class=\"fig\"><div class=\"flow\"><div class=\"step\"><span class=\"n\">1</span><b>Listen</b><span>don't interrupt</span></div><div class=\"step\"><span class=\"n\">2</span><b>Thank</b><span>Thanks for telling me.</span></div><div class=\"step\"><span class=\"n\">3</span><b>Clarify</b><span>Could you give me an example?</span></div><div class=\"step\"><span class=\"n\">4</span><b>Reflect</b><span>take time if you need it</span></div><div class=\"step\"><span class=\"n\">5</span><b>Respond</b><span>agree on next steps, or disagree politely</span></div></div><figcaption>Five steps for receiving feedback.</figcaption></figure><div class=\"label\">Phrases by purpose</div><div class=\"table-scroll\"><table class=\"\"><thead><tr><th>Purpose</th><th>Phrases</th></tr></thead><tbody><tr><td>Thanking</td><td>Thanks for telling me. / I appreciate the feedback. / Thank you, that's helpful to know.</td></tr><tr><td>Clarifying</td><td>Could you give me an example? / What exactly did you notice? / When did that happen? / What would you like me to do differently?</td></tr><tr><td>Checking</td><td>So you feel that… / If I understand correctly, the main issue is…</td></tr><tr><td>Taking time</td><td>Can I think about that and get back to you? / That's a lot to think about. Can we talk again on Friday?</td></tr><tr><td>Explaining</td><td>Can I explain what happened from my side? / The reason I did it that way was…</td></tr><tr><td>Disagreeing politely</td><td>I see it a bit differently. / I'm not sure I agree, but I understand your point. / I'd like to understand your view better.</td></tr><tr><td>Committing</td><td>That's useful. I'll try that next time. / Let me work on that. / Could we check how it's going in a month?</td></tr><tr><td>Receiving praise</td><td>Thank you, that's great to hear. / I'm glad it was useful. / Thanks, the team did a lot of the work too.</td></tr></tbody></table></div>",
+    "phrases": [],
+    "example": "",
+    "short": "Thank, ask, then decide."
+   },
+   {
+    "title": "Performance conversations",
+    "body": "<p>When performance is a problem, the conversation must be clear and fair. Use facts, state the expectation, agree on support and set a follow-up date. HR often prepares managers for these conversations.</p>\n<p>Some organisations use a <strong>performance improvement plan</strong> (PIP): a written plan with goals, support and a review date. The term is common in British and American companies.</p>\n<p>If a conversation is a formal step, such as a warning, say so clearly. Do not let the employee find out later.</p>",
+    "phrases": [
+     "I'd like to talk about the last two project deadlines.",
+     "Let's look at what happened together.",
+     "The expectation for this role is…",
+     "What's getting in the way?",
+     "What support do you need to get there?",
+     "Let's agree on the next steps and review them in a month.",
+     "I want to be clear: this is a formal warning.",
+     "Let me summarise what we've agreed, and I'll send it to you in writing."
+    ],
+    "example": "",
+    "short": "Facts, expectation, support, follow-up. Say clearly if it is formal."
+   },
+   {
+    "title": "Change and leaving",
+    "body": "<p>Employees leave for many reasons: a new job, a move, or organisational change. HR handles the communication.</p>\n<p><strong>Change negotiations</strong> (muutosneuvottelut) are the negotiations required by the Co-operation Act in larger organisations before staff reductions. The older term was <em>co-operation negotiations</em> (yt-neuvottelut). Use the English term and explain it the first time: many international employees do not know it.</p>\n<p>An <strong>exit interview</strong> is a conversation with a leaving employee about their experience. The aim is to learn, not to persuade the person to stay.</p>\n<p>Laws change. Check current rules with official sources before you explain them.</p>",
+    "phrases": [
+     "Thank you for letting me know. We'll be sorry to see you go.",
+     "Let's go through the practical steps: your notice period, your last working day and your final pay.",
+     "Would you be willing to take part in an exit interview?",
+     "What worked well for you here?",
+     "What could we have done better?",
+     "What would you tell a friend who was thinking of applying here?",
+     "We wish you all the best in your new role."
+    ],
+    "example": "",
+    "short": "Thank, handle the practical steps, learn from the exit interview."
+   }
+  ],
+  "errors": [
+   [
+    "Can I give you a feedback?",
+    "Can I give you some feedback? / a piece of feedback"
+   ],
+   [
+    "Thank you for the feedbacks.",
+    "Thank you for the feedback."
+   ],
+   [
+    "You always do this.",
+    "In yesterday's meeting, you…"
+   ],
+   [
+    "I appreciate your constructive critic.",
+    "I appreciate your constructive criticism."
+   ],
+   [
+    "You have been lazy.",
+    "Two of your last three deadlines were missed."
+   ],
+   [
+    "We must discuss about your performance.",
+    "We need to discuss your performance."
+   ]
+  ],
+  "quiz": [
+   {
+    "q": "A development discussion (kehityskeskustelu) is…",
+    "o": [
+     "a regular meeting between an employee and their manager about work, goals and development.",
+     "a job interview.",
+     "a meeting about dismissals.",
+     "a team party."
+    ],
+    "a": 0,
+    "e": "It is a regular one-to-one meeting about work and development."
+   },
+   {
+    "q": "Constructive feedback is…",
+    "o": [
+     "specific, about behaviour, and helps the person improve.",
+     "general and about the person.",
+     "always positive.",
+     "given months later."
+    ],
+    "a": 0,
+    "e": "It is specific, about behaviour and forward-looking."
+   },
+   {
+    "q": "What does SBI stand for?",
+    "o": [
+     "Situation, Behaviour, Impact",
+     "Start, Build, Improve",
+     "Speak, Balance, Inform",
+     "Situation, Blame, Improvement"
+    ],
+    "a": 0,
+    "e": "Situation, Behaviour, Impact (Center for Creative Leadership)."
+   },
+   {
+    "q": "Which is correct?",
+    "o": [
+     "Can I give you some feedback?",
+     "Can I give you a feedback?",
+     "Can I give you feedbacks?",
+     "Can I give you an feedback?"
+    ],
+    "a": 0,
+    "e": "\"Feedback\" is uncountable: some feedback, a piece of feedback."
+   },
+   {
+    "q": "Which feedback is more constructive?",
+    "o": [
+     "In yesterday's meeting, you interrupted Maria twice, so she didn't finish her point.",
+     "You're always rude.",
+     "Everyone thinks you're difficult.",
+     "You need to change."
+    ],
+    "a": 0,
+    "e": "It names a situation, a behaviour and an impact."
+   },
+   {
+    "q": "When you receive feedback, what is a good first step?",
+    "o": [
+     "Thank the person and ask a question to understand.",
+     "Explain why they are wrong.",
+     "Say nothing and leave.",
+     "Give them feedback back."
+    ],
+    "a": 0,
+    "e": "Understand the feedback before you decide what to do with it."
+   },
+   {
+    "q": "What is true about the \"feedback sandwich\"?",
+    "o": [
+     "Some people use it; others say the main message can get lost.",
+     "It is required by law.",
+     "It is always the best method.",
+     "It is only for written feedback."
+    ],
+    "a": 0,
+    "e": "Opinions about the feedback sandwich differ."
+   },
+   {
+    "q": "I appreciate the constructive ___.",
+    "o": [
+     "criticism",
+     "critic",
+     "critics",
+     "criticise"
+    ],
+    "a": 0,
+    "e": "Criticism is the noun. A critic is a person. Criticise is the verb."
+   },
+   {
+    "q": "Which is the best opening for a performance conversation?",
+    "o": [
+     "I'd like to talk about the last two project deadlines. Let's look at what happened together.",
+     "You're not good at your job.",
+     "Everyone is complaining about you.",
+     "Why are you so slow?"
+    ],
+    "a": 0,
+    "e": "It starts with specific facts and invites discussion."
+   },
+   {
+    "q": "\"Let's agree on the next steps and review them in a month\" does what?",
+    "o": [
+     "It sets a clear plan and a follow-up date.",
+     "It ends the employment.",
+     "It avoids the problem.",
+     "It gives a bonus."
+    ],
+    "a": 0,
+    "e": "A clear plan and a review date make the conversation fair."
+   },
+   {
+    "q": "What is muutosneuvottelut in English?",
+    "o": [
+     "change negotiations",
+     "change meetings",
+     "transformation talks",
+     "restructuring votes"
+    ],
+    "a": 0,
+    "e": "Muutosneuvottelut are change negotiations. The older term was co-operation negotiations (yt-neuvottelut)."
+   },
+   {
+    "q": "An exit interview is…",
+    "o": [
+     "a conversation with a leaving employee about their experience.",
+     "a final job interview for a new role.",
+     "a disciplinary meeting.",
+     "a meeting to persuade someone to stay."
+    ],
+    "a": 0,
+    "e": "The aim is to learn from the employee's experience."
+   },
+   {
+    "q": "A colleague tells you they are resigning. What is the best first answer?",
+    "o": [
+     "Thank you for letting me know. We'll be sorry to see you go.",
+     "Why? What's wrong with us?",
+     "OK. Bye.",
+     "You can't do that."
+    ],
+    "a": 0,
+    "e": "Thank the person and stay professional."
+   }
+  ],
+  "reading": {
+   "title": "Growing and moving on",
+   "type": "Dialogues and exit interview",
+   "text": "<p><strong>Part 1: Daniel's first development discussion</strong></p>\n<p><strong>Heidi:</strong> Thanks for coming, Daniel. <mark class=\"lp\">Today I'd like to cover three things<sup>1</sup></mark>: how your first year has gone, some feedback, and your goals for next year.</p>\n<p><strong>Daniel:</strong> Sounds good.</p>\n<p><strong>Heidi:</strong> <mark class=\"lp\">Let's start with<sup>2</sup></mark> the past year. How do you feel it's gone?</p>\n<p><strong>Daniel:</strong> Well, overall. The beginning was hard, especially the workload in February, but things are much better now.</p>\n<p><strong>Heidi:</strong> I agree, and thank you for raising the workload issue. It helped us plan better. Now, some feedback. First, your work on the new service was excellent. <mark class=\"lp\">The client said the demo was the clearest they had seen.<sup>3</sup></mark></p>\n<p><strong>Daniel:</strong> That's great to hear.</p>\n<p><strong>Heidi:</strong> <mark class=\"lp\">Can I give you some feedback<sup>4</sup></mark> on one thing, too? <mark class=\"lp\">In the last sprint review, I noticed that<sup>5</sup></mark> you answered the client's questions very quickly and moved on. <mark class=\"lp\">The effect was that<sup>6</sup></mark> they weren't sure the answers applied to them, and I got two emails afterwards.</p>\n<p><strong>Daniel:</strong> <mark class=\"lp\">Thanks for telling me.<sup>7</sup></mark> <mark class=\"lp\">Could you give me an example<sup>8</sup></mark>?</p>\n<p><strong>Heidi:</strong> They asked about data storage. Your answer was correct, but very short. <mark class=\"lp\">Next time, could you<sup>9</sup></mark> check with them after you answer? Something like \"Does that answer your question?\"</p>\n<p><strong>Daniel:</strong> That's useful. I'll try that. I think I was worried about time.</p>\n<p><strong>Heidi:</strong> That's fair. <mark class=\"lp\">Now let's look at<sup>10</sup></mark> your goals. What would you like to develop next year?</p>\n<p><strong>Daniel:</strong> I'd like to lead a small project, and I'd like to improve my Finnish.</p>\n<p><strong>Heidi:</strong> Both are good goals. <mark class=\"lp\">Let's agree on the next steps<sup>11</sup></mark>: I'll look for a project for you to lead in spring, and you'll check the Finnish courses in our training calendar. We'll <mark class=\"lp\">review<sup>12</sup></mark> them in six months.</p>\n<p><strong>Part 2: Two years later, the exit interview</strong></p>\n<p><strong>Sara:</strong> <mark class=\"lp\">Thank you for letting me know about your new job. We'll be sorry to see you go.<sup>13</sup></mark> Congratulations, though!</p>\n<p><strong>Daniel:</strong> Thank you. It was a hard decision.</p>\n<p><strong>Sara:</strong> Let's go through the practical steps first: your <mark class=\"lp\">notice period<sup>14</sup></mark>, your last working day and your final pay. Then, <mark class=\"lp\">would you be willing to<sup>15</sup></mark> answer a few questions about your time here?</p>\n<p><strong>Daniel:</strong> Of course.</p>\n<p><strong>Sara:</strong> <mark class=\"lp\">What worked well for you here?<sup>16</sup></mark></p>\n<p><strong>Daniel:</strong> The team, definitely. And the onboarding. The help with the tax card saved me in the first month.</p>\n<p><strong>Sara:</strong> <mark class=\"lp\">What could we have done better?<sup>17</sup></mark></p>\n<p><strong>Daniel:</strong> Honestly, the workload problem in my first year. It was solved, but only after I came to you. Maybe managers could check workloads when someone leaves the team.</p>\n<p><strong>Sara:</strong> That's very helpful. <mark class=\"lp\">We wish you all the best in your new role.<sup>18</sup></mark></p>",
+   "points": [
+    [
+     "Today I'd like to cover three things",
+     "Opening signpost for a structured discussion."
+    ],
+    [
+     "Let's start with",
+     "Signposts the first topic."
+    ],
+    [
+     "The client said the demo was the clearest they had seen.",
+     "Specific positive feedback: says what was good and why."
+    ],
+    [
+     "Can I give you some feedback",
+     "Asks permission first. Feedback is uncountable."
+    ],
+    [
+     "In the last sprint review, I noticed that",
+     "Situation + behaviour: specific and neutral."
+    ],
+    [
+     "The effect was that",
+     "Impact: the result of the behaviour."
+    ],
+    [
+     "Thanks for telling me.",
+     "A good first response when receiving feedback."
+    ],
+    [
+     "Could you give me an example",
+     "Asks for detail before reacting."
+    ],
+    [
+     "Next time, could you",
+     "Forward-looking request."
+    ],
+    [
+     "Now let's look at",
+     "Signposts the next topic."
+    ],
+    [
+     "Let's agree on the next steps",
+     "Turns the discussion into clear actions."
+    ],
+    [
+     "review",
+     "To look at again and assess. A review date makes goals concrete."
+    ],
+    [
+     "Thank you for letting me know… We'll be sorry to see you go.",
+     "A professional, warm response to a resignation."
+    ],
+    [
+     "notice period",
+     "The time between resigning and the last working day."
+    ],
+    [
+     "would you be willing to",
+     "A polite way to ask for something optional."
+    ],
+    [
+     "What worked well for you here?",
+     "Opens an exit interview positively."
+    ],
+    [
+     "What could we have done better?",
+     "Asks for honest criticism. The aim is to learn."
+    ],
+    [
+     "We wish you all the best in your new role.",
+     "A standard, warm goodbye."
+    ]
+   ]
+  },
+  "journal": [
+   "Write one piece of feedback using Situation, Behaviour, Impact and a request for next time. Use a real situation or an invented one.",
+   "Write two questions you would ask in an exit interview.",
+   "Look back at your earlier journal entries. What is one thing you now say differently in English at work?"
+  ],
+  "topic": {
+   "title": "Development, feedback and endings",
+   "text": "<p>A <mark class=\"lp\">development discussion<sup>1</sup></mark> is a regular meeting between an employee and their manager about work, goals, <mark class=\"lp\">wellbeing<sup>2</sup></mark> and development. HR usually designs the process and supports managers. A good discussion has a clear structure, uses signposts, and ends with agreed <mark class=\"lp\">next steps<sup>3</sup></mark> and a <mark class=\"lp\">review<sup>4</sup></mark> date.</p>\n<p><mark class=\"lp\">Constructive feedback<sup>5</sup></mark> is specific, about <mark class=\"lp\">behaviour<sup>6</sup></mark> rather than the person, timely and forward-looking. The <mark class=\"lp\">SBI model<sup>7</sup></mark> (Situation, Behaviour, Impact) gives a simple structure. <mark class=\"lp\">Positive feedback<sup>8</sup></mark> works best when it is specific too. <mark class=\"lp\">Receiving feedback<sup>9</sup></mark> is also a skill: thank the person and ask a question before you react.</p>\n<p>When performance is a problem, the conversation must be clear and fair: facts, the <mark class=\"lp\">expectation<sup>10</sup></mark>, support and follow-up. Some organisations use a <mark class=\"lp\">performance improvement plan<sup>11</sup></mark>. If a conversation is a <mark class=\"lp\">formal step<sup>12</sup></mark>, such as a <mark class=\"lp\">written warning<sup>13</sup></mark>, say so clearly.</p>\n<p>Every employment relationship ends one day. An employee may <mark class=\"lp\">resign<sup>14</sup></mark>, or the employer may need to reduce staff, which in larger Finnish organisations requires <mark class=\"lp\">change negotiations<sup>15</sup></mark>. HR handles the practical steps, such as the <mark class=\"lp\">notice period<sup>16</sup></mark> and <mark class=\"lp\">final pay<sup>17</sup></mark>. An <mark class=\"lp\">exit interview<sup>18</sup></mark> helps the organisation learn from leaving employees. The aim is to learn, not to persuade the person to stay.</p>",
+   "keys": [
+    [
+     "development discussion",
+     "a regular meeting about work, goals and development (kehityskeskustelu)"
+    ],
+    [
+     "wellbeing",
+     "health and satisfaction at work"
+    ],
+    [
+     "next steps",
+     "the actions agreed for the future"
+    ],
+    [
+     "review",
+     "to look at again and assess"
+    ],
+    [
+     "constructive feedback",
+     "feedback that helps a person improve"
+    ],
+    [
+     "behaviour",
+     "what a person does (AmE: behavior)"
+    ],
+    [
+     "SBI model",
+     "Situation, Behaviour, Impact: a structure for feedback"
+    ],
+    [
+     "positive feedback",
+     "feedback about what went well"
+    ],
+    [
+     "receiving feedback",
+     "listening to and using feedback from others"
+    ],
+    [
+     "expectation",
+     "what the organisation needs from the person in the role"
+    ],
+    [
+     "performance improvement plan",
+     "a written plan with goals and support when performance is weak"
+    ],
+    [
+     "formal step",
+     "an official part of a procedure"
+    ],
+    [
+     "written warning",
+     "a formal written notice about misconduct (kirjallinen varoitus)"
+    ],
+    [
+     "resign",
+     "to end your own employment (irtisanoutua)"
+    ],
+    [
+     "change negotiations",
+     "negotiations required by law in larger organisations before reducing staff (muutosneuvottelut)"
+    ],
+    [
+     "notice period",
+     "the time between giving notice and the last working day"
+    ],
+    [
+     "final pay",
+     "the last salary payment, including any unused leave"
+    ],
+    [
+     "exit interview",
+     "a conversation with a leaving employee about their experience"
+    ]
+   ]
+  }
+ }
+];
+const KEYWORDS = [["human resources (HR)","henkilöstöhallinto (HR)","the function that manages people matters","General",""],["HR business partner","HR-kumppani","an HR specialist who supports one unit and its managers","General","Our HR business partner meets the unit's managers every week."],["personnel / staff","henkilöstö","all the people who work in an organisation","General",""],["employee","työntekijä","a person who works for an organisation","General",""],["employer","työnantaja","the organisation that employs people","General",""],["line manager","lähiesihenkilö","the person you report to directly","General",""],["colleague","työtoveri, kollega","a person you work with","General",""],["job title","tehtävänimike","the name of a person's job","General",""],["remit","vastuualue","the areas a person or team is responsible for (formal, mainly BrE)","General","I'm afraid that's outside my remit."],["headcount","henkilöstömäärä","the number of people employed","General","Our headcount grew by ten per cent last year."],["to be entitled to","olla oikeutettu johonkin","to have a right to something","General",""],["to be required to","olla velvollinen","to have to do something","General",""],["eligible for","oikeutettu (ehdot täyttävä)","able to get something because you meet the conditions","General","Part-time staff are eligible for the lunch benefit."],["statutory","lakisääteinen","required by law","General","Occupational health care is a statutory service in Finland."],["personal data","henkilötiedot","information that identifies a person","General","Personal data must be stored securely."],["data protection / GDPR","tietosuoja","rules on how personal data is handled","General",""],["recruitment","rekrytointi","finding and hiring new employees","Recruitment",""],["job vacancy / opening","avoin työpaikka","a job that is available","Recruitment","We have two vacancies in the finance team."],["job advertisement / job posting","työpaikkailmoitus","a public notice about a vacancy (BrE also: job ad, advert)","Recruitment",""],["job description","tehtävänkuvaus","a list of the duties of a job","Recruitment",""],["person specification","haettavan henkilön profiili","the skills, experience and qualities the ideal candidate needs","Recruitment",""],["applicant / candidate","hakija","a person who applies for a job","Recruitment",""],["CV / résumé","ansioluettelo, CV","a document listing education and experience (CV BrE, résumé AmE)","Recruitment",""],["covering letter / cover letter","hakemuskirje, saatekirje","a letter sent with a CV (covering BrE, cover AmE)","Recruitment",""],["open application","avoin hakemus","an application sent when there is no advertised vacancy","Recruitment",""],["application deadline / closing date","hakuajan päättyminen","the last day to apply","Recruitment","The closing date is Friday at 16:00."],["internal / external recruitment","sisäinen / ulkoinen rekrytointi","hiring from inside / outside the organisation","Recruitment",""],["recruitment agency","rekrytointiyritys, henkilöstöpalveluyritys","a company that finds candidates for employers","Recruitment",""],["headhunting","suorahaku","contacting suitable people directly, usually for senior roles","Recruitment",""],["passive candidate","passiivinen työnhakija","a person who is not looking for a job but may be open to an offer","Recruitment",""],["talent pool","osaajapooli","a group of possible candidates for current or future roles","Recruitment",""],["employer brand","työnantajakuva, työnantajabrändi","how people see an organisation as a place to work","Recruitment","A strong employer brand attracts better applicants."],["referral programme","suositteluohjelma","a scheme that rewards employees for recommending candidates (AmE: program)","Recruitment",""],["applicant tracking system (ATS)","rekrytointijärjestelmä","software for managing applications","Recruitment",""],["equal opportunities","yhtäläiset mahdollisuudet","fair treatment of all candidates and employees","Recruitment",""],["screening","esikarsinta, seulonta","checking applications to remove unsuitable ones","Selection and onboarding",""],["to shortlist","valita jatkoon","to choose the best applicants for the next stage","Selection and onboarding","We shortlisted six candidates for interview."],["selection criteria","valintakriteerit","the standards used to choose a candidate","Selection and onboarding",""],["job interview","työhaastattelu","a meeting to decide whether to hire a candidate","Selection and onboarding",""],["structured interview","strukturoitu haastattelu","an interview where every candidate gets the same questions","Selection and onboarding",""],["competency-based interview","osaamisperusteinen haastattelu","an interview that asks for examples of skills in real situations","Selection and onboarding",""],["interview panel","haastatteluryhmä","a group of people who interview a candidate together","Selection and onboarding",""],["aptitude assessment","soveltuvuusarviointi","tests of whether a person suits a job","Selection and onboarding",""],["assessment centre","arviointitilaisuus","a day of tasks, tests and interviews for several candidates (AmE: center)","Selection and onboarding",""],["referee","suosittelija","a person who gives information about a candidate's work (AmE: reference)","Selection and onboarding",""],["reference check","suosittelijakysely","a call or questionnaire to a referee","Selection and onboarding",""],["security clearance","turvallisuusselvitys","an official check of a person's background for certain jobs","Selection and onboarding",""],["job offer","työtarjous","a formal offer of a job","Selection and onboarding","She accepted the job offer on Monday."],["to turn down an offer","kieltäytyä tarjouksesta","to refuse a job offer","Selection and onboarding",""],["unsuccessful candidate","valitsematta jäänyt hakija","a candidate who did not get the job","Selection and onboarding",""],["candidate experience","hakijakokemus","how candidates feel about the recruitment process","Selection and onboarding",""],["start date","aloituspäivä","the first day of work","Selection and onboarding",""],["probationary period","koeaika","a trial period at the start of employment","Selection and onboarding",""],["onboarding / induction","perehdytys","introducing a new employee to the job and workplace","Selection and onboarding",""],["employment relationship","työsuhde","the legal relationship between employer and employee","Employee relations",""],["employment contract","työsopimus","the agreement between employer and employee","Employee relations",""],["permanent / fixed-term contract","toistaiseksi voimassa oleva / määräaikainen työsopimus","a contract with no end date / with an end date","Employee relations","Fixed-term contracts need a justified reason in Finland."],["full-time / part-time","kokoaikainen / osa-aikainen","working the normal full hours / fewer hours","Employee relations",""],["working hours / overtime","työaika / ylityö","the hours you work / hours beyond the normal limit","Employee relations",""],["flexitime","liukuva työaika","a system where you can choose when to start and finish work","Employee relations",""],["remote work","etätyö","working outside the workplace, e.g. at home","Employee relations",""],["annual leave / holiday","vuosiloma","paid time off work each year (AmE: vacation)","Employee relations",""],["sick leave","sairausloma","time off work because of illness","Employee relations",""],["doctor's certificate","lääkärintodistus","a document from a doctor, e.g. for sick leave","Employee relations",""],["occupational health care","työterveyshuolto","health services arranged by the employer","Employee relations",""],["occupational safety","työsuojelu","safety and health at work","Employee relations",""],["early support model","varhaisen tuen malli","a practice for acting early when work ability may be at risk","Employee relations",""],["return to work","töihin paluu","coming back after a long absence","Employee relations",""],["absence management","poissaolojen hallinta","monitoring and handling absences","Employee relations",""],["wellbeing at work","työhyvinvointi","health and satisfaction at work","Employee relations",""],["employee engagement","henkilöstön sitoutuminen","how committed and motivated employees are","Employee relations",""],["employee survey","henkilöstökysely","a regular questionnaire for all staff","Employee relations",""],["staff turnover","henkilöstön vaihtuvuus","the rate at which people leave and are replaced","Employee relations","High staff turnover is expensive."],["retention","henkilöstön pysyvyys, pitovoima","keeping employees in the organisation","Employee relations",""],["inappropriate treatment","epäasiallinen kohtelu","behaviour at work that is not acceptable","Employee relations",""],["harassment / bullying","häirintä / kiusaaminen","repeated or serious unacceptable behaviour towards a person","Employee relations",""],["grievance","valitus, epäkohta","a formal complaint by an employee","Employee relations","She raised a grievance about her workload."],["misconduct","työvelvoitteiden rikkominen","serious breaking of work rules","Employee relations",""],["written warning","kirjallinen varoitus","a formal written notice about misconduct","Employee relations",""],["confidential","luottamuksellinen","private; not to be shared","Employee relations",""],["resignation / to resign","irtisanoutuminen / irtisanoutua","when an employee ends the employment","Employee relations","He handed in his resignation on Friday."],["dismissal","irtisanominen","when the employer ends the employment","Employee relations",""],["notice period","irtisanomisaika","the time between giving notice and the end of employment","Employee relations",""],["redundancy","irtisanominen tuotannollisista ja taloudellisista syistä","dismissal because the job is no longer needed (BrE; AmE often: layoff)","Employee relations",""],["temporary lay-off","lomautus","a temporary break in work and pay; employment continues","Employee relations","Always say temporary: in American English, a layoff is usually permanent."],["exit interview","lähtöhaastattelu","a conversation with an employee who is leaving","Employee relations",""],["learning and development (L&D)","osaamisen kehittäminen","the HR area that develops employees' skills","Learning and development",""],["development discussion","kehityskeskustelu","a regular meeting with your manager about work, goals and development","Learning and development",""],["performance review / appraisal","suoriutumisen arviointi","a formal assessment of how well someone does their job","Learning and development",""],["objectives / targets","tavoitteet","results a person is expected to achieve","Learning and development",""],["key performance indicator (KPI)","keskeinen mittari","a number used to measure performance","Learning and development",""],["personal development plan","henkilökohtainen kehittymissuunnitelma","a written plan for an employee's learning","Learning and development",""],["performance improvement plan (PIP)","suoriutumisen parantamissuunnitelma","a written plan with goals and support when performance is weak","Learning and development",""],["training needs analysis","koulutustarvekartoitus","finding out what skills people need to learn","Learning and development",""],["competence","osaaminen","the skills and knowledge needed to do a job","Learning and development",""],["upskilling / reskilling","osaamisen syventäminen / uudelleenkouluttautuminen","learning more in your job / learning a new job","Learning and development",""],["on-the-job training","työssä oppiminen","learning while doing the real job","Learning and development",""],["mentoring / coaching","mentorointi / valmennus","support from an experienced colleague / structured support to reach goals","Learning and development",""],["360-degree feedback","360-palaute","feedback from a manager, colleagues and team members","Learning and development",""],["job rotation","työkierto","moving between different jobs to learn","Learning and development",""],["career path","urapolku","the steps of a person's career","Learning and development",""],["succession planning","seuraajasuunnittelu","preparing people to take over key roles","Learning and development",""],["talent management","osaajien johtaminen","attracting, developing and keeping skilled people","Learning and development",""],["remuneration / compensation","palkitseminen, palkkaus","everything an employee receives for work (remuneration BrE, compensation AmE)","Reward and pay",""],["salary","palkka (kuukausipalkka)","fixed pay, usually monthly","Reward and pay",""],["wage","palkka (tunti- tai viikkopalkka)","pay calculated by the hour or week","Reward and pay",""],["gross / net pay","bruttopalkka / nettopalkka","pay before / after tax and deductions","Reward and pay",""],["payroll","palkanlaskenta","calculating and paying salaries","Reward and pay",""],["pay slip","palkkalaskelma","a document showing pay and deductions (AmE: pay stub)","Reward and pay",""],["pay scale / pay grade","palkkataulukko / palkkaluokka","a system of fixed pay levels","Reward and pay",""],["pay rise","palkankorotus","an increase in pay (AmE: raise)","Reward and pay",""],["pay transparency","palkka-avoimuus","openness about pay levels and how pay is set","Reward and pay",""],["bonus / performance-related pay","bonus / tulospalkkio","extra pay for results","Reward and pay",""],["incentive","kannustin","something that motivates people to do more","Reward and pay",""],["total reward","kokonaispalkitseminen","pay, benefits, development and other rewards together","Reward and pay",""],["benefits","henkilöstöedut","extra things employees receive besides pay","Reward and pay",""],["benefit in kind","luontoisetu","a taxable non-cash benefit, e.g. a phone or car","Reward and pay",""],["lunch benefit","lounasetu","an employer-supported lunch","Reward and pay",""],["sport and culture benefit","liikunta- ja kulttuurietu","an employer-supported benefit for sport and culture","Reward and pay",""],["holiday pay / holiday bonus","lomapalkka / lomaraha","pay during annual leave / an extra payment linked to holidays","Reward and pay","Holiday bonus is based on the collective agreement."],["pension","eläke","money paid after retirement","Reward and pay",""],["salary expectations","palkkatoive","the pay a candidate hopes to receive","Reward and pay",""],["trade union","ammattiliitto","an organisation that represents workers (AmE: labor union)","Industrial relations",""],["employers' organisation","työnantajaliitto","an organisation that represents employers","Industrial relations",""],["labour market organisations / social partners","työmarkkinajärjestöt","unions and employers' organisations together","Industrial relations",""],["collective bargaining","työehtosopimusneuvottelut","negotiations between unions and employers on pay and conditions","Industrial relations",""],["collective agreement","työehtosopimus (TES)","an agreement on pay and working conditions for a whole sector","Industrial relations",""],["generally applicable collective agreement","yleissitova työehtosopimus","a collective agreement that all employers in the sector must follow","Industrial relations",""],["shop steward","luottamusmies","an employee who represents union members at work","Industrial relations",""],["employee representative","henkilöstön edustaja","a person elected to represent staff","Industrial relations",""],["occupational safety representative","työsuojeluvaltuutettu","an elected representative for safety and health at work","Industrial relations",""],["change negotiations","muutosneuvottelut","negotiations required by law in larger organisations before reducing staff (formerly yt-neuvottelut)","Industrial relations",""],["continuous dialogue","jatkuva vuoropuhelu","regular discussion between employer and staff under the Co-operation Act","Industrial relations",""],["industrial action / strike","työtaistelu / lakko","collective action by workers, e.g. stopping work","Industrial relations",""],["overtime ban","ylityökielto","a form of industrial action: no overtime","Industrial relations",""],["labour dispute","työriita","a disagreement between employers and employees","Industrial relations",""],["Labour Court","työtuomioistuin","the court for disputes about collective agreements","Industrial relations",""],["active listening","aktiivinen kuuntelu","listening with full attention and showing you understand","Communication",""],["feedback","palaute","comments on work or behaviour (uncountable)","Communication",""],["small talk","small talk, kevyt jutustelu","short, friendly conversation about everyday topics","Communication",""],["rapport","hyvä yhteys","a good, easy connection with someone","Communication","She quickly builds rapport with candidates."],["signpost","puheen jäsennysilmaus","a phrase that shows where a conversation is going","Communication",""],["to keep someone in the loop","pitää ajan tasalla","to keep someone informed","Communication",""],["to touch base","olla lyhyesti yhteydessä","to make brief contact (informal)","Communication",""],["to reach out","ottaa yhteyttä","to contact someone","Communication","Feel free to reach out with any questions."],["working time bank","työaikapankki","saving working hours to take as time off later","Employee relations",""],["time off in lieu (TOIL)","ylityön korvaaminen vapaana","time off instead of overtime pay (BrE)","Reward and pay",""],["overtime compensation","ylityökorvaus","extra pay or time off for overtime","Reward and pay",""],["parental leave / family leave","perhevapaat","leave to care for a child","Employee relations",""],["unpaid leave / leave of absence","palkaton vapaa","time off without pay","Employee relations",""],["study leave","opintovapaa","time off for studies","Learning and development",""],["equality plan","tasa-arvosuunnitelma","a plan to promote gender equality at work","Employee relations",""],["non-discrimination plan","yhdenvertaisuussuunnitelma","a plan to promote equal treatment","Employee relations",""],["code of conduct","eettinen ohjeistus","rules on how employees should behave","General",""],["whistleblowing channel","ilmoituskanava","a channel for reporting misconduct confidentially","General",""],["substance abuse programme","päihdeohjelma","an organisation's rules and support for alcohol and drug problems","Employee relations",""],["acceptable use policy","tietoturvaohje","rules for using IT systems and devices","General",""],["expense claim","kulukorvaushakemus","a request to get money back for work costs","Reward and pay",""],["non-disclosure agreement (NDA)","salassapitosopimus","an agreement to keep information confidential","General",""],["non-competition agreement","kilpailukieltosopimus","an agreement not to work for a competitor for a time","Employee relations",""],["disciplinary procedure","varoitusmenettely","the steps taken when an employee breaks rules","Employee relations",""],["paid time off (PTO)","palkallinen vapaa","AmE term for paid leave","Reward and pay",""],["termination","työsuhteen päättäminen","ending an employment (AmE, formal)","Employee relations",""],["plain language","selkeä kieli","writing that readers can easily find, understand and use","Communication",""],["communication accommodation","viestinnällinen mukautuminen","adjusting how you speak to your listener","Communication",""]];
+const SOURCES = [
+ "Brown, P. & Levinson, S. C. 1987. Politeness: Some universals in language usage. Cambridge: Cambridge University Press.",
+ "Center for Creative Leadership. Situation–Behavior–Impact (SBI) feedback model. Greensboro, NC: Center for Creative Leadership.",
+ "Council of Europe. 2020. Common European Framework of Reference for Languages: Learning, teaching, assessment – Companion volume. Strasbourg: Council of Europe Publishing.",
+ "Finnish Tax Administration (Vero). Summer job tips [leaflet]. <a href=\"https://www.vero.fi/contentassets/100beb7201974f2986e8e050992b699b/kes%C3%A4ty%C3%B6kirje_en.pdf\" target=\"_blank\" rel=\"noopener\">vero.fi</a>",
+ "Giles, H. (ed.) 2016. Communication accommodation theory: Negotiating personal relationships and social identities across contexts. Cambridge: Cambridge University Press.",
+ "Hall, E. T. 1976. Beyond culture. New York: Anchor Books.",
+ "ISO 24495-1:2023. Plain language – Part 1: Governing principles and guidelines. Geneva: International Organization for Standardization.",
+ "Meyer, E. 2014. The culture map: Breaking through the invisible boundaries of global business. New York: PublicAffairs.",
+ "PushtoLearn. English for Human Resources: 1. Recruitment [word list, consulted as a checklist only]. <a href=\"https://pushtolearn.com/business-english/english-for-human-resources/1-recruitment\" target=\"_blank\" rel=\"noopener\">pushtolearn.com</a>",
+ "Rogers, C. R. & Farson, R. E. 1957. Active listening. Chicago: Industrial Relations Center, University of Chicago.",
+ "Stone, D. & Heen, S. 2014. Thanks for the feedback: The science and art of receiving feedback well. New York: Viking.",
+ "TEK. Change negotiations (muutosneuvottelut). <a href=\"https://www.tek.fi/en/services-and-benefits/work-life-in-finland/change-negotiations-muutosneuvottelut\" target=\"_blank\" rel=\"noopener\">tek.fi</a>",
+ "Vuosilomalaki 162/2005 [Annual Holidays Act]. <a href=\"https://www.finlex.fi/\" target=\"_blank\" rel=\"noopener\">Finlex</a>",
+ "Yhteistoimintalaki 1333/2021 [Co-operation Act]. <a href=\"https://www.finlex.fi/\" target=\"_blank\" rel=\"noopener\">Finlex</a>"
+];
+
+
+const $ = s => document.querySelector(s);
+const esc = s => String(s).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;");
+
+// Tabs
+document.querySelectorAll(".tab-btn").forEach(b => b.addEventListener("click", () => showTab(b.dataset.tab)));
+function showTab(id) {
+  document.querySelectorAll(".tab-btn").forEach(x => { const on = x.dataset.tab === id; x.classList.toggle("active", on); x.setAttribute("aria-selected", on); });
+  document.querySelectorAll(".panel").forEach(p => p.classList.toggle("active", p.id === id));
+  window.scrollTo({ top: $("nav.tabs-bar").offsetTop, behavior: "smooth" });
+}
+
+// Module overview
+$("#class-map").innerHTML = MODULES.map(m =>
+  `<div class="card"><div class="meta">Module ${m.id}</div><h3><a href="#" data-open="${m.id}">${esc(m.title)}</a></h3><p style="margin:4px 0;color:var(--lab-grey-mid)">Dialogues: ${esc(m.reading.title)}</p></div>`).join("");
+document.querySelectorAll("[data-open]").forEach(a => a.addEventListener("click", e => { e.preventDefault(); openModule(+a.dataset.open); showTab("modules"); }));
+
+// Modules
+$("#mod-list").innerHTML = MODULES.map(m => `<button class="mod-btn" data-mod="${m.id}"><small>Module ${m.id}</small>${esc(m.title)}</button>`).join("");
+document.querySelectorAll(".mod-btn").forEach(b => b.addEventListener("click", () => { openModule(+b.dataset.mod); window.scrollTo({ top: $("nav.tabs-bar").offsetTop, behavior: "smooth" }); }));
+function openModule(id) {
+  const m = MODULES[id - 1];
+  document.querySelectorAll(".mod-btn").forEach(b => b.classList.toggle("active", +b.dataset.mod === id));
+  let h = `<div class="card"><div class="meta">Module ${m.id}</div><h2>${esc(m.title)}</h2><p>${m.intro}</p></div>`;
+  const acc = (title, inner, cls = "") => `<details class="acc ${cls}"><summary>${esc(title)}</summary><div class="acc-body">${inner}</div></details>`;
+  h += `<div class="acc-tools"><button class="acc-toggle" data-open="1">Open all</button><button class="acc-toggle" data-open="0">Close all</button></div>`;
+  const t = m.topic;
+  h += acc(`Text: ${t.title}`, t.text + `<div class="label">Key words and phrases</div><ol class="lp-list">${t.keys.map(([k, g]) => `<li><strong>${esc(k)}</strong>: ${esc(g)}</li>`).join("")}</ol>`, "reading");
+  const r = m.reading;
+  h += acc(`Dialogues: ${r.title} (${r.type})`, r.text + `<div class="label">Language points</div><ol class="lp-list">${r.points.map(([p, x]) => `<li><strong>${esc(p)}</strong>: ${esc(x)}</li>`).join("")}</ol>`, "reading");
+  m.cards.forEach(c => {
+    let inner = c.body;
+    if (c.phrases.length) inner += `<div class="label">Useful phrases</div><ul class="phrases">${c.phrases.map(p => `<li>${esc(p)}</li>`).join("")}</ul>`;
+    if (c.example) inner += `<div class="label">Example</div><div class="example">${c.example}</div>`;
+    inner += `<div class="short"><strong>In short:</strong> ${esc(c.short)}</div>`;
+    h += acc(c.title, inner);
+  });
+  h += acc("Common errors for Finnish speakers", `<div class="table-scroll"><table><thead><tr><th>Avoid</th><th>Say instead</th></tr></thead><tbody>` +
+    m.errors.map(([w, r]) => `<tr><td class="wrong">${esc(w)}</td><td class="right">${esc(r)}</td></tr>`).join("") + `</tbody></table></div>`);
+  h += acc("Learning journal task", `<p>Add an entry to your learning journal. Answer all four points. About 200 words is enough.</p><ol>${m.journal.map((t, i) => `<li>${i === 2 ? "<strong>Reflection.</strong> " : ""}${esc(t)}</li>`).join("")}<li><strong>Accommodation.</strong> After the class: how did you and the others in your group adjust your English to each other? What worked, and what would you change?</li></ol>`);
+  h += `<div class="card" style="margin-top:20px"><p style="margin:0">Next step: <a href="#" id="to-quiz">do the Module ${m.id} quiz</a>.</p></div>`;
+  $("#mod-content").innerHTML = h;
+  document.querySelectorAll("#mod-content .acc-toggle").forEach(b => b.addEventListener("click", () => document.querySelectorAll("#mod-content details.acc").forEach(d => d.open = b.dataset.open === "1")));
+  $("#to-quiz").addEventListener("click", e => { e.preventDefault(); startQuiz(m.id); showTab("quiz"); });
+}
+openModule(1);
+document.querySelectorAll("#accommodation .acc-toggle").forEach(b => b.addEventListener("click", () => document.querySelectorAll("#accommodation details.acc").forEach(d => d.open = b.dataset.open === "1")));
+
+
+// Vocabulary
+const AREAS = ["All", ...new Set(KEYWORDS.map(k => k[3]))];
+let kwArea = "All";
+$("#kw-areas").innerHTML = AREAS.map(a => `<button data-area="${esc(a)}" class="${a === "All" ? "active" : ""}">${esc(a)}</button>`).join("");
+document.querySelectorAll("#kw-areas button").forEach(b => b.addEventListener("click", () => {
+  kwArea = b.dataset.area;
+  document.querySelectorAll("#kw-areas button").forEach(x => x.classList.toggle("active", x === b));
+  renderKw($("#kw-search").value);
+}));
+function renderKw(filter = "") {
+  const f = filter.toLowerCase();
+  $("#kw-body").innerHTML = KEYWORDS
+    .filter(k => (kwArea === "All" || k[3] === kwArea) && k.join(" ").toLowerCase().includes(f))
+    .sort((a, b) => a[0].localeCompare(b[0]))
+    .map(([en, fi, d, area, ex]) => `<tr><td><strong>${esc(en)}</strong></td><td>${esc(fi)}</td><td>${esc(d)}${ex ? `<br><em style="color:var(--lab-grey-mid)">${esc(ex)}</em>` : ""}</td><td style="font-size:0.875rem;color:var(--lab-grey-mid)">${esc(area)}</td></tr>`).join("")
+    || `<tr><td colspan="4">No vocabulary found.</td></tr>`;
+}
+$("#kw-search").addEventListener("input", e => renderKw(e.target.value));
+renderKw();
+
+// Quiz
+const shuffle = a => { a = a.slice(); for (let i = a.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; } return a; };
+let current = { set: 1, qs: [], answered: 0, correct: 0 };
+$("#quiz-picker").innerHTML = MODULES.map(m => `<button data-set="${m.id}">Module ${m.id}</button>`).join("") + `<button data-set="all">All modules (20 questions)</button>`;
+document.querySelectorAll("#quiz-picker button").forEach(b => b.addEventListener("click", () => startQuiz(b.dataset.set === "all" ? "all" : +b.dataset.set)));
+function startQuiz(set) {
+  const pool = set === "all" ? shuffle(MODULES.flatMap(m => m.quiz.map(q => ({ ...q, mod: m.id })))).slice(0, 20)
+                             : MODULES[set - 1].quiz.map(q => ({ ...q, mod: set }));
+  current = { set, qs: pool, answered: 0, correct: 0 };
+  document.querySelectorAll("#quiz-picker button").forEach(b => b.classList.toggle("active", b.dataset.set === String(set)));
+  $("#quiz-body").innerHTML = pool.map((q, qi) => {
+    const opts = shuffle(q.o.map((t, i) => ({ t, ok: i === q.a })));
+    return `<div class="q" data-qi="${qi}"><div class="meta">Question ${qi + 1}${set === "all" ? ` · Module ${q.mod}` : ""}</div><div class="q-text">${esc(q.q)}</div>` +
+      opts.map(o => `<button class="opt" data-ok="${o.ok}">${esc(o.t)}</button>`).join("") + `<div class="fb-slot"></div></div>`;
+  }).join("");
+  document.querySelectorAll("#quiz-body .q").forEach(qEl => {
+    const q = current.qs[+qEl.dataset.qi];
+    qEl.querySelectorAll(".opt").forEach(btn => btn.addEventListener("click", () => {
+      const ok = btn.dataset.ok === "true";
+      qEl.querySelectorAll(".opt").forEach(b => { b.disabled = true; if (b.dataset.ok === "true") b.classList.add("correct"); });
+      if (!ok) btn.classList.add("incorrect");
+      current.answered++; if (ok) current.correct++;
+      qEl.querySelector(".fb-slot").innerHTML = `<div class="fb ${ok ? "ok" : "no"}"><strong>${ok ? "Correct." : "Not quite."}</strong> ${esc(q.e)}</div>`;
+      updateScore();
+    }));
+  });
+  updateScore();
+}
+function updateScore() {
+  const { answered, correct, qs, set } = current;
+  const done = answered === qs.length;
+  $("#score").innerHTML = `<span>${set === "all" ? "All modules" : "Module " + set}: ${correct} / ${qs.length} correct${done ? " · Finished" : ` · ${qs.length - answered} left`}</span><button class="btn" id="restart">Start again</button>`;
+  $("#restart").addEventListener("click", () => startQuiz(set));
+}
+startQuiz(1);
+
+// Answer key
+$("#answer-body").innerHTML = MODULES.map(m => `<div class="card"><div class="meta">Module ${m.id}</div><h3>${esc(m.title)}</h3><ol class="key-list">` +
+  m.quiz.map(q => `<li>${esc(q.q)}<br><span class="key-ans">${esc(q.o[q.a])}</span><br><span style="color:var(--lab-grey-mid)">${esc(q.e)}</span></li>`).join("") +
+  `</ol></div>`).join("");
+
+// Sources
+$("#source-list").innerHTML = SOURCES.map(s => `<li style="margin-bottom:8px">${s}</li>`).join("");
+</script>
+</body>
+</html>
