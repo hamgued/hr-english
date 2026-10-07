@@ -170,13 +170,12 @@ footer a { color: var(--lab-footer-text); }
 <section class="panel active" id="start">
   <h2>How to use this coursebook</h2>
   <div class="card">
-    <p>This coursebook supports the HR English course. Its five modules follow one international employee, Daniel, from his job interview to his exit interview. Each module has a short text, dialogues, topic cards with useful phrases, common errors for Finnish speakers, a learning journal task and a quiz. The Vocabulary tab lists HR terms in English and Finnish.</p>
+    <p>This coursebook supports the HR English course. Its five modules follow one international employee, Daniel, from his job interview to his exit interview. Each module has a short text, dialogues, topic cards with useful phrases, a learning journal task and a quiz. The Vocabulary tab lists HR terms in English and Finnish.</p>
     <p>Study each module before its class: Module 1 before Class 2, Module 2 before Class 3, and so on. Read the Accommodation tab before Module 1. The Final task tab explains the instructional speech for Class 7.</p>
     <ol>
       <li>Read the short text and its key words.</li>
       <li>Read the dialogues and their language points.</li>
       <li>Read the topic cards. Say the useful phrases aloud.</li>
-      <li>Check the common errors.</li>
       <li>Do the module quiz.</li>
       <li>After the class, write your learning journal entry (about 200 words).</li>
     </ol>
@@ -250,7 +249,7 @@ footer a { color: var(--lab-footer-text); }
 
 <section class="panel" id="keywords">
   <h2>Vocabulary: English–Finnish</h2>
-  <p>HR vocabulary in eight areas. Choose an area or search. BrE = British English, AmE = American English.</p>
+  <p>HR vocabulary and useful expressions in nine areas. Choose an area or search. BrE = British English, AmE = American English.</p>
   <div class="quiz-picker" id="kw-areas"></div>
   <input type="search" id="kw-search" placeholder="Search in English or Finnish" aria-label="Search vocabulary">
   <div class="table-scroll"><table>
@@ -324,7 +323,7 @@ footer a { color: var(--lab-footer-text); }
 <section class="panel" id="sources">
   <h2>Sources</h2>
   <div class="card"><ul id="source-list"></ul>
-  <div class="note">Laws and HR policies change. Check current rules with your HR team or official sources.</div></div>
+  <div class="note">Laws and policies change, so some legal details in this coursebook may become outdated.</div></div>
 </section>
 
 </div></main>
@@ -349,27 +348,36 @@ const MODULES = [
      "Adding: I'd also like to ask about…",
      "Their questions: Do you have any questions for us?",
      "Closing: Before we finish, … / To sum up, …",
-     "Next steps: We'll contact you by the end of next week."
+     "Next steps: We'll contact you by the end of next week.",
+     "Before we start, let me explain how the interview will go.",
+     "We'll have about 45 minutes.",
+     "Let's come back to that later.",
+     "Is there anything else you'd like to add?"
     ],
     "example": "",
     "short": "Open, ask, invite questions, close. Signpost each step."
    },
    {
     "title": "Interview questions",
-    "body": "<p><strong>Open questions</strong> let the candidate talk: <em>Tell me about yourself.</em></p>\n<p><strong>Behavioural questions</strong> ask about real past situations: <em>Tell me about a time when you solved a conflict at work.</em> The idea is that past behaviour shows how a person works.</p>\n<p><strong>Follow-up questions</strong> go deeper: <em>What did you do next? What was the result?</em></p>\n<p><strong>Questions to avoid:</strong> in Finland and the EU, equality and non-discrimination laws limit what you can ask. Do not ask about age, family plans, religion, health or origin unless the question is directly necessary for the job. Check your organisation's recruitment guidelines.</p>",
+    "body": "<p><strong>Open questions</strong> let the candidate talk: <em>Could you tell me a bit about yourself?</em></p>\n<p><strong>Behavioural questions</strong> ask about real past situations: <em>Could you tell me about a time when you solved a conflict at work?</em> The idea is that past behaviour shows how a person works.</p>\n<p><strong>Follow-up questions</strong> go deeper: <em>What did you do next? What was the result?</em></p>\n<p><strong>Questions to avoid:</strong> age, family plans, religion, health or origin, unless the question is directly necessary for the job.</p>",
     "phrases": [
-     "Tell me about yourself.",
+     "Could you tell me a bit about yourself?",
      "Why are you interested in this role?",
-     "Tell me about a time when…",
+     "Could you tell me about a time when…?",
      "What did you learn from that?",
-     "What would you do if…?"
+     "What would you do if…?",
+     "What made you apply for this role?",
+     "How would your colleagues describe you?",
+     "What kind of working environment suits you best?",
+     "Could you give me an example of…?",
+     "How did you handle that?"
     ],
     "example": "",
     "short": "Ask open and behavioural questions. Avoid personal questions."
    },
    {
     "title": "Probing questions, next steps and reference checks",
-    "body": "<p>Experienced interviewers probe: they ask for details until they get real evidence. They also tell candidates clearly what happens next.</p>\n<p>Reference checks are short structured calls with a referee: a person who knows the candidate's work. In Finland, you normally need the candidate's consent before you contact referees. Check your organisation's practice.</p>",
+    "body": "<p>Experienced interviewers probe: they ask for details until they get real evidence. They also tell candidates clearly what happens next.</p>\n<p>Reference checks are short structured calls with a referee: a person who knows the candidate's work.</p>",
     "phrases": [
      "Could you walk me through your last project?",
      "What was your role in that, specifically?",
@@ -395,45 +403,16 @@ const MODULES = [
      "Finnish is an advantage but not a requirement.",
      "We welcome applicants from all backgrounds.",
      "Thank you for your interest in the position. After careful consideration, we have decided to proceed with other candidates.",
-     "We will keep your application on file for similar roles, with your permission."
+     "We will keep your application on file for similar roles, with your permission.",
+     "Applications close on…",
+     "For more information, please contact…",
+     "We received a large number of strong applications.",
+     "We were impressed by your experience, but…",
+     "We encourage you to apply for future positions."
     ],
     "example": "",
     "short": "Describe the work, not the person. Reject clearly and politely."
    }
-  ],
-  "errors": [
-   [
-    "Tell about yourself.",
-    "Tell me about yourself."
-   ],
-   [
-    "Let's discuss about your goals.",
-    "Let's discuss your goals. / Let's talk about your goals."
-   ],
-   [
-    "Next question is…",
-    "My next question is… / Let's move on to…"
-   ],
-   [
-    "Do you have children? (in an interview)",
-    "Avoid. Ask only about things the job requires."
-   ],
-   [
-    "What is your salary wish?",
-    "What are your salary expectations?"
-   ],
-   [
-    "Can you open this more?",
-    "Could you tell me more about that? / Could you walk me through it?"
-   ],
-   [
-    "You were not chosen because you were bad in the interview.",
-    "After careful consideration, we have decided to proceed with other candidates."
-   ],
-   [
-    "We regret to inform that…",
-    "We regret to inform you that…"
-   ]
   ],
   "quiz": [
    {
@@ -450,7 +429,7 @@ const MODULES = [
    {
     "q": "Which is a behavioural question?",
     "o": [
-     "Tell me about a time when you solved a conflict at work.",
+     "Could you tell me about a time when you solved a conflict at work?",
      "Do you like conflicts?",
      "Are you good at your job?",
      "Where do you live?"
@@ -470,11 +449,11 @@ const MODULES = [
     "e": "\"Tell\" needs a person: tell me."
    },
    {
-    "q": "Which question should you avoid in a job interview in Finland?",
+    "q": "Which question should you avoid in a job interview?",
     "o": [
      "Are you planning to have children?",
      "Why are you interested in this role?",
-     "Tell me about a project you led.",
+     "Could you tell me about a project you led?",
      "What would you do if a deadline changed?"
     ],
     "a": 0,
@@ -608,7 +587,7 @@ const MODULES = [
     ],
     [
      "Tell me about a time when",
-     "Opens a behavioural question: asks for a real past example."
+     "Not a question but a request: it asks the candidate for a real past example. Also: Could you tell me about a time when…?"
     ],
     [
      "What was your role in that, specifically?",
@@ -651,7 +630,7 @@ const MODULES = [
   ],
   "topic": {
    "title": "Recruiting internationally",
-   "text": "<p>Many Finnish organisations now recruit <mark class=\"lp\">international talent<sup>1</sup></mark>. For a candidate abroad, the <mark class=\"lp\">job advert<sup>2</sup></mark> is often the first contact with your organisation, so it needs to be clear and <mark class=\"lp\">inclusive<sup>3</sup></mark>. Good adverts describe the <mark class=\"lp\">duties<sup>4</sup></mark> and the <mark class=\"lp\">requirements<sup>5</sup></mark>, not the ideal person. They use <mark class=\"lp\">gender-neutral job titles<sup>6</sup></mark> and say honestly which languages are needed.</p>\n<p>The next step is <mark class=\"lp\">screening<sup>7</sup></mark>: checking applications against the <mark class=\"lp\">selection criteria<sup>8</sup></mark> and <mark class=\"lp\">shortlisting<sup>9</sup></mark> the strongest candidates. Many organisations use a <mark class=\"lp\">structured interview<sup>10</sup></mark>, in which every candidate answers the same questions. This makes the process fairer and the candidates easier to compare.</p><figure class=\"fig\"><div class=\"flow\"><div class=\"step\"><span class=\"n\">1</span><b>Job advert</b><span>duties, requirements, languages</span></div><div class=\"step\"><span class=\"n\">2</span><b>Screening</b><span>check against criteria</span></div><div class=\"step\"><span class=\"n\">3</span><b>Shortlist</b><span>the strongest candidates</span></div><div class=\"step\"><span class=\"n\">4</span><b>Interviews</b><span>structured questions</span></div><div class=\"step\"><span class=\"n\">5</span><b>References</b><span>with consent</span></div><div class=\"step\"><span class=\"n\">6</span><b>Offer</b><span>often subject to conditions</span></div><div class=\"step\"><span class=\"n\">7</span><b>Onboarding</b><span>first weeks</span></div></div><figcaption>The recruitment process, from advert to onboarding.</figcaption></figure>\n<p><mark class=\"lp\">Behavioural questions<sup>11</sup></mark> ask about real past situations: <em>Tell me about a time when…</em> <mark class=\"lp\">Probing questions<sup>12</sup></mark> ask for details: <em>What was your role, specifically?</em> Interviewers also use <mark class=\"lp\">signposts<sup>13</sup></mark> to show the structure of the interview. This helps candidates who are not using their first language.</p>\n<p>Before making an offer, you may do a <mark class=\"lp\">reference check<sup>14</sup></mark> with the candidate's <mark class=\"lp\">referees<sup>15</sup></mark>. In Finland, you normally need the candidate's consent first. A <mark class=\"lp\">job offer<sup>16</sup></mark> is often <mark class=\"lp\">subject to<sup>17</sup></mark> conditions, for example satisfactory references. Candidates who are not selected deserve a short, polite and clear message. A good <mark class=\"lp\">candidate experience<sup>18</sup></mark> protects your <mark class=\"lp\">employer brand<sup>19</sup></mark>, even when the answer is no.</p>",
+   "text": "<p>Recruiting <mark class=\"lp\">international talent<sup>1</sup></mark> is now part of everyday HR work. For a candidate abroad, the <mark class=\"lp\">job advert<sup>2</sup></mark> is often the first contact with your organisation, so it needs to be clear and <mark class=\"lp\">inclusive<sup>3</sup></mark>. Good adverts describe the <mark class=\"lp\">duties<sup>4</sup></mark> and the <mark class=\"lp\">requirements<sup>5</sup></mark>, not the ideal person. They use <mark class=\"lp\">gender-neutral job titles<sup>6</sup></mark> and say honestly which languages are needed.</p>\n<p>The next step is <mark class=\"lp\">screening<sup>7</sup></mark>: checking applications against the <mark class=\"lp\">selection criteria<sup>8</sup></mark> and <mark class=\"lp\">shortlisting<sup>9</sup></mark> the strongest candidates. Many organisations use a <mark class=\"lp\">structured interview<sup>10</sup></mark>, in which every candidate answers the same questions. This makes the process fairer and the candidates easier to compare.</p><figure class=\"fig\"><div class=\"flow\"><div class=\"step\"><span class=\"n\">1</span><b>Job advert</b><span>duties, requirements, languages</span></div><div class=\"step\"><span class=\"n\">2</span><b>Screening</b><span>check against criteria</span></div><div class=\"step\"><span class=\"n\">3</span><b>Shortlist</b><span>the strongest candidates</span></div><div class=\"step\"><span class=\"n\">4</span><b>Interviews</b><span>structured questions</span></div><div class=\"step\"><span class=\"n\">5</span><b>References</b><span>with consent</span></div><div class=\"step\"><span class=\"n\">6</span><b>Offer</b><span>often subject to conditions</span></div><div class=\"step\"><span class=\"n\">7</span><b>Onboarding</b><span>first weeks</span></div></div><figcaption>The recruitment process, from advert to onboarding.</figcaption></figure>\n<p><mark class=\"lp\">Behavioural questions<sup>11</sup></mark> ask about real past situations: <em>Could you tell me about a time when…?</em> <mark class=\"lp\">Probing questions<sup>12</sup></mark> ask for details: <em>What was your role, specifically?</em> Interviewers also use <mark class=\"lp\">signposts<sup>13</sup></mark> to show the structure of the interview. This helps candidates who are not using their first language.</p>\n<p>Before making an offer, you may do a <mark class=\"lp\">reference check<sup>14</sup></mark> with the candidate's <mark class=\"lp\">referees<sup>15</sup></mark>. A <mark class=\"lp\">job offer<sup>16</sup></mark> is often <mark class=\"lp\">subject to<sup>17</sup></mark> conditions, for example satisfactory references. Candidates who are not selected deserve a short, polite and clear message. A good <mark class=\"lp\">candidate experience<sup>18</sup></mark> protects your <mark class=\"lp\">employer brand<sup>19</sup></mark>, even when the answer is no.</p>",
    "keys": [
     [
      "international talent",
@@ -747,7 +726,11 @@ const MODULES = [
      "Your buddy is Ville. He'll show you around and answer everyday questions.",
      "Don't hesitate to ask if anything is unclear.",
      "Let's meet again at the end of the week to see how things are going.",
-     "Is there anything you'd like to know before we start?"
+     "Is there anything you'd like to know before we start?",
+     "Let me introduce you to the team.",
+     "Here's your laptop and access card.",
+     "You can find most of the information on the intranet.",
+     "How are you settling in?"
     ],
     "example": "",
     "short": "Welcome, contact person, plan, buddy, follow-up."
@@ -816,7 +799,12 @@ const MODULES = [
     "phrases": [
      "Let me think about that for a moment.",
      "Just to be clear, do you mean…?",
-     "In Finland, we tend to be quite direct. Please tell me if I sound too direct."
+     "In Finland, we tend to be quite direct. Please tell me if I sound too direct.",
+     "Could you tell me a bit more about what you mean?",
+     "I'd really like to hear what you think.",
+     "There's no need to answer right away.",
+     "Feel free to disagree.",
+     "In my experience, …"
     ],
     "example": "",
     "short": "Styles differ, but individuals differ more. Check meaning; do not assume it."
@@ -837,40 +825,6 @@ const MODULES = [
     "example": "",
     "short": "Understand common expressions; use them carefully with international groups."
    }
-  ],
-  "errors": [
-   [
-    "I am working here since 2019.",
-    "I have worked here since 2019."
-   ],
-   [
-    "We are 200 persons.",
-    "We have 200 employees. / There are 200 of us."
-   ],
-   [
-    "I work in the HR.",
-    "I work in HR."
-   ],
-   [
-    "I'm responsible of payroll.",
-    "I'm responsible for payroll. / I'm in charge of payroll."
-   ],
-   [
-    "I take care about recruiting.",
-    "I take care of recruitment. / I handle recruitment."
-   ],
-   [
-    "Nice to see you. (first meeting)",
-    "Nice to meet you. (first meeting) / Nice to see you again."
-   ],
-   [
-    "Let's keep contact.",
-    "Let's keep in touch. / Let's stay in touch."
-   ],
-   [
-    "I'll inform you about it later. (can sound very formal)",
-    "I'll keep you posted. / I'll let you know."
-   ]
   ],
   "quiz": [
    {
@@ -1171,17 +1125,21 @@ const MODULES = [
    },
    {
     "title": "Common questions from international employees",
-    "body": "<p>These are typical first questions. The answers depend partly on the law and partly on your organisation and collective agreement, so always check your own policies.</p>\n<ul><li><strong>Tax card (verokortti):</strong> the employer needs the employee's tax rate to pay salary. Without a tax card, the employer must withhold 60 per cent tax. Employees order a tax card in MyTax (OmaVero).</li>\n<li><strong>Annual leave:</strong> leave builds up month by month in the holiday credit year, which runs from 1 April to 31 March. New employees usually earn 2 days per month in their first year, and 2.5 days after that. Saturdays count as leave days, so a week of holiday uses six days.</li>\n<li><strong>Sick leave:</strong> practice depends on the organisation: how to report, how many days without a certificate, and when to visit occupational health care.</li>\n<li><strong>Occupational health care:</strong> employer-arranged health services. Explain what is included at your organisation.</li>\n<li><strong>Collective agreement:</strong> explain that it sets minimum pay and conditions for the sector, and that the employee's contract refers to it.</li>\n<li><strong>Probationary period:</strong> explain its length and what it means in practice.</li></ul><figure class=\"fig\"><svg viewBox=\"0 0 640 290\" role=\"img\" aria-labelledby=\"hct\" style=\"width:100%;height:auto;display:block\"><title id=\"hct\">Leave days built up during one holiday credit year: 2 days per month in the first year, 2.5 days per month later</title><line x1=\"44\" x2=\"630\" y1=\"240\" y2=\"240\" stroke=\"#e0e0e0\"/><text x=\"36\" y=\"244\" font-size=\"11\" text-anchor=\"end\" fill=\"#555\">0</text><line x1=\"44\" x2=\"630\" y1=\"196.8\" y2=\"196.8\" stroke=\"#e0e0e0\"/><text x=\"36\" y=\"200.8\" font-size=\"11\" text-anchor=\"end\" fill=\"#555\">6</text><line x1=\"44\" x2=\"630\" y1=\"153.6\" y2=\"153.6\" stroke=\"#e0e0e0\"/><text x=\"36\" y=\"157.6\" font-size=\"11\" text-anchor=\"end\" fill=\"#555\">12</text><line x1=\"44\" x2=\"630\" y1=\"110.4\" y2=\"110.4\" stroke=\"#e0e0e0\"/><text x=\"36\" y=\"114.4\" font-size=\"11\" text-anchor=\"end\" fill=\"#555\">18</text><line x1=\"44\" x2=\"630\" y1=\"67.19999999999999\" y2=\"67.19999999999999\" stroke=\"#e0e0e0\"/><text x=\"36\" y=\"71.19999999999999\" font-size=\"11\" text-anchor=\"end\" fill=\"#555\">24</text><line x1=\"44\" x2=\"630\" y1=\"24\" y2=\"24\" stroke=\"#e0e0e0\"/><text x=\"36\" y=\"28\" font-size=\"11\" text-anchor=\"end\" fill=\"#555\">30</text><rect x=\"50\" y=\"225.6\" width=\"17.416666666666668\" height=\"14.400000000000006\" fill=\"#9fd9d9\"/><rect x=\"69.41666666666667\" y=\"222\" width=\"17.416666666666668\" height=\"18\" fill=\"#069494\"/><text x=\"67.41666666666667\" y=\"256\" font-size=\"11\" text-anchor=\"middle\" fill=\"#1a1a1a\">Apr</text><rect x=\"98.83333333333334\" y=\"211.2\" width=\"17.416666666666668\" height=\"28.80000000000001\" fill=\"#9fd9d9\"/><rect x=\"118.25000000000001\" y=\"204\" width=\"17.416666666666668\" height=\"36\" fill=\"#069494\"/><text x=\"116.25000000000001\" y=\"256\" font-size=\"11\" text-anchor=\"middle\" fill=\"#1a1a1a\">May</text><rect x=\"147.66666666666669\" y=\"196.8\" width=\"17.416666666666668\" height=\"43.19999999999999\" fill=\"#9fd9d9\"/><rect x=\"167.08333333333334\" y=\"186\" width=\"17.416666666666668\" height=\"54\" fill=\"#069494\"/><text x=\"165.08333333333334\" y=\"256\" font-size=\"11\" text-anchor=\"middle\" fill=\"#1a1a1a\">Jun</text><rect x=\"196.5\" y=\"182.4\" width=\"17.416666666666668\" height=\"57.599999999999994\" fill=\"#9fd9d9\"/><rect x=\"215.91666666666666\" y=\"168\" width=\"17.416666666666668\" height=\"72\" fill=\"#069494\"/><text x=\"213.91666666666666\" y=\"256\" font-size=\"11\" text-anchor=\"middle\" fill=\"#1a1a1a\">Jul</text><rect x=\"245.33333333333334\" y=\"168\" width=\"17.416666666666668\" height=\"72\" fill=\"#9fd9d9\"/><rect x=\"264.75\" y=\"150\" width=\"17.416666666666668\" height=\"90\" fill=\"#069494\"/><text x=\"262.75\" y=\"256\" font-size=\"11\" text-anchor=\"middle\" fill=\"#1a1a1a\">Aug</text><rect x=\"294.1666666666667\" y=\"153.6\" width=\"17.416666666666668\" height=\"86.4\" fill=\"#9fd9d9\"/><rect x=\"313.58333333333337\" y=\"132\" width=\"17.416666666666668\" height=\"108\" fill=\"#069494\"/><text x=\"311.58333333333337\" y=\"256\" font-size=\"11\" text-anchor=\"middle\" fill=\"#1a1a1a\">Sep</text><rect x=\"343\" y=\"139.2\" width=\"17.416666666666668\" height=\"100.80000000000001\" fill=\"#9fd9d9\"/><rect x=\"362.4166666666667\" y=\"113.99999999999999\" width=\"17.416666666666668\" height=\"126.00000000000001\" fill=\"#069494\"/><text x=\"360.4166666666667\" y=\"256\" font-size=\"11\" text-anchor=\"middle\" fill=\"#1a1a1a\">Oct</text><rect x=\"391.83333333333337\" y=\"124.8\" width=\"17.416666666666668\" height=\"115.2\" fill=\"#9fd9d9\"/><rect x=\"411.25000000000006\" y=\"96\" width=\"17.416666666666668\" height=\"144\" fill=\"#069494\"/><text x=\"409.25000000000006\" y=\"256\" font-size=\"11\" text-anchor=\"middle\" fill=\"#1a1a1a\">Nov</text><rect x=\"440.6666666666667\" y=\"110.4\" width=\"17.416666666666668\" height=\"129.6\" fill=\"#9fd9d9\"/><rect x=\"460.08333333333337\" y=\"78\" width=\"17.416666666666668\" height=\"162\" fill=\"#069494\"/><text x=\"458.08333333333337\" y=\"256\" font-size=\"11\" text-anchor=\"middle\" fill=\"#1a1a1a\">Dec</text><rect x=\"489.5\" y=\"96\" width=\"17.416666666666668\" height=\"144\" fill=\"#9fd9d9\"/><rect x=\"508.9166666666667\" y=\"60\" width=\"17.416666666666668\" height=\"180\" fill=\"#069494\"/><text x=\"506.9166666666667\" y=\"256\" font-size=\"11\" text-anchor=\"middle\" fill=\"#1a1a1a\">Jan</text><rect x=\"538.3333333333334\" y=\"81.60000000000002\" width=\"17.416666666666668\" height=\"158.39999999999998\" fill=\"#9fd9d9\"/><rect x=\"557.75\" y=\"42\" width=\"17.416666666666668\" height=\"198\" fill=\"#069494\"/><text x=\"555.75\" y=\"256\" font-size=\"11\" text-anchor=\"middle\" fill=\"#1a1a1a\">Feb</text><rect x=\"587.1666666666667\" y=\"67.19999999999999\" width=\"17.416666666666668\" height=\"172.8\" fill=\"#9fd9d9\"/><rect x=\"606.5833333333334\" y=\"24\" width=\"17.416666666666668\" height=\"216\" fill=\"#069494\"/><text x=\"604.5833333333334\" y=\"256\" font-size=\"11\" text-anchor=\"middle\" fill=\"#1a1a1a\">Mar</text><text x=\"595.8750000000001\" y=\"62.19999999999999\" font-size=\"11\" text-anchor=\"middle\" font-weight=\"700\" fill=\"#1a1a1a\">24</text><text x=\"615.2916666666667\" y=\"19\" font-size=\"11\" text-anchor=\"middle\" font-weight=\"700\" fill=\"#1a1a1a\">30</text><rect x=\"44\" y=\"268\" width=\"12\" height=\"12\" fill=\"#9fd9d9\"/><text x=\"62\" y=\"278\" font-size=\"12\" fill=\"#1a1a1a\">First year: 2 days per month</text><rect x=\"274\" y=\"268\" width=\"12\" height=\"12\" fill=\"#069494\"/><text x=\"292\" y=\"278\" font-size=\"12\" fill=\"#1a1a1a\">Later years: 2.5 days per month</text></svg><figcaption>Leave days built up over one holiday credit year (1 April – 31 March), assuming every month is a full holiday credit month. Saturdays count as leave days, so 30 days = five weeks.</figcaption></figure>",
+    "body": "<p>These are typical first questions. The notes show one way to explain each answer in English.</p>\n<ul><li><strong>Tax card (verokortti):</strong> the employer needs the employee's tax rate to pay salary. Without a tax card, the employer must withhold 60 per cent tax. Employees order a tax card in MyTax (OmaVero).</li>\n<li><strong>Annual leave:</strong> leave builds up month by month in the holiday credit year, which runs from 1 April to 31 March. New employees usually earn 2 days per month in their first year, and 2.5 days after that. Saturdays count as leave days, so a week of holiday uses six days.</li>\n<li><strong>Sick leave:</strong> practice depends on the organisation: how to report, how many days without a certificate, and when to visit occupational health care.</li>\n<li><strong>Occupational health care:</strong> employer-arranged health services. Explain what is included at your organisation.</li>\n<li><strong>Collective agreement:</strong> explain that it sets minimum pay and conditions for the sector, and that the employee's contract refers to it.</li>\n<li><strong>Probationary period:</strong> explain its length and what it means in practice.</li></ul><figure class=\"fig\"><svg viewBox=\"0 0 640 290\" role=\"img\" aria-labelledby=\"hct\" style=\"width:100%;height:auto;display:block\"><title id=\"hct\">Leave days built up during one holiday credit year: 2 days per month in the first year, 2.5 days per month later</title><line x1=\"44\" x2=\"630\" y1=\"240\" y2=\"240\" stroke=\"#e0e0e0\"/><text x=\"36\" y=\"244\" font-size=\"11\" text-anchor=\"end\" fill=\"#555\">0</text><line x1=\"44\" x2=\"630\" y1=\"196.8\" y2=\"196.8\" stroke=\"#e0e0e0\"/><text x=\"36\" y=\"200.8\" font-size=\"11\" text-anchor=\"end\" fill=\"#555\">6</text><line x1=\"44\" x2=\"630\" y1=\"153.6\" y2=\"153.6\" stroke=\"#e0e0e0\"/><text x=\"36\" y=\"157.6\" font-size=\"11\" text-anchor=\"end\" fill=\"#555\">12</text><line x1=\"44\" x2=\"630\" y1=\"110.4\" y2=\"110.4\" stroke=\"#e0e0e0\"/><text x=\"36\" y=\"114.4\" font-size=\"11\" text-anchor=\"end\" fill=\"#555\">18</text><line x1=\"44\" x2=\"630\" y1=\"67.19999999999999\" y2=\"67.19999999999999\" stroke=\"#e0e0e0\"/><text x=\"36\" y=\"71.19999999999999\" font-size=\"11\" text-anchor=\"end\" fill=\"#555\">24</text><line x1=\"44\" x2=\"630\" y1=\"24\" y2=\"24\" stroke=\"#e0e0e0\"/><text x=\"36\" y=\"28\" font-size=\"11\" text-anchor=\"end\" fill=\"#555\">30</text><rect x=\"50\" y=\"225.6\" width=\"17.416666666666668\" height=\"14.400000000000006\" fill=\"#9fd9d9\"/><rect x=\"69.41666666666667\" y=\"222\" width=\"17.416666666666668\" height=\"18\" fill=\"#069494\"/><text x=\"67.41666666666667\" y=\"256\" font-size=\"11\" text-anchor=\"middle\" fill=\"#1a1a1a\">Apr</text><rect x=\"98.83333333333334\" y=\"211.2\" width=\"17.416666666666668\" height=\"28.80000000000001\" fill=\"#9fd9d9\"/><rect x=\"118.25000000000001\" y=\"204\" width=\"17.416666666666668\" height=\"36\" fill=\"#069494\"/><text x=\"116.25000000000001\" y=\"256\" font-size=\"11\" text-anchor=\"middle\" fill=\"#1a1a1a\">May</text><rect x=\"147.66666666666669\" y=\"196.8\" width=\"17.416666666666668\" height=\"43.19999999999999\" fill=\"#9fd9d9\"/><rect x=\"167.08333333333334\" y=\"186\" width=\"17.416666666666668\" height=\"54\" fill=\"#069494\"/><text x=\"165.08333333333334\" y=\"256\" font-size=\"11\" text-anchor=\"middle\" fill=\"#1a1a1a\">Jun</text><rect x=\"196.5\" y=\"182.4\" width=\"17.416666666666668\" height=\"57.599999999999994\" fill=\"#9fd9d9\"/><rect x=\"215.91666666666666\" y=\"168\" width=\"17.416666666666668\" height=\"72\" fill=\"#069494\"/><text x=\"213.91666666666666\" y=\"256\" font-size=\"11\" text-anchor=\"middle\" fill=\"#1a1a1a\">Jul</text><rect x=\"245.33333333333334\" y=\"168\" width=\"17.416666666666668\" height=\"72\" fill=\"#9fd9d9\"/><rect x=\"264.75\" y=\"150\" width=\"17.416666666666668\" height=\"90\" fill=\"#069494\"/><text x=\"262.75\" y=\"256\" font-size=\"11\" text-anchor=\"middle\" fill=\"#1a1a1a\">Aug</text><rect x=\"294.1666666666667\" y=\"153.6\" width=\"17.416666666666668\" height=\"86.4\" fill=\"#9fd9d9\"/><rect x=\"313.58333333333337\" y=\"132\" width=\"17.416666666666668\" height=\"108\" fill=\"#069494\"/><text x=\"311.58333333333337\" y=\"256\" font-size=\"11\" text-anchor=\"middle\" fill=\"#1a1a1a\">Sep</text><rect x=\"343\" y=\"139.2\" width=\"17.416666666666668\" height=\"100.80000000000001\" fill=\"#9fd9d9\"/><rect x=\"362.4166666666667\" y=\"113.99999999999999\" width=\"17.416666666666668\" height=\"126.00000000000001\" fill=\"#069494\"/><text x=\"360.4166666666667\" y=\"256\" font-size=\"11\" text-anchor=\"middle\" fill=\"#1a1a1a\">Oct</text><rect x=\"391.83333333333337\" y=\"124.8\" width=\"17.416666666666668\" height=\"115.2\" fill=\"#9fd9d9\"/><rect x=\"411.25000000000006\" y=\"96\" width=\"17.416666666666668\" height=\"144\" fill=\"#069494\"/><text x=\"409.25000000000006\" y=\"256\" font-size=\"11\" text-anchor=\"middle\" fill=\"#1a1a1a\">Nov</text><rect x=\"440.6666666666667\" y=\"110.4\" width=\"17.416666666666668\" height=\"129.6\" fill=\"#9fd9d9\"/><rect x=\"460.08333333333337\" y=\"78\" width=\"17.416666666666668\" height=\"162\" fill=\"#069494\"/><text x=\"458.08333333333337\" y=\"256\" font-size=\"11\" text-anchor=\"middle\" fill=\"#1a1a1a\">Dec</text><rect x=\"489.5\" y=\"96\" width=\"17.416666666666668\" height=\"144\" fill=\"#9fd9d9\"/><rect x=\"508.9166666666667\" y=\"60\" width=\"17.416666666666668\" height=\"180\" fill=\"#069494\"/><text x=\"506.9166666666667\" y=\"256\" font-size=\"11\" text-anchor=\"middle\" fill=\"#1a1a1a\">Jan</text><rect x=\"538.3333333333334\" y=\"81.60000000000002\" width=\"17.416666666666668\" height=\"158.39999999999998\" fill=\"#9fd9d9\"/><rect x=\"557.75\" y=\"42\" width=\"17.416666666666668\" height=\"198\" fill=\"#069494\"/><text x=\"555.75\" y=\"256\" font-size=\"11\" text-anchor=\"middle\" fill=\"#1a1a1a\">Feb</text><rect x=\"587.1666666666667\" y=\"67.19999999999999\" width=\"17.416666666666668\" height=\"172.8\" fill=\"#9fd9d9\"/><rect x=\"606.5833333333334\" y=\"24\" width=\"17.416666666666668\" height=\"216\" fill=\"#069494\"/><text x=\"604.5833333333334\" y=\"256\" font-size=\"11\" text-anchor=\"middle\" fill=\"#1a1a1a\">Mar</text><text x=\"595.8750000000001\" y=\"62.19999999999999\" font-size=\"11\" text-anchor=\"middle\" font-weight=\"700\" fill=\"#1a1a1a\">24</text><text x=\"615.2916666666667\" y=\"19\" font-size=\"11\" text-anchor=\"middle\" font-weight=\"700\" fill=\"#1a1a1a\">30</text><rect x=\"44\" y=\"268\" width=\"12\" height=\"12\" fill=\"#9fd9d9\"/><text x=\"62\" y=\"278\" font-size=\"12\" fill=\"#1a1a1a\">First year: 2 days per month</text><rect x=\"274\" y=\"268\" width=\"12\" height=\"12\" fill=\"#069494\"/><text x=\"292\" y=\"278\" font-size=\"12\" fill=\"#1a1a1a\">Later years: 2.5 days per month</text></svg><figcaption>Leave days built up over one holiday credit year (1 April – 31 March), assuming every month is a full holiday credit month. Saturdays count as leave days, so 30 days = five weeks.</figcaption></figure>",
     "phrases": [
      "Have you ordered your tax card yet?",
      "Holiday builds up month by month.",
      "In your first year, you earn two days of leave per month.",
      "For short absences, you can report it to your manager yourself.",
      "Occupational health care covers…",
-     "Your contract follows the collective agreement for our sector."
+     "Your contract follows the collective agreement for our sector.",
+     "You can check your leave balance in the HR system.",
+     "Your payslip shows your gross pay, tax and other deductions.",
+     "Let me know if you need help with that.",
+     "That depends on your contract. Let me check."
     ],
     "example": "",
-    "short": "Know the common questions. Check your own policies for the details."
+    "short": "Know the common questions and how to explain the answers in English."
    },
    {
     "title": "Modal verbs for rules: a clear explanation",
@@ -1211,36 +1169,6 @@ const MODULES = [
     "example": "",
     "short": "Know both forms. Choose one variety per document. Say \"temporary lay-off\" for lomautus."
    }
-  ],
-  "errors": [
-   [
-    "You don't must come.",
-    "You don't have to come."
-   ],
-   [
-    "You mustn't come. (meaning: it is not necessary)",
-    "You don't have to come."
-   ],
-   [
-    "I'm on sick holiday.",
-    "I'm on sick leave."
-   ],
-   [
-    "The company has a good benefit package with many benefit.",
-    "The company has a good benefits package with many benefits."
-   ],
-   [
-    "You are allowed to occupational health care.",
-    "You are entitled to occupational health care."
-   ],
-   [
-    "We laid off ten people. (meaning lomautus)",
-    "Ten people were temporarily laid off."
-   ],
-   [
-    "He is eligible to the bonus.",
-    "He is eligible for the bonus."
-   ]
   ],
   "quiz": [
    {
@@ -1454,7 +1382,7 @@ const MODULES = [
   ],
   "topic": {
    "title": "How Finnish working life works",
-   "text": "<p>International employees often ask how working life works in Finland. Many answers depend on three levels: <mark class=\"lp\">legislation<sup>1</sup></mark>, the <mark class=\"lp\">collective agreement<sup>2</sup></mark> for the sector, and the organisation's own <mark class=\"lp\">policies<sup>3</sup></mark>. HR professionals know these levels well. The challenge is to explain them simply, in English, to someone with no background.</p><figure class=\"fig\"><div class=\"levels\"><div class=\"lvl lvl0\"><b>Legislation</b><span>e.g. the Annual Holidays Act, the Employment Contracts Act</span><div class=\"lvl lvl1\"><b>Collective agreement</b><span>minimum pay and conditions for the sector</span><div class=\"lvl lvl2\"><b>Organisation's policies</b><span>your own rules and practices</span><div class=\"lvl lvl3\"><b>Employment contract</b><span>the individual agreement</span></div></div></div></div></div><figcaption>Three levels of rules, plus the individual contract. In general, each level must meet the minimum set by the levels above it.</figcaption></figure>\n<p>Common first questions concern the <mark class=\"lp\">tax card<sup>4</sup></mark>, <mark class=\"lp\">annual leave<sup>5</sup></mark>, <mark class=\"lp\">sick leave<sup>6</sup></mark>, <mark class=\"lp\">occupational health care<sup>7</sup></mark> and the <mark class=\"lp\">probationary period<sup>8</sup></mark>. For example, without a tax card, the employer must <mark class=\"lp\">withhold<sup>9</sup></mark> 60 per cent tax, and annual leave <mark class=\"lp\">builds up<sup>10</sup></mark> month by month during the <mark class=\"lp\">holiday credit year<sup>11</sup></mark>.</p>\n<p>A useful method has four steps: the rule, the reason, what to do, and where to find more. Comparing with what the person already knows also helps: <em>The main difference from many other countries is that…</em></p>\n<p>The language of rules is modal verbs. <em>Must</em> and <mark class=\"lp\">be required to<sup>12</sup></mark> express obligation; <mark class=\"lp\">mustn't<sup>13</sup></mark> expresses prohibition; <mark class=\"lp\">don't have to<sup>14</sup></mark> means that something is not necessary; <em>may</em> and <mark class=\"lp\">be entitled to<sup>15</sup></mark> express permission and rights.</p>\n<p>Written policies use a <mark class=\"lp\">formal register<sup>16</sup></mark>: <mark class=\"lp\">eligible for<sup>17</sup></mark>, <mark class=\"lp\">in accordance with<sup>18</sup></mark>, <mark class=\"lp\">with effect from<sup>19</sup></mark>. Many international employees understand a <mark class=\"lp\">plain-English<sup>20</sup></mark> version faster. When you are not sure about a rule, say so, and point to the official source.</p>",
+   "text": "<p>International employees often ask how working life works in Finland. Many answers depend on three levels: <mark class=\"lp\">legislation<sup>1</sup></mark>, the <mark class=\"lp\">collective agreement<sup>2</sup></mark> for the sector, and the organisation's own <mark class=\"lp\">policies<sup>3</sup></mark>. HR professionals know these levels well. The challenge is to explain them simply, in English, to someone with no background.</p><figure class=\"fig\"><div class=\"levels\"><div class=\"lvl lvl0\"><b>Legislation</b><span>e.g. the Annual Holidays Act, the Employment Contracts Act</span><div class=\"lvl lvl1\"><b>Collective agreement</b><span>minimum pay and conditions for the sector</span><div class=\"lvl lvl2\"><b>Organisation's policies</b><span>your own rules and practices</span><div class=\"lvl lvl3\"><b>Employment contract</b><span>the individual agreement</span></div></div></div></div></div><figcaption>Three levels of rules, plus the individual contract. In general, each level must meet the minimum set by the levels above it.</figcaption></figure>\n<p>Common first questions concern the <mark class=\"lp\">tax card<sup>4</sup></mark>, <mark class=\"lp\">annual leave<sup>5</sup></mark>, <mark class=\"lp\">sick leave<sup>6</sup></mark>, <mark class=\"lp\">occupational health care<sup>7</sup></mark> and the <mark class=\"lp\">probationary period<sup>8</sup></mark>. In English, you might say that without a tax card, the employer must <mark class=\"lp\">withhold<sup>9</sup></mark> 60 per cent tax, or that annual leave <mark class=\"lp\">builds up<sup>10</sup></mark> month by month during the <mark class=\"lp\">holiday credit year<sup>11</sup></mark>.</p>\n<p>A useful method has four steps: the rule, the reason, what to do, and where to find more. Comparing with what the person already knows also helps: <em>The main difference from many other countries is that…</em></p>\n<p>The language of rules is modal verbs. <em>Must</em> and <mark class=\"lp\">be required to<sup>12</sup></mark> express obligation; <mark class=\"lp\">mustn't<sup>13</sup></mark> expresses prohibition; <mark class=\"lp\">don't have to<sup>14</sup></mark> means that something is not necessary; <em>may</em> and <mark class=\"lp\">be entitled to<sup>15</sup></mark> express permission and rights.</p>\n<p>Written policies use a <mark class=\"lp\">formal register<sup>16</sup></mark>: <mark class=\"lp\">eligible for<sup>17</sup></mark>, <mark class=\"lp\">in accordance with<sup>18</sup></mark>, <mark class=\"lp\">with effect from<sup>19</sup></mark>. Many international employees understand a <mark class=\"lp\">plain-English<sup>20</sup></mark> version faster. When you are not sure about a rule, say so, and point to the official source.</p>",
    "keys": [
     [
      "legislation",
@@ -1552,7 +1480,12 @@ const MODULES = [
      "Would you mind checking the dates again?",
      "It seems that the form is missing a signature.",
      "The schedule is a bit tight.",
-     "I was wondering if you could join the meeting."
+     "I was wondering if you could join the meeting.",
+     "Would it be possible to…?",
+     "I'm not sure that will work.",
+     "It might be better to…",
+     "Could we possibly…?",
+     "Just a quick reminder that…"
     ],
     "example": "",
     "short": "Soft language keeps the message clear and the relationship good."
@@ -1592,13 +1525,17 @@ const MODULES = [
    },
    {
     "title": "Open and closed questions",
-    "body": "<p><strong>Closed questions</strong> can be answered with <em>yes</em>, <em>no</em> or a short fact. They often start with an auxiliary verb: <em>Is…? Do…? Did…? Can…? Have…?</em> Use them to confirm facts and to finish a topic.</p>\n<p><strong>Open questions</strong> need a longer answer. They start with <em>what, how, why</em>, or with <em>tell me, describe, explain</em>. Use them to start a topic, to understand a situation and to let the other person talk.</p><div class=\"table-scroll\"><table class=\"\"><thead><tr><th>Closed question</th><th>Open version</th></tr></thead><tbody><tr><td>Is the workload too high?</td><td>How is your workload at the moment?</td></tr><tr><td>Did you like the training?</td><td>What did you find most useful in the training?</td></tr><tr><td>Do you have problems with the new system?</td><td>How is the new system working for you?</td></tr><tr><td>Was it difficult?</td><td>What was the most difficult part?</td></tr><tr><td>Are you happy in the team?</td><td>How would you describe the atmosphere in the team?</td></tr><tr><td>Did you talk to your manager?</td><td>What happened when you talked to your manager?</td></tr></tbody></table></div><figure class=\"fig\"><div class=\"funnel\"><div class=\"frow\" style=\"width:100%\"><b>Open</b><span>How is your work going?</span></div><div class=\"frow\" style=\"width:82%\"><b>Probing</b><span>What exactly makes the deadlines difficult?</span></div><div class=\"frow\" style=\"width:64%\"><b>Closed</b><span>So the problem is the Friday deadline?</span></div></div><figcaption>The question funnel: start open, then probe, then use a closed question to confirm.</figcaption></figure><p><strong>Be careful with <em>why</em>:</strong> <em>Why did you do that?</em> can sound like criticism. <em>What made you decide to…?</em> is softer.</p>",
+    "body": "<p><strong>Closed questions</strong> can be answered with <em>yes</em>, <em>no</em> or a short fact. They often start with an auxiliary verb: <em>Is…? Do…? Did…? Can…? Have…?</em> Use them to confirm facts and to finish a topic.</p>\n<p><strong>Open questions</strong> need a longer answer. They start with <em>what, how</em> or <em>why</em>. Requests such as <em>Tell me about…</em> or <em>Could you describe…?</em> work in the same way: they invite a longer answer. Use them to start a topic, to understand a situation and to let the other person talk.</p><div class=\"table-scroll\"><table class=\"\"><thead><tr><th>Closed question</th><th>Open version</th></tr></thead><tbody><tr><td>Is the workload too high?</td><td>How is your workload at the moment?</td></tr><tr><td>Did you like the training?</td><td>What did you find most useful in the training?</td></tr><tr><td>Do you have problems with the new system?</td><td>How is the new system working for you?</td></tr><tr><td>Was it difficult?</td><td>What was the most difficult part?</td></tr><tr><td>Are you happy in the team?</td><td>How would you describe the atmosphere in the team?</td></tr><tr><td>Did you talk to your manager?</td><td>What happened when you talked to your manager?</td></tr></tbody></table></div><figure class=\"fig\"><div class=\"funnel\"><div class=\"frow\" style=\"width:100%\"><b>Open</b><span>How is your work going?</span></div><div class=\"frow\" style=\"width:82%\"><b>Probing</b><span>What exactly makes the deadlines difficult?</span></div><div class=\"frow\" style=\"width:64%\"><b>Closed</b><span>So the problem is the Friday deadline?</span></div></div><figcaption>The question funnel: start open, then probe, then use a closed question to confirm.</figcaption></figure><p><strong>Be careful with <em>why</em>:</strong> <em>Why did you do that?</em> can sound like criticism. <em>What made you decide to…?</em> is softer.</p>",
     "phrases": [
      "How do you feel about…?",
      "What happened next?",
      "Could you describe…?",
      "What would help?",
-     "So, just to confirm: is it the Friday deadline?"
+     "So, just to confirm: is it the Friday deadline?",
+     "What makes you say that?",
+     "What would you like to happen?",
+     "How do you see the situation?",
+     "So, just to check: is that right?"
     ],
     "example": "",
     "short": "Open questions to explore, closed questions to confirm. Start open, finish closed."
@@ -1633,60 +1570,6 @@ const MODULES = [
     "example": "",
     "short": "Recognise the feeling first. Be honest about confidentiality."
    }
-  ],
-  "errors": [
-   [
-    "You must send the form today.",
-    "Could you send the form today, please?"
-   ],
-   [
-    "I want to change the meeting.",
-    "I'd like to change the meeting."
-   ],
-   [
-    "I'm scared I can't come.",
-    "I'm afraid I can't come."
-   ],
-   [
-    "Please send me the file. (in speech, can sound like an order)",
-    "Could you send me the file, please?"
-   ],
-   [
-    "Too many softeners: I was just maybe wondering if perhaps…",
-    "One or two softeners are enough. Keep the main message clear."
-   ],
-   [
-    "Yes. Yes. Yes. (only)",
-    "Right. / I see. / That makes sense."
-   ],
-   [
-    "What do you mean? (can sound sharp)",
-    "Could you say a bit more about that?"
-   ],
-   [
-    "Only closed questions: Is it bad? Is it Monday?",
-    "Open questions: How is it going? What is the problem?"
-   ],
-   [
-    "Interrupting to give a solution",
-    "Listen first, then paraphrase, then suggest."
-   ],
-   [
-    "I understand you. (can sound empty)",
-    "I can see why you'd feel that way."
-   ],
-   [
-    "Don't worry, I won't tell anyone. (a promise you may not be able to keep)",
-    "I'll handle this as confidentially as I can."
-   ],
-   [
-    "I suggest you to contact HR.",
-    "I suggest contacting HR. / I suggest (that) you contact HR."
-   ],
-   [
-    "In my opinion, I think we should wait.",
-    "In my opinion, we should wait. / I think we should wait."
-   ]
   ],
   "quiz": [
    {
@@ -1775,7 +1658,7 @@ const MODULES = [
      "Are you tired?"
     ],
     "a": 0,
-    "e": "Open questions start with what, how, why or tell me."
+    "e": "Open questions start with what, how or why."
    },
    {
     "q": "Which is softer than \"What do you mean?\"",
@@ -1970,7 +1853,7 @@ const MODULES = [
     ],
     [
      "open questions",
-     "questions that start with what, how, why or tell me"
+     "questions that start with what, how or why"
     ],
     [
      "paraphrasing",
@@ -2049,14 +1932,17 @@ const MODULES = [
      "What support do you need to get there?",
      "Let's agree on the next steps and review them in a month.",
      "I want to be clear: this is a formal warning.",
-     "Let me summarise what we've agreed, and I'll send it to you in writing."
+     "Let me summarise what we've agreed, and I'll send it to you in writing.",
+     "I've noticed a change in…",
+     "Let's make sure we're both clear on the expectations.",
+     "What would help you meet the deadline next time?"
     ],
     "example": "",
     "short": "Facts, expectation, support, follow-up. Say clearly if it is formal."
    },
    {
     "title": "Change and leaving",
-    "body": "<p>Employees leave for many reasons: a new job, a move, or organisational change. HR handles the communication.</p>\n<p><strong>Change negotiations</strong> (muutosneuvottelut) are the negotiations required by the Co-operation Act in larger organisations before staff reductions. The older term was <em>co-operation negotiations</em> (yt-neuvottelut). Use the English term and explain it the first time: many international employees do not know it.</p>\n<p>An <strong>exit interview</strong> is a conversation with a leaving employee about their experience. The aim is to learn, not to persuade the person to stay.</p>\n<p>Laws change. Check current rules with official sources before you explain them.</p>",
+    "body": "<p>Employees leave for many reasons: a new job, a move, or organisational change. HR handles the communication.</p>\n<p><strong>Change negotiations</strong> (muutosneuvottelut) are the negotiations required by the Co-operation Act in larger organisations before staff reductions. The older term was <em>co-operation negotiations</em> (yt-neuvottelut). Use the English term and explain it the first time: many international employees do not know it.</p>\n<p>An <strong>exit interview</strong> is a conversation with a leaving employee about their experience. The aim is to learn, not to persuade the person to stay.</p>",
     "phrases": [
      "Thank you for letting me know. We'll be sorry to see you go.",
      "Let's go through the practical steps: your notice period, your last working day and your final pay.",
@@ -2064,37 +1950,15 @@ const MODULES = [
      "What worked well for you here?",
      "What could we have done better?",
      "What would you tell a friend who was thinking of applying here?",
-     "We wish you all the best in your new role."
+     "We wish you all the best in your new role.",
+     "When would your last working day be?",
+     "Your manager will plan the handover with you.",
+     "We'd be happy to give you a reference.",
+     "Is there anything you'd like to tell us before you leave?"
     ],
     "example": "",
     "short": "Thank, handle the practical steps, learn from the exit interview."
    }
-  ],
-  "errors": [
-   [
-    "Can I give you a feedback?",
-    "Can I give you some feedback? / a piece of feedback"
-   ],
-   [
-    "Thank you for the feedbacks.",
-    "Thank you for the feedback."
-   ],
-   [
-    "You always do this.",
-    "In yesterday's meeting, you…"
-   ],
-   [
-    "I appreciate your constructive critic.",
-    "I appreciate your constructive criticism."
-   ],
-   [
-    "You have been lazy.",
-    "Two of your last three deadlines were missed."
-   ],
-   [
-    "We must discuss about your performance.",
-    "We need to discuss your performance."
-   ]
   ],
   "quiz": [
    {
@@ -2327,7 +2191,7 @@ const MODULES = [
   ],
   "topic": {
    "title": "Development, feedback and endings",
-   "text": "<p>A <mark class=\"lp\">development discussion<sup>1</sup></mark> is a regular meeting between an employee and their manager about work, goals, <mark class=\"lp\">wellbeing<sup>2</sup></mark> and development. HR usually designs the process and supports managers. A good discussion has a clear structure, uses signposts, and ends with agreed <mark class=\"lp\">next steps<sup>3</sup></mark> and a <mark class=\"lp\">review<sup>4</sup></mark> date.</p>\n<p><mark class=\"lp\">Constructive feedback<sup>5</sup></mark> is specific, about <mark class=\"lp\">behaviour<sup>6</sup></mark> rather than the person, timely and forward-looking. The <mark class=\"lp\">SBI model<sup>7</sup></mark> (Situation, Behaviour, Impact) gives a simple structure. <mark class=\"lp\">Positive feedback<sup>8</sup></mark> works best when it is specific too. <mark class=\"lp\">Receiving feedback<sup>9</sup></mark> is also a skill: thank the person and ask a question before you react.</p>\n<p>When performance is a problem, the conversation must be clear and fair: facts, the <mark class=\"lp\">expectation<sup>10</sup></mark>, support and follow-up. Some organisations use a <mark class=\"lp\">performance improvement plan<sup>11</sup></mark>. If a conversation is a <mark class=\"lp\">formal step<sup>12</sup></mark>, such as a <mark class=\"lp\">written warning<sup>13</sup></mark>, say so clearly.</p>\n<p>Every employment relationship ends one day. An employee may <mark class=\"lp\">resign<sup>14</sup></mark>, or the employer may need to reduce staff, which in larger Finnish organisations requires <mark class=\"lp\">change negotiations<sup>15</sup></mark>. HR handles the practical steps, such as the <mark class=\"lp\">notice period<sup>16</sup></mark> and <mark class=\"lp\">final pay<sup>17</sup></mark>. An <mark class=\"lp\">exit interview<sup>18</sup></mark> helps the organisation learn from leaving employees. The aim is to learn, not to persuade the person to stay.</p>",
+   "text": "<p>A <mark class=\"lp\">development discussion<sup>1</sup></mark> is a regular meeting between an employee and their manager about work, goals, <mark class=\"lp\">wellbeing<sup>2</sup></mark> and development. HR usually designs the process and supports managers. A good discussion has a clear structure, uses signposts, and ends with agreed <mark class=\"lp\">next steps<sup>3</sup></mark> and a <mark class=\"lp\">review<sup>4</sup></mark> date.</p>\n<p><mark class=\"lp\">Constructive feedback<sup>5</sup></mark> is specific, about <mark class=\"lp\">behaviour<sup>6</sup></mark> rather than the person, timely and forward-looking. The <mark class=\"lp\">SBI model<sup>7</sup></mark> (Situation, Behaviour, Impact) gives a simple structure. <mark class=\"lp\">Positive feedback<sup>8</sup></mark> works best when it is specific too. <mark class=\"lp\">Receiving feedback<sup>9</sup></mark> is also a skill: thank the person and ask a question before you react.</p>\n<p>When performance is a problem, the conversation must be clear and fair: facts, the <mark class=\"lp\">expectation<sup>10</sup></mark>, support and follow-up. Some organisations use a <mark class=\"lp\">performance improvement plan<sup>11</sup></mark>. If a conversation is a <mark class=\"lp\">formal step<sup>12</sup></mark>, such as a <mark class=\"lp\">written warning<sup>13</sup></mark>, say so clearly.</p>\n<p>Every employment relationship ends one day. An employee may <mark class=\"lp\">resign<sup>14</sup></mark>, or the employer may need to reduce staff, which in larger organisations requires <mark class=\"lp\">change negotiations<sup>15</sup></mark>. HR handles the practical steps, such as the <mark class=\"lp\">notice period<sup>16</sup></mark> and <mark class=\"lp\">final pay<sup>17</sup></mark>. An <mark class=\"lp\">exit interview<sup>18</sup></mark> helps the organisation learn from leaving employees. The aim is to learn, not to persuade the person to stay.</p>",
    "keys": [
     [
      "development discussion",
@@ -2405,7 +2269,7 @@ const MODULES = [
   }
  }
 ];
-const KEYWORDS = [["human resources (HR)","henkilöstöhallinto (HR)","the function that manages people matters","General",""],["HR business partner","HR-kumppani","an HR specialist who supports one unit and its managers","General","Our HR business partner meets the unit's managers every week."],["personnel / staff","henkilöstö","all the people who work in an organisation","General",""],["employee","työntekijä","a person who works for an organisation","General",""],["employer","työnantaja","the organisation that employs people","General",""],["line manager","lähiesihenkilö","the person you report to directly","General",""],["colleague","työtoveri, kollega","a person you work with","General",""],["job title","tehtävänimike","the name of a person's job","General",""],["remit","vastuualue","the areas a person or team is responsible for (formal, mainly BrE)","General","I'm afraid that's outside my remit."],["headcount","henkilöstömäärä","the number of people employed","General","Our headcount grew by ten per cent last year."],["to be entitled to","olla oikeutettu johonkin","to have a right to something","General",""],["to be required to","olla velvollinen","to have to do something","General",""],["eligible for","oikeutettu (ehdot täyttävä)","able to get something because you meet the conditions","General","Part-time staff are eligible for the lunch benefit."],["statutory","lakisääteinen","required by law","General","Occupational health care is a statutory service in Finland."],["personal data","henkilötiedot","information that identifies a person","General","Personal data must be stored securely."],["data protection / GDPR","tietosuoja","rules on how personal data is handled","General",""],["recruitment","rekrytointi","finding and hiring new employees","Recruitment",""],["job vacancy / opening","avoin työpaikka","a job that is available","Recruitment","We have two vacancies in the finance team."],["job advertisement / job posting","työpaikkailmoitus","a public notice about a vacancy (BrE also: job ad, advert)","Recruitment",""],["job description","tehtävänkuvaus","a list of the duties of a job","Recruitment",""],["person specification","haettavan henkilön profiili","the skills, experience and qualities the ideal candidate needs","Recruitment",""],["applicant / candidate","hakija","a person who applies for a job","Recruitment",""],["CV / résumé","ansioluettelo, CV","a document listing education and experience (CV BrE, résumé AmE)","Recruitment",""],["covering letter / cover letter","hakemuskirje, saatekirje","a letter sent with a CV (covering BrE, cover AmE)","Recruitment",""],["open application","avoin hakemus","an application sent when there is no advertised vacancy","Recruitment",""],["application deadline / closing date","hakuajan päättyminen","the last day to apply","Recruitment","The closing date is Friday at 16:00."],["internal / external recruitment","sisäinen / ulkoinen rekrytointi","hiring from inside / outside the organisation","Recruitment",""],["recruitment agency","rekrytointiyritys, henkilöstöpalveluyritys","a company that finds candidates for employers","Recruitment",""],["headhunting","suorahaku","contacting suitable people directly, usually for senior roles","Recruitment",""],["passive candidate","passiivinen työnhakija","a person who is not looking for a job but may be open to an offer","Recruitment",""],["talent pool","osaajapooli","a group of possible candidates for current or future roles","Recruitment",""],["employer brand","työnantajakuva, työnantajabrändi","how people see an organisation as a place to work","Recruitment","A strong employer brand attracts better applicants."],["referral programme","suositteluohjelma","a scheme that rewards employees for recommending candidates (AmE: program)","Recruitment",""],["applicant tracking system (ATS)","rekrytointijärjestelmä","software for managing applications","Recruitment",""],["equal opportunities","yhtäläiset mahdollisuudet","fair treatment of all candidates and employees","Recruitment",""],["screening","esikarsinta, seulonta","checking applications to remove unsuitable ones","Selection and onboarding",""],["to shortlist","valita jatkoon","to choose the best applicants for the next stage","Selection and onboarding","We shortlisted six candidates for interview."],["selection criteria","valintakriteerit","the standards used to choose a candidate","Selection and onboarding",""],["job interview","työhaastattelu","a meeting to decide whether to hire a candidate","Selection and onboarding",""],["structured interview","strukturoitu haastattelu","an interview where every candidate gets the same questions","Selection and onboarding",""],["competency-based interview","osaamisperusteinen haastattelu","an interview that asks for examples of skills in real situations","Selection and onboarding",""],["interview panel","haastatteluryhmä","a group of people who interview a candidate together","Selection and onboarding",""],["aptitude assessment","soveltuvuusarviointi","tests of whether a person suits a job","Selection and onboarding",""],["assessment centre","arviointitilaisuus","a day of tasks, tests and interviews for several candidates (AmE: center)","Selection and onboarding",""],["referee","suosittelija","a person who gives information about a candidate's work (AmE: reference)","Selection and onboarding",""],["reference check","suosittelijakysely","a call or questionnaire to a referee","Selection and onboarding",""],["security clearance","turvallisuusselvitys","an official check of a person's background for certain jobs","Selection and onboarding",""],["job offer","työtarjous","a formal offer of a job","Selection and onboarding","She accepted the job offer on Monday."],["to turn down an offer","kieltäytyä tarjouksesta","to refuse a job offer","Selection and onboarding",""],["unsuccessful candidate","valitsematta jäänyt hakija","a candidate who did not get the job","Selection and onboarding",""],["candidate experience","hakijakokemus","how candidates feel about the recruitment process","Selection and onboarding",""],["start date","aloituspäivä","the first day of work","Selection and onboarding",""],["probationary period","koeaika","a trial period at the start of employment","Selection and onboarding",""],["onboarding / induction","perehdytys","introducing a new employee to the job and workplace","Selection and onboarding",""],["employment relationship","työsuhde","the legal relationship between employer and employee","Employee relations",""],["employment contract","työsopimus","the agreement between employer and employee","Employee relations",""],["permanent / fixed-term contract","toistaiseksi voimassa oleva / määräaikainen työsopimus","a contract with no end date / with an end date","Employee relations","Fixed-term contracts need a justified reason in Finland."],["full-time / part-time","kokoaikainen / osa-aikainen","working the normal full hours / fewer hours","Employee relations",""],["working hours / overtime","työaika / ylityö","the hours you work / hours beyond the normal limit","Employee relations",""],["flexitime","liukuva työaika","a system where you can choose when to start and finish work","Employee relations",""],["remote work","etätyö","working outside the workplace, e.g. at home","Employee relations",""],["annual leave / holiday","vuosiloma","paid time off work each year (AmE: vacation)","Employee relations",""],["sick leave","sairausloma","time off work because of illness","Employee relations",""],["doctor's certificate","lääkärintodistus","a document from a doctor, e.g. for sick leave","Employee relations",""],["occupational health care","työterveyshuolto","health services arranged by the employer","Employee relations",""],["occupational safety","työsuojelu","safety and health at work","Employee relations",""],["early support model","varhaisen tuen malli","a practice for acting early when work ability may be at risk","Employee relations",""],["return to work","töihin paluu","coming back after a long absence","Employee relations",""],["absence management","poissaolojen hallinta","monitoring and handling absences","Employee relations",""],["wellbeing at work","työhyvinvointi","health and satisfaction at work","Employee relations",""],["employee engagement","henkilöstön sitoutuminen","how committed and motivated employees are","Employee relations",""],["employee survey","henkilöstökysely","a regular questionnaire for all staff","Employee relations",""],["staff turnover","henkilöstön vaihtuvuus","the rate at which people leave and are replaced","Employee relations","High staff turnover is expensive."],["retention","henkilöstön pysyvyys, pitovoima","keeping employees in the organisation","Employee relations",""],["inappropriate treatment","epäasiallinen kohtelu","behaviour at work that is not acceptable","Employee relations",""],["harassment / bullying","häirintä / kiusaaminen","repeated or serious unacceptable behaviour towards a person","Employee relations",""],["grievance","valitus, epäkohta","a formal complaint by an employee","Employee relations","She raised a grievance about her workload."],["misconduct","työvelvoitteiden rikkominen","serious breaking of work rules","Employee relations",""],["written warning","kirjallinen varoitus","a formal written notice about misconduct","Employee relations",""],["confidential","luottamuksellinen","private; not to be shared","Employee relations",""],["resignation / to resign","irtisanoutuminen / irtisanoutua","when an employee ends the employment","Employee relations","He handed in his resignation on Friday."],["dismissal","irtisanominen","when the employer ends the employment","Employee relations",""],["notice period","irtisanomisaika","the time between giving notice and the end of employment","Employee relations",""],["redundancy","irtisanominen tuotannollisista ja taloudellisista syistä","dismissal because the job is no longer needed (BrE; AmE often: layoff)","Employee relations",""],["temporary lay-off","lomautus","a temporary break in work and pay; employment continues","Employee relations","Always say temporary: in American English, a layoff is usually permanent."],["exit interview","lähtöhaastattelu","a conversation with an employee who is leaving","Employee relations",""],["learning and development (L&D)","osaamisen kehittäminen","the HR area that develops employees' skills","Learning and development",""],["development discussion","kehityskeskustelu","a regular meeting with your manager about work, goals and development","Learning and development",""],["performance review / appraisal","suoriutumisen arviointi","a formal assessment of how well someone does their job","Learning and development",""],["objectives / targets","tavoitteet","results a person is expected to achieve","Learning and development",""],["key performance indicator (KPI)","keskeinen mittari","a number used to measure performance","Learning and development",""],["personal development plan","henkilökohtainen kehittymissuunnitelma","a written plan for an employee's learning","Learning and development",""],["performance improvement plan (PIP)","suoriutumisen parantamissuunnitelma","a written plan with goals and support when performance is weak","Learning and development",""],["training needs analysis","koulutustarvekartoitus","finding out what skills people need to learn","Learning and development",""],["competence","osaaminen","the skills and knowledge needed to do a job","Learning and development",""],["upskilling / reskilling","osaamisen syventäminen / uudelleenkouluttautuminen","learning more in your job / learning a new job","Learning and development",""],["on-the-job training","työssä oppiminen","learning while doing the real job","Learning and development",""],["mentoring / coaching","mentorointi / valmennus","support from an experienced colleague / structured support to reach goals","Learning and development",""],["360-degree feedback","360-palaute","feedback from a manager, colleagues and team members","Learning and development",""],["job rotation","työkierto","moving between different jobs to learn","Learning and development",""],["career path","urapolku","the steps of a person's career","Learning and development",""],["succession planning","seuraajasuunnittelu","preparing people to take over key roles","Learning and development",""],["talent management","osaajien johtaminen","attracting, developing and keeping skilled people","Learning and development",""],["remuneration / compensation","palkitseminen, palkkaus","everything an employee receives for work (remuneration BrE, compensation AmE)","Reward and pay",""],["salary","palkka (kuukausipalkka)","fixed pay, usually monthly","Reward and pay",""],["wage","palkka (tunti- tai viikkopalkka)","pay calculated by the hour or week","Reward and pay",""],["gross / net pay","bruttopalkka / nettopalkka","pay before / after tax and deductions","Reward and pay",""],["payroll","palkanlaskenta","calculating and paying salaries","Reward and pay",""],["pay slip","palkkalaskelma","a document showing pay and deductions (AmE: pay stub)","Reward and pay",""],["pay scale / pay grade","palkkataulukko / palkkaluokka","a system of fixed pay levels","Reward and pay",""],["pay rise","palkankorotus","an increase in pay (AmE: raise)","Reward and pay",""],["pay transparency","palkka-avoimuus","openness about pay levels and how pay is set","Reward and pay",""],["bonus / performance-related pay","bonus / tulospalkkio","extra pay for results","Reward and pay",""],["incentive","kannustin","something that motivates people to do more","Reward and pay",""],["total reward","kokonaispalkitseminen","pay, benefits, development and other rewards together","Reward and pay",""],["benefits","henkilöstöedut","extra things employees receive besides pay","Reward and pay",""],["benefit in kind","luontoisetu","a taxable non-cash benefit, e.g. a phone or car","Reward and pay",""],["lunch benefit","lounasetu","an employer-supported lunch","Reward and pay",""],["sport and culture benefit","liikunta- ja kulttuurietu","an employer-supported benefit for sport and culture","Reward and pay",""],["holiday pay / holiday bonus","lomapalkka / lomaraha","pay during annual leave / an extra payment linked to holidays","Reward and pay","Holiday bonus is based on the collective agreement."],["pension","eläke","money paid after retirement","Reward and pay",""],["salary expectations","palkkatoive","the pay a candidate hopes to receive","Reward and pay",""],["trade union","ammattiliitto","an organisation that represents workers (AmE: labor union)","Industrial relations",""],["employers' organisation","työnantajaliitto","an organisation that represents employers","Industrial relations",""],["labour market organisations / social partners","työmarkkinajärjestöt","unions and employers' organisations together","Industrial relations",""],["collective bargaining","työehtosopimusneuvottelut","negotiations between unions and employers on pay and conditions","Industrial relations",""],["collective agreement","työehtosopimus (TES)","an agreement on pay and working conditions for a whole sector","Industrial relations",""],["generally applicable collective agreement","yleissitova työehtosopimus","a collective agreement that all employers in the sector must follow","Industrial relations",""],["shop steward","luottamusmies","an employee who represents union members at work","Industrial relations",""],["employee representative","henkilöstön edustaja","a person elected to represent staff","Industrial relations",""],["occupational safety representative","työsuojeluvaltuutettu","an elected representative for safety and health at work","Industrial relations",""],["change negotiations","muutosneuvottelut","negotiations required by law in larger organisations before reducing staff (formerly yt-neuvottelut)","Industrial relations",""],["continuous dialogue","jatkuva vuoropuhelu","regular discussion between employer and staff under the Co-operation Act","Industrial relations",""],["industrial action / strike","työtaistelu / lakko","collective action by workers, e.g. stopping work","Industrial relations",""],["overtime ban","ylityökielto","a form of industrial action: no overtime","Industrial relations",""],["labour dispute","työriita","a disagreement between employers and employees","Industrial relations",""],["Labour Court","työtuomioistuin","the court for disputes about collective agreements","Industrial relations",""],["active listening","aktiivinen kuuntelu","listening with full attention and showing you understand","Communication",""],["feedback","palaute","comments on work or behaviour (uncountable)","Communication",""],["small talk","small talk, kevyt jutustelu","short, friendly conversation about everyday topics","Communication",""],["rapport","hyvä yhteys","a good, easy connection with someone","Communication","She quickly builds rapport with candidates."],["signpost","puheen jäsennysilmaus","a phrase that shows where a conversation is going","Communication",""],["to keep someone in the loop","pitää ajan tasalla","to keep someone informed","Communication",""],["to touch base","olla lyhyesti yhteydessä","to make brief contact (informal)","Communication",""],["to reach out","ottaa yhteyttä","to contact someone","Communication","Feel free to reach out with any questions."],["working time bank","työaikapankki","saving working hours to take as time off later","Employee relations",""],["time off in lieu (TOIL)","ylityön korvaaminen vapaana","time off instead of overtime pay (BrE)","Reward and pay",""],["overtime compensation","ylityökorvaus","extra pay or time off for overtime","Reward and pay",""],["parental leave / family leave","perhevapaat","leave to care for a child","Employee relations",""],["unpaid leave / leave of absence","palkaton vapaa","time off without pay","Employee relations",""],["study leave","opintovapaa","time off for studies","Learning and development",""],["equality plan","tasa-arvosuunnitelma","a plan to promote gender equality at work","Employee relations",""],["non-discrimination plan","yhdenvertaisuussuunnitelma","a plan to promote equal treatment","Employee relations",""],["code of conduct","eettinen ohjeistus","rules on how employees should behave","General",""],["whistleblowing channel","ilmoituskanava","a channel for reporting misconduct confidentially","General",""],["substance abuse programme","päihdeohjelma","an organisation's rules and support for alcohol and drug problems","Employee relations",""],["acceptable use policy","tietoturvaohje","rules for using IT systems and devices","General",""],["expense claim","kulukorvaushakemus","a request to get money back for work costs","Reward and pay",""],["non-disclosure agreement (NDA)","salassapitosopimus","an agreement to keep information confidential","General",""],["non-competition agreement","kilpailukieltosopimus","an agreement not to work for a competitor for a time","Employee relations",""],["disciplinary procedure","varoitusmenettely","the steps taken when an employee breaks rules","Employee relations",""],["paid time off (PTO)","palkallinen vapaa","AmE term for paid leave","Reward and pay",""],["termination","työsuhteen päättäminen","ending an employment (AmE, formal)","Employee relations",""],["plain language","selkeä kieli","writing that readers can easily find, understand and use","Communication",""],["communication accommodation","viestinnällinen mukautuminen","adjusting how you speak to your listener","Communication",""]];
+const KEYWORDS = [["human resources (HR)","henkilöstöhallinto (HR)","the function that manages people matters","General",""],["HR business partner","HR-kumppani","an HR specialist who supports one unit and its managers","General","Our HR business partner meets the unit's managers every week."],["personnel / staff","henkilöstö","all the people who work in an organisation","General",""],["employee","työntekijä","a person who works for an organisation","General",""],["employer","työnantaja","the organisation that employs people","General",""],["line manager","lähiesihenkilö","the person you report to directly","General",""],["colleague","työtoveri, kollega","a person you work with","General",""],["job title","tehtävänimike","the name of a person's job","General",""],["remit","vastuualue","the areas a person or team is responsible for (formal, mainly BrE)","General","I'm afraid that's outside my remit."],["headcount","henkilöstömäärä","the number of people employed","General","Our headcount grew by ten per cent last year."],["to be entitled to","olla oikeutettu johonkin","to have a right to something","General",""],["to be required to","olla velvollinen","to have to do something","General",""],["eligible for","oikeutettu (ehdot täyttävä)","able to get something because you meet the conditions","General","Part-time staff are eligible for the lunch benefit."],["statutory","lakisääteinen","required by law","General","Occupational health care is a statutory service in Finland."],["personal data","henkilötiedot","information that identifies a person","General","Personal data must be stored securely."],["data protection / GDPR","tietosuoja","rules on how personal data is handled","General",""],["recruitment","rekrytointi","finding and hiring new employees","Recruitment",""],["job vacancy / opening","avoin työpaikka","a job that is available","Recruitment","We have two vacancies in the finance team."],["job advertisement / job posting","työpaikkailmoitus","a public notice about a vacancy (BrE also: job ad, advert)","Recruitment",""],["job description","tehtävänkuvaus","a list of the duties of a job","Recruitment",""],["person specification","haettavan henkilön profiili","the skills, experience and qualities the ideal candidate needs","Recruitment",""],["applicant / candidate","hakija","a person who applies for a job","Recruitment",""],["CV / résumé","ansioluettelo, CV","a document listing education and experience (CV BrE, résumé AmE)","Recruitment",""],["covering letter / cover letter","hakemuskirje, saatekirje","a letter sent with a CV (covering BrE, cover AmE)","Recruitment",""],["open application","avoin hakemus","an application sent when there is no advertised vacancy","Recruitment",""],["application deadline / closing date","hakuajan päättyminen","the last day to apply","Recruitment","The closing date is Friday at 16:00."],["internal / external recruitment","sisäinen / ulkoinen rekrytointi","hiring from inside / outside the organisation","Recruitment",""],["recruitment agency","rekrytointiyritys, henkilöstöpalveluyritys","a company that finds candidates for employers","Recruitment",""],["headhunting","suorahaku","contacting suitable people directly, usually for senior roles","Recruitment",""],["passive candidate","passiivinen työnhakija","a person who is not looking for a job but may be open to an offer","Recruitment",""],["talent pool","osaajapooli","a group of possible candidates for current or future roles","Recruitment",""],["employer brand","työnantajakuva, työnantajabrändi","how people see an organisation as a place to work","Recruitment","A strong employer brand attracts better applicants."],["referral programme","suositteluohjelma","a scheme that rewards employees for recommending candidates (AmE: program)","Recruitment",""],["applicant tracking system (ATS)","rekrytointijärjestelmä","software for managing applications","Recruitment",""],["equal opportunities","yhtäläiset mahdollisuudet","fair treatment of all candidates and employees","Recruitment",""],["screening","esikarsinta, seulonta","checking applications to remove unsuitable ones","Selection and onboarding",""],["to shortlist","valita jatkoon","to choose the best applicants for the next stage","Selection and onboarding","We shortlisted six candidates for interview."],["selection criteria","valintakriteerit","the standards used to choose a candidate","Selection and onboarding",""],["job interview","työhaastattelu","a meeting to decide whether to hire a candidate","Selection and onboarding",""],["structured interview","strukturoitu haastattelu","an interview where every candidate gets the same questions","Selection and onboarding",""],["competency-based interview","osaamisperusteinen haastattelu","an interview that asks for examples of skills in real situations","Selection and onboarding",""],["interview panel","haastatteluryhmä","a group of people who interview a candidate together","Selection and onboarding",""],["aptitude assessment","soveltuvuusarviointi","tests of whether a person suits a job","Selection and onboarding",""],["assessment centre","arviointitilaisuus","a day of tasks, tests and interviews for several candidates (AmE: center)","Selection and onboarding",""],["referee","suosittelija","a person who gives information about a candidate's work (AmE: reference)","Selection and onboarding",""],["reference check","suosittelijakysely","a call or questionnaire to a referee","Selection and onboarding",""],["security clearance","turvallisuusselvitys","an official check of a person's background for certain jobs","Selection and onboarding",""],["job offer","työtarjous","a formal offer of a job","Selection and onboarding","She accepted the job offer on Monday."],["to turn down an offer","kieltäytyä tarjouksesta","to refuse a job offer","Selection and onboarding",""],["unsuccessful candidate","valitsematta jäänyt hakija","a candidate who did not get the job","Selection and onboarding",""],["candidate experience","hakijakokemus","how candidates feel about the recruitment process","Selection and onboarding",""],["start date","aloituspäivä","the first day of work","Selection and onboarding",""],["probationary period","koeaika","a trial period at the start of employment","Selection and onboarding",""],["onboarding / induction","perehdytys","introducing a new employee to the job and workplace","Selection and onboarding",""],["employment relationship","työsuhde","the legal relationship between employer and employee","Employee relations",""],["employment contract","työsopimus","the agreement between employer and employee","Employee relations",""],["permanent / fixed-term contract","toistaiseksi voimassa oleva / määräaikainen työsopimus","a contract with no end date / with an end date","Employee relations","Fixed-term contracts need a justified reason in Finland."],["full-time / part-time","kokoaikainen / osa-aikainen","working the normal full hours / fewer hours","Employee relations",""],["working hours / overtime","työaika / ylityö","the hours you work / hours beyond the normal limit","Employee relations",""],["flexitime","liukuva työaika","a system where you can choose when to start and finish work","Employee relations",""],["remote work","etätyö","working outside the workplace, e.g. at home","Employee relations",""],["annual leave / holiday","vuosiloma","paid time off work each year (AmE: vacation)","Employee relations",""],["sick leave","sairausloma","time off work because of illness","Employee relations",""],["doctor's certificate","lääkärintodistus","a document from a doctor, e.g. for sick leave","Employee relations",""],["occupational health care","työterveyshuolto","health services arranged by the employer","Employee relations",""],["occupational safety","työsuojelu","safety and health at work","Employee relations",""],["early support model","varhaisen tuen malli","a practice for acting early when work ability may be at risk","Employee relations",""],["return to work","töihin paluu","coming back after a long absence","Employee relations",""],["absence management","poissaolojen hallinta","monitoring and handling absences","Employee relations",""],["wellbeing at work","työhyvinvointi","health and satisfaction at work","Employee relations",""],["employee engagement","henkilöstön sitoutuminen","how committed and motivated employees are","Employee relations",""],["employee survey","henkilöstökysely","a regular questionnaire for all staff","Employee relations",""],["staff turnover","henkilöstön vaihtuvuus","the rate at which people leave and are replaced","Employee relations","High staff turnover is expensive."],["retention","henkilöstön pysyvyys, pitovoima","keeping employees in the organisation","Employee relations",""],["inappropriate treatment","epäasiallinen kohtelu","behaviour at work that is not acceptable","Employee relations",""],["harassment / bullying","häirintä / kiusaaminen","repeated or serious unacceptable behaviour towards a person","Employee relations",""],["grievance","valitus, epäkohta","a formal complaint by an employee","Employee relations","She raised a grievance about her workload."],["misconduct","työvelvoitteiden rikkominen","serious breaking of work rules","Employee relations",""],["written warning","kirjallinen varoitus","a formal written notice about misconduct","Employee relations",""],["confidential","luottamuksellinen","private; not to be shared","Employee relations",""],["resignation / to resign","irtisanoutuminen / irtisanoutua","when an employee ends the employment","Employee relations","He handed in his resignation on Friday."],["dismissal","irtisanominen","when the employer ends the employment","Employee relations",""],["notice period","irtisanomisaika","the time between giving notice and the end of employment","Employee relations",""],["redundancy","irtisanominen tuotannollisista ja taloudellisista syistä","dismissal because the job is no longer needed (BrE; AmE often: layoff)","Employee relations",""],["temporary lay-off","lomautus","a temporary break in work and pay; employment continues","Employee relations","Always say temporary: in American English, a layoff is usually permanent."],["exit interview","lähtöhaastattelu","a conversation with an employee who is leaving","Employee relations",""],["learning and development (L&D)","osaamisen kehittäminen","the HR area that develops employees' skills","Learning and development",""],["development discussion","kehityskeskustelu","a regular meeting with your manager about work, goals and development","Learning and development",""],["performance review / appraisal","suoriutumisen arviointi","a formal assessment of how well someone does their job","Learning and development",""],["objectives / targets","tavoitteet","results a person is expected to achieve","Learning and development",""],["key performance indicator (KPI)","keskeinen mittari","a number used to measure performance","Learning and development",""],["personal development plan","henkilökohtainen kehittymissuunnitelma","a written plan for an employee's learning","Learning and development",""],["performance improvement plan (PIP)","suoriutumisen parantamissuunnitelma","a written plan with goals and support when performance is weak","Learning and development",""],["training needs analysis","koulutustarvekartoitus","finding out what skills people need to learn","Learning and development",""],["competence","osaaminen","the skills and knowledge needed to do a job","Learning and development",""],["upskilling / reskilling","osaamisen syventäminen / uudelleenkouluttautuminen","learning more in your job / learning a new job","Learning and development",""],["on-the-job training","työssä oppiminen","learning while doing the real job","Learning and development",""],["mentoring / coaching","mentorointi / valmennus","support from an experienced colleague / structured support to reach goals","Learning and development",""],["360-degree feedback","360-palaute","feedback from a manager, colleagues and team members","Learning and development",""],["job rotation","työkierto","moving between different jobs to learn","Learning and development",""],["career path","urapolku","the steps of a person's career","Learning and development",""],["succession planning","seuraajasuunnittelu","preparing people to take over key roles","Learning and development",""],["talent management","osaajien johtaminen","attracting, developing and keeping skilled people","Learning and development",""],["remuneration / compensation","palkitseminen, palkkaus","everything an employee receives for work (remuneration BrE, compensation AmE)","Reward and pay",""],["salary","palkka (kuukausipalkka)","fixed pay, usually monthly","Reward and pay",""],["wage","palkka (tunti- tai viikkopalkka)","pay calculated by the hour or week","Reward and pay",""],["gross / net pay","bruttopalkka / nettopalkka","pay before / after tax and deductions","Reward and pay",""],["payroll","palkanlaskenta","calculating and paying salaries","Reward and pay",""],["pay slip","palkkalaskelma","a document showing pay and deductions (AmE: pay stub)","Reward and pay",""],["pay scale / pay grade","palkkataulukko / palkkaluokka","a system of fixed pay levels","Reward and pay",""],["pay rise","palkankorotus","an increase in pay (AmE: raise)","Reward and pay",""],["pay transparency","palkka-avoimuus","openness about pay levels and how pay is set","Reward and pay",""],["bonus / performance-related pay","bonus / tulospalkkio","extra pay for results","Reward and pay",""],["incentive","kannustin","something that motivates people to do more","Reward and pay",""],["total reward","kokonaispalkitseminen","pay, benefits, development and other rewards together","Reward and pay",""],["benefits","henkilöstöedut","extra things employees receive besides pay","Reward and pay",""],["benefit in kind","luontoisetu","a taxable non-cash benefit, e.g. a phone or car","Reward and pay",""],["lunch benefit","lounasetu","an employer-supported lunch","Reward and pay",""],["sport and culture benefit","liikunta- ja kulttuurietu","an employer-supported benefit for sport and culture","Reward and pay",""],["holiday pay / holiday bonus","lomapalkka / lomaraha","pay during annual leave / an extra payment linked to holidays","Reward and pay","Holiday bonus is based on the collective agreement."],["pension","eläke","money paid after retirement","Reward and pay",""],["salary expectations","palkkatoive","the pay a candidate hopes to receive","Reward and pay",""],["trade union","ammattiliitto","an organisation that represents workers (AmE: labor union)","Industrial relations",""],["employers' organisation","työnantajaliitto","an organisation that represents employers","Industrial relations",""],["labour market organisations / social partners","työmarkkinajärjestöt","unions and employers' organisations together","Industrial relations",""],["collective bargaining","työehtosopimusneuvottelut","negotiations between unions and employers on pay and conditions","Industrial relations",""],["collective agreement","työehtosopimus (TES)","an agreement on pay and working conditions for a whole sector","Industrial relations",""],["generally applicable collective agreement","yleissitova työehtosopimus","a collective agreement that all employers in the sector must follow","Industrial relations",""],["shop steward","luottamusmies","an employee who represents union members at work","Industrial relations",""],["employee representative","henkilöstön edustaja","a person elected to represent staff","Industrial relations",""],["occupational safety representative","työsuojeluvaltuutettu","an elected representative for safety and health at work","Industrial relations",""],["change negotiations","muutosneuvottelut","negotiations required by law in larger organisations before reducing staff (formerly yt-neuvottelut)","Industrial relations",""],["continuous dialogue","jatkuva vuoropuhelu","regular discussion between employer and staff under the Co-operation Act","Industrial relations",""],["industrial action / strike","työtaistelu / lakko","collective action by workers, e.g. stopping work","Industrial relations",""],["overtime ban","ylityökielto","a form of industrial action: no overtime","Industrial relations",""],["labour dispute","työriita","a disagreement between employers and employees","Industrial relations",""],["Labour Court","työtuomioistuin","the court for disputes about collective agreements","Industrial relations",""],["active listening","aktiivinen kuuntelu","listening with full attention and showing you understand","Communication",""],["feedback","palaute","comments on work or behaviour (uncountable)","Communication",""],["small talk","small talk, kevyt jutustelu","short, friendly conversation about everyday topics","Communication",""],["rapport","hyvä yhteys","a good, easy connection with someone","Communication","She quickly builds rapport with candidates."],["signpost","puheen jäsennysilmaus","a phrase that shows where a conversation is going","Communication",""],["to keep someone in the loop","pitää ajan tasalla","to keep someone informed","Communication",""],["to touch base","olla lyhyesti yhteydessä","to make brief contact (informal)","Communication",""],["to reach out","ottaa yhteyttä","to contact someone","Communication","Feel free to reach out with any questions."],["working time bank","työaikapankki","saving working hours to take as time off later","Employee relations",""],["time off in lieu (TOIL)","ylityön korvaaminen vapaana","time off instead of overtime pay (BrE)","Reward and pay",""],["overtime compensation","ylityökorvaus","extra pay or time off for overtime","Reward and pay",""],["parental leave / family leave","perhevapaat","leave to care for a child","Employee relations",""],["unpaid leave / leave of absence","palkaton vapaa","time off without pay","Employee relations",""],["study leave","opintovapaa","time off for studies","Learning and development",""],["equality plan","tasa-arvosuunnitelma","a plan to promote gender equality at work","Employee relations",""],["non-discrimination plan","yhdenvertaisuussuunnitelma","a plan to promote equal treatment","Employee relations",""],["code of conduct","eettinen ohjeistus","rules on how employees should behave","General",""],["whistleblowing channel","ilmoituskanava","a channel for reporting misconduct confidentially","General",""],["substance abuse programme","päihdeohjelma","an organisation's rules and support for alcohol and drug problems","Employee relations",""],["acceptable use policy","tietoturvaohje","rules for using IT systems and devices","General",""],["expense claim","kulukorvaushakemus","a request to get money back for work costs","Reward and pay",""],["non-disclosure agreement (NDA)","salassapitosopimus","an agreement to keep information confidential","General",""],["non-competition agreement","kilpailukieltosopimus","an agreement not to work for a competitor for a time","Employee relations",""],["disciplinary procedure","varoitusmenettely","the steps taken when an employee breaks rules","Employee relations",""],["paid time off (PTO)","palkallinen vapaa","AmE term for paid leave","Reward and pay",""],["termination","työsuhteen päättäminen","ending an employment (AmE, formal)","Employee relations",""],["plain language","selkeä kieli","writing that readers can easily find, understand and use","Communication",""],["communication accommodation","viestinnällinen mukautuminen","adjusting how you speak to your listener","Communication",""],["to be in charge of","vastata jostakin","to be responsible for something","Useful expressions","She's in charge of onboarding."],["to raise a concern","ottaa huolenaihe puheeksi","to tell someone about a worry or problem","Useful expressions","He raised a concern about his workload."],["to address an issue","puuttua asiaan","to start dealing with a problem","Useful expressions","We need to address this issue quickly."],["to follow up on something","palata asiaan, seurata asiaa","to check or continue something later","Useful expressions","I'm just following up on our meeting."],["to get back to someone","palata asiaan jonkun kanssa","to reply or contact someone later","Useful expressions","I'll get back to you by Friday."],["to keep someone posted","pitää joku ajan tasalla","to keep someone informed","Useful expressions","Please keep me posted."],["to handle a complaint","käsitellä valitus","to deal with a complaint","Useful expressions",""],["to fill a vacancy","täyttää avoin paikka","to find someone for an open job","Useful expressions","We hope to fill the vacancy by May."],["to post a job advert","julkaista työpaikkailmoitus","to publish a job advert","Useful expressions",""],["to run an interview","pitää haastattelu","to lead an interview","Useful expressions",""],["to set goals","asettaa tavoitteet","to decide what someone should achieve","Useful expressions",""],["to meet a deadline","pysyä määräajassa","to finish something on time","Useful expressions","We need to meet the deadline."],["to take time off","pitää vapaata","to not work for a period","Useful expressions",""],["to be on leave","olla lomalla tai vapaalla","to be away from work with permission","Useful expressions","She's on parental leave until March."],["to hand in your notice","irtisanoutua","to tell your employer that you are leaving","Useful expressions","He handed in his notice last week."],["to settle in","kotiutua, sopeutua","to start to feel comfortable in a new place or job","Useful expressions","How are you settling in?"]];
 const SOURCES = [
  "Brown, P. & Levinson, S. C. 1987. Politeness: Some universals in language usage. Cambridge: Cambridge University Press.",
  "Center for Creative Leadership. Situation–Behavior–Impact (SBI) feedback model. Greensboro, NC: Center for Creative Leadership.",
@@ -2460,8 +2324,6 @@ function openModule(id) {
     inner += `<div class="short"><strong>In short:</strong> ${esc(c.short)}</div>`;
     h += acc(c.title, inner);
   });
-  h += acc("Common errors for Finnish speakers", `<div class="table-scroll"><table><thead><tr><th>Avoid</th><th>Say instead</th></tr></thead><tbody>` +
-    m.errors.map(([w, r]) => `<tr><td class="wrong">${esc(w)}</td><td class="right">${esc(r)}</td></tr>`).join("") + `</tbody></table></div>`);
   h += acc("Learning journal task", `<p>Answer all four points in your learning journal (about 200 words).</p><ol>${m.journal.map((t, i) => `<li>${i === 2 ? "<strong>Reflection.</strong> " : ""}${esc(t)}</li>`).join("")}<li><strong>Accommodation.</strong> After the class: how did you and your group adjust your English to each other? What worked? What would you change?</li></ol>`);
   h += `<div class="card" style="margin-top:20px"><p style="margin:0">Next step: <a href="#" id="to-quiz">do the Module ${m.id} quiz</a>.</p></div>`;
   $("#mod-content").innerHTML = h;
